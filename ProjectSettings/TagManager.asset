@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Critter
+  - SpawningPool
   layers:
   - Default
   - TransparentFX

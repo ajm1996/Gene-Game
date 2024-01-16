@@ -27,6 +27,8 @@ public class Critter : MonoBehaviour
     }
 }
 
+//Should probably separate to its own file
+//Also maybe make this an abstract class so trait abilities are handled easier.
 public class Trait : IComparable<Trait>
 {
     public Color Color;
