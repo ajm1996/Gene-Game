@@ -14,7 +14,6 @@ public class DayNightCycle : MonoBehaviour
     void Start()
     {
         //Simply assigning colors to the 4 starting Drones at the start
-        Drone tempDrone = new Drone();
         var playerDrones = GameObject.FindGameObjectsWithTag("Drone");
         for(int i = 0; i < playerDrones.Length; i++)
         {

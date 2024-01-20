@@ -4,7 +4,8 @@ using UnityEngine;
 public class Drone : MonoBehaviour
 {
     // default values subject to change
-    public int health = 5;
+    public int maxHealth = 10;
+    public int currentHealth = 5;
     public int damage = 2;
     public int speed = 1;
 
@@ -43,8 +44,14 @@ public class Drone : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        health -= damageAmount;
-        if (health <= 0) Die();
+        currentHealth -= damageAmount;
+        if (currentHealth <= 0) Die();
+    }
+
+    public void HealDamage(int healAmount)
+    {
+        currentHealth += healAmount;
+        if (currentHealth > maxHealth) currentHealth = maxHealth;
     }
 
     private void Die()

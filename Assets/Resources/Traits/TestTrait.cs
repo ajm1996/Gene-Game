@@ -11,6 +11,6 @@ public class TestTrait : Trait
     public override void ApplyEffect(Drone drone)
     {
         drone.speed += 1;
-        drone.health +=2 ;
+        drone.maxHealth += 2;
     }
 }
