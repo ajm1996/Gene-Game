@@ -8,23 +8,22 @@ public class DayNightCycle : MonoBehaviour
 {
     private float TIMECYCLELENGTH = 3f;
     public float DayTimeLength = 3f;
-    public Critter defaultCritter;
+    public Drone defaultDrone;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Simply assigning colors to the 4 starting critters at the start
-        Critter tempCritter = new Critter();
-        var playerCritters = GameObject.FindGameObjectsWithTag("Critter");
-        for(int i = 0; i < playerCritters.Length; i++)
+        //Simply assigning colors to the 4 starting Drones at the start
+        var playerDrones = GameObject.FindGameObjectsWithTag("Drone");
+        for(int i = 0; i < playerDrones.Length; i++)
         {
             if (UnityEngine.Random.Range(0, 2) < 1)
             {
-                playerCritters[i].GetComponent<Critter>().Traits.Add(new Trait() { Id = 1, Color = Color.red });
+                playerDrones[i].GetComponent<Drone>().AddTrait(new TestTrait());
             }
             else
             {
-                playerCritters[i].GetComponent<Critter>().Traits.Add(new Trait() { Id = 2, Color = Color.yellow });
+                playerDrones[i].GetComponent<Drone>().AddTrait(new TestTrait());
             }
         }
     }

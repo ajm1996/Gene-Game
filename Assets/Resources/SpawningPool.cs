@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SpawningPool : MonoBehaviour
 {
-    public Critter defaultCritter;
+    public Drone defaultDrone;
 
     // Start is called before the first frame update
     void Start()
@@ -21,33 +21,39 @@ public class SpawningPool : MonoBehaviour
 
     public void BreedTime()
     {
-        var playerCritters = GameObject.FindGameObjectsWithTag("Critter");
-        var selectedCritters = new List<Critter>();
-        for(int i = 0; i < playerCritters.Length; i++)
+        var playerDrones = GameObject.FindGameObjectsWithTag("Drone");
+        var selectedDrones = new List<Drone>();
+        for(int i = 0; i < playerDrones.Length; i++)
         {
-            if (playerCritters[i].GetComponent<BoxCollider2D>().IsTouching(GetComponent<BoxCollider2D>()))
+            if (playerDrones[i].GetComponent<BoxCollider2D>().IsTouching(GetComponent<BoxCollider2D>()))
             {
-                selectedCritters.Add(playerCritters[i].GetComponent<Critter>());
+                selectedDrones.Add(playerDrones[i].GetComponent<Drone>());
             }
         }
         //Still need to enforce no more than two per pool
-        if(selectedCritters.Count > 1)    
-            BreedCritters(selectedCritters[0].GetComponent<Critter>(), selectedCritters[1].GetComponent<Critter>());
+        if(selectedDrones.Count > 1)    
+            BreedDrones(selectedDrones[0].GetComponent<Drone>(), selectedDrones[1].GetComponent<Drone>());
     }
 
-    public void BreedCritters(Critter critter1, Critter critter2)
+    public void BreedDrones(Drone Drone1, Drone Drone2)
     {
         List<Trait> traitList = new List<Trait>();
-        traitList.AddRange(critter1.Traits);
-        traitList.AddRange(critter2.Traits);
+        traitList.AddRange(Drone1.GetTraits());
+        traitList.AddRange(Drone2.GetTraits());
 
-        Critter newCritter1 = defaultCritter;
-        Critter newCritter2 = defaultCritter;
-        Critter newCritter3 = defaultCritter;
+        Drone newDrone1 = defaultDrone;
+        Drone newDrone2 = defaultDrone;
+        Drone newDrone3 = defaultDrone;
 
-        var instantiatedCritter1 = Instantiate(newCritter1);
-        var instantiatedCritter2 = Instantiate(newCritter2);
-        var instantiatedCritter3 = Instantiate(newCritter3);
+        var instantiatedDrone1 = Instantiate(newDrone1);
+        var instantiatedDrone2 = Instantiate(newDrone2);
+        var instantiatedDrone3 = Instantiate(newDrone3);
+
+
+        newDrone1.Initialize(1,2,3);
+        newDrone2.Initialize(1,2,3);
+        newDrone3.Initialize(1,2,3);
+        
         traitList.Sort();
         Debug.Log(traitList.Count);
         for (int i = 0; i < traitList.Count - 1; i++)
@@ -55,37 +61,37 @@ public class SpawningPool : MonoBehaviour
             //They both have the trait, 
             if (traitList[i].Id == traitList[i + 1].Id)
             {
-                instantiatedCritter1.Traits.Add(traitList[i]);
-                instantiatedCritter2.Traits.Add(traitList[i]);
-                instantiatedCritter3.Traits.Add(traitList[i]);
+                instantiatedDrone1.AddTrait(traitList[i]);
+                instantiatedDrone2.AddTrait(traitList[i]);
+                instantiatedDrone3.AddTrait(traitList[i]);
             }
             //Only one has the trait, so 50%
             else
             {
                 if (Random.value > 0.5)
-                    instantiatedCritter1.Traits.Add(traitList[i]);
+                    instantiatedDrone1.AddTrait(traitList[i]);
                 if (Random.value > 0.5)
-                    instantiatedCritter2.Traits.Add(traitList[i]);
+                    instantiatedDrone2.AddTrait(traitList[i]);
                 if (Random.value > 0.5)
-                    instantiatedCritter3.Traits.Add(traitList[i]);
+                    instantiatedDrone3.AddTrait(traitList[i]);
             }
         }
         if (traitList.Count % 2 == 1)
         {
             //Check for last trait
             if (Random.value > 0.5)
-                instantiatedCritter1.Traits.Add(traitList[traitList.Count - 1]);
+                instantiatedDrone1.AddTrait(traitList[traitList.Count - 1]);
             if (Random.value > 0.5)
-                instantiatedCritter2.Traits.Add(traitList[traitList.Count - 1]);
+                instantiatedDrone2.AddTrait(traitList[traitList.Count - 1]);
             if (Random.value > 0.5)
-                instantiatedCritter3.Traits.Add(traitList[traitList.Count - 1]);
+                instantiatedDrone3.AddTrait(traitList[traitList.Count - 1]);
         }
 
-        instantiatedCritter1.transform.position = new Vector3(critter1.transform.position.x - 1, critter1.transform.position.y, 0);
-        instantiatedCritter2.transform.position = new Vector3(critter1.transform.position.x, critter1.transform.position.y, 0);
-        instantiatedCritter3.transform.position = new Vector3(critter1.transform.position.x + 1, critter1.transform.position.y, 0);
+        instantiatedDrone1.transform.position = new Vector3(Drone1.transform.position.x - 1, Drone1.transform.position.y, 0);
+        instantiatedDrone2.transform.position = new Vector3(Drone1.transform.position.x, Drone1.transform.position.y, 0);
+        instantiatedDrone3.transform.position = new Vector3(Drone1.transform.position.x + 1, Drone1.transform.position.y, 0);
 
-        Destroy(critter1.gameObject);
-        Destroy(critter2.gameObject);
+        Destroy(Drone1.gameObject);
+        Destroy(Drone2.gameObject);
     }
 }
