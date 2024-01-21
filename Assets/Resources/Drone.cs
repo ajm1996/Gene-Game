@@ -75,7 +75,7 @@ public class Drone : MonoBehaviour
                 MoveTo(closestEnemy);
             }
         }
-        else hideHealthbar(); //TODO: move this to game script once there is an initiate combat method
+        else hideHealthbar(); //TODO: move this to game script once there is an end combat method
     }
 
      void FixedUpdate() {
