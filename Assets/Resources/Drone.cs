@@ -9,11 +9,14 @@ public class Drone : MonoBehaviour
     public int currentHealth;
     public int damage;
     public int speed;
+    public int AttackSpeed; //in seconds
+    public float AttackDistance;
     public Color color;
 
     private Game game;
     private List<Trait> traits = new List<Trait>();
     private Vector2 moveTarget;
+    private float timeOfLastAttack = Mathf.NegativeInfinity;
 
     [SerializeField] Healthbar healthbar;
 
@@ -59,7 +62,12 @@ public class Drone : MonoBehaviour
                 }
             }
 
-            moveTo(closestEnemy);
+            MoveTo(closestEnemy);
+
+            Debug.Log(closestDistance);
+            if (closestDistance <= AttackDistance) {
+                Attack(closestEnemy);
+            }
         }
     }
 
@@ -70,12 +78,20 @@ public class Drone : MonoBehaviour
         }
     }
 
-    public void moveTo(Vector2 target) {
+    public void MoveTo(Vector2 target) {
         moveTarget = target;
     }
 
-    public void moveTo(GameObject g) {
+    public void MoveTo(GameObject g) {
         moveTarget = g.transform.position;
+    }
+
+    public void Attack(GameObject enemy) {
+
+        if (Time.time - timeOfLastAttack >= AttackSpeed) {
+            enemy.GetComponent<Drone>().DealDamage(damage);
+            timeOfLastAttack = Time.time;
+        }
     }
 
 
@@ -96,7 +112,7 @@ public class Drone : MonoBehaviour
         return traits;
     }
 
-    public void TakeDamage(int damageAmount)
+    public void DealDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
         healthbar.UpdateHealthbar(currentHealth, maxHealth);

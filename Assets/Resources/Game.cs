@@ -15,10 +15,6 @@ public class Game : MonoBehaviour
     {
         //temp enemy spawn for testing
         SpawnEnemy();
-
-        GameObject enemy = Instantiate(enemyObject);
-        
-        //TODO: set enemy traits and stats
     }
 
     // Update is called once per frame
