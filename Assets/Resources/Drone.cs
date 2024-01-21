@@ -11,7 +11,9 @@ public class Drone : MonoBehaviour
     public int speed;
     public Color color;
 
+    private Game game;
     private List<Trait> traits = new List<Trait>();
+    private Vector2 moveTarget;
 
     [SerializeField] Healthbar healthbar;
 
@@ -23,6 +25,8 @@ public class Drone : MonoBehaviour
         //initialize healthbar and update it to full
         healthbar = GetComponentInChildren<Healthbar>();
         healthbar.UpdateHealthbar(currentHealth, maxHealth);
+
+        game = Camera.main.GetComponent<Game>();
     }
 
     void Update()
@@ -32,7 +36,48 @@ public class Drone : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = traits[traits.Count - 1].Color;
         }
+
+
+        //if enemies exist, set the moveTarget with MoveTo
+        if (game.livingEnemies.Count > 0) {
+            
+            GameObject closestEnemy = null;
+            float closestDistance = Mathf.Infinity;
+
+            foreach (GameObject g in game.livingEnemies) {
+
+                if (closestEnemy == null) {
+                    closestEnemy = g;
+                    closestDistance = Vector2.Distance(g.transform.position, transform.position);
+                    continue;
+                }
+
+                float currentDsitance =  Vector2.Distance(g.transform.position, transform.position);
+                if (closestDistance > currentDsitance) {
+                    closestEnemy = g;
+                    closestDistance = currentDsitance;
+                }
+            }
+
+            moveTo(closestEnemy);
+        }
     }
+
+     void FixedUpdate() {
+
+        if(moveTarget != null) {
+            transform.position = Vector2.MoveTowards(transform.position, moveTarget, speed * Time.deltaTime);
+        }
+    }
+
+    public void moveTo(Vector2 target) {
+        moveTarget = target;
+    }
+
+    public void moveTo(GameObject g) {
+        moveTarget = g.transform.position;
+    }
+
 
     public void AddTrait(Trait trait)
     {
