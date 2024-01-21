@@ -44,6 +44,8 @@ public class Drone : MonoBehaviour
             GetComponent<SpriteRenderer>().color = traits[traits.Count - 1].Color;
         }
 
+        Debug.Log(moving);
+
 
         //if enemies exist, set the moveTarget with MoveTo
         if (attackList.Count > 0) {
@@ -51,6 +53,7 @@ public class Drone : MonoBehaviour
             GameObject closestEnemy = null;
             float closestDistance = Mathf.Infinity;
 
+            //find closest target in attacklist
             foreach (GameObject g in attackList) {
 
                 if (closestEnemy == null) {
@@ -66,10 +69,11 @@ public class Drone : MonoBehaviour
                 }
             }
 
-            MoveTo(closestEnemy);
-
             if (closestDistance <= AttackDistance) {
+                moving = false;
                 Attack(closestEnemy);
+            } else {
+                MoveTo(closestEnemy);
             }
         }
     }
@@ -77,7 +81,7 @@ public class Drone : MonoBehaviour
      void FixedUpdate() {
         //move towards target
         if(moving) {
-            if (Vector2.Distance(transform.position, moveTarget) < 0.1f) { //change value for more moving percision. value may be to low to stop moving when enemies are collidng into each other?
+            if (Vector2.Distance(transform.position, moveTarget) < 0.01f) { //change value for more or less moving percision
                 moving = false;
             } else {
                 transform.position = Vector2.MoveTowards(transform.position, moveTarget, speed * Time.deltaTime);
