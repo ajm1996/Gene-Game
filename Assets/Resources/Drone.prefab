@@ -202,12 +202,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa500dae3b59eee4ea0a69e6ce68b640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  currentHealth: 0
-  damage: 2
-  speed: 0
-  color: {r: 0, g: 0, b: 0, a: 0}
-  healthbar: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 100
+  damage: 5
+  speed: 5
+  color: {r: 1, g: 0, b: 0, a: 0}
+  healthbar: {fileID: 1233967103461217159}
 --- !u!61 &-5465589510707516361
 BoxCollider2D:
   m_ObjectHideFlags: 0

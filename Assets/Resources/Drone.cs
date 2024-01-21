@@ -19,14 +19,8 @@ public class Drone : MonoBehaviour
     {
         // Test: Add a default trait
         AddTrait(new TestTrait());
-    }
 
-    public void Initialize(int newHealth = 10, int newDamage = 5, int newSpeed = 5) {
-        maxHealth = newHealth;
-        currentHealth = newHealth;
-        damage = newDamage;
-        speed = newSpeed;
-
+        //initialize healthbar and update it to full
         healthbar = GetComponentInChildren<Healthbar>();
         healthbar.UpdateHealthbar(currentHealth, maxHealth);
     }
