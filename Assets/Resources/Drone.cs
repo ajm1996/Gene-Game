@@ -13,17 +13,16 @@ public class Drone : MonoBehaviour
 
     private List<Trait> traits = new List<Trait>();
 
+    [SerializeField] Healthbar healthbar;
+
     void Start()
     {
         // Test: Add a default trait
         AddTrait(new TestTrait());
-    }
 
-    public void Initialize(int newHealth = 10, int newDamage = 5, int newSpeed = 5) {
-        maxHealth = newHealth;
-        currentHealth = newHealth;
-        damage = newDamage;
-        speed = newSpeed;
+        //initialize healthbar and update it to full
+        healthbar = GetComponentInChildren<Healthbar>();
+        healthbar.UpdateHealthbar(currentHealth, maxHealth);
     }
 
     void Update()
@@ -55,12 +54,14 @@ public class Drone : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
+        healthbar.UpdateHealthbar(currentHealth, maxHealth);
         if (currentHealth <= 0) Die();
     }
 
     public void HealDamage(int healAmount)
     {
         currentHealth += healAmount;
+        healthbar.UpdateHealthbar(currentHealth, maxHealth);
         if (currentHealth > maxHealth) currentHealth = maxHealth;
     }
     

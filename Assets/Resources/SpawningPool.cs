@@ -41,18 +41,9 @@ public class SpawningPool : MonoBehaviour
         traitList.AddRange(Drone1.GetTraits());
         traitList.AddRange(Drone2.GetTraits());
 
-        Drone newDrone1 = defaultDrone;
-        Drone newDrone2 = defaultDrone;
-        Drone newDrone3 = defaultDrone;
-
-        var instantiatedDrone1 = Instantiate(newDrone1);
-        var instantiatedDrone2 = Instantiate(newDrone2);
-        var instantiatedDrone3 = Instantiate(newDrone3);
-
-
-        newDrone1.Initialize(1,2,3);
-        newDrone2.Initialize(1,2,3);
-        newDrone3.Initialize(1,2,3);
+        Drone instantiatedDrone1 = Instantiate(defaultDrone);
+        Drone instantiatedDrone2 = Instantiate(defaultDrone);
+        Drone instantiatedDrone3 = Instantiate(defaultDrone);
         
         traitList.Sort();
         Debug.Log(traitList.Count);

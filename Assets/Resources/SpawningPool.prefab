@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136c1e9f95416fd4a9e7d4700f06ef60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCritter: {fileID: -3159514381734830285, guid: 53b83a8279109824995d8e09fb52579f, type: 3}
+  defaultDrone: {fileID: -3159514381734830285, guid: 53b83a8279109824995d8e09fb52579f, type: 3}
 --- !u!50 &-8980393376969719345
 Rigidbody2D:
   serializedVersion: 4
