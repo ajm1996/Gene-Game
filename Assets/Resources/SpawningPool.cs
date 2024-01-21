@@ -48,6 +48,12 @@ public class SpawningPool : MonoBehaviour
         var instantiatedDrone1 = Instantiate(newDrone1);
         var instantiatedDrone2 = Instantiate(newDrone2);
         var instantiatedDrone3 = Instantiate(newDrone3);
+
+
+        newDrone1.Initialize(1,2,3);
+        newDrone2.Initialize(1,2,3);
+        newDrone3.Initialize(1,2,3);
+        
         traitList.Sort();
         Debug.Log(traitList.Count);
         for (int i = 0; i < traitList.Count - 1; i++)
