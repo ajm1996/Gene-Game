@@ -11,10 +11,13 @@ public class Game : MonoBehaviour
     public GameObject allyDroneObject;
     public List<GameObject> livingEnemies;
     public List<GameObject> livingAllies;
+    public GameObject breedingMenu;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Menu initialization
+        //breedingMenu = createBreedingMenu();
         //temp spawning for testing
         SpawnEnemy(new Vector2(2, 2));
         SpawnAlly(new Vector2(-4, -4));
@@ -23,8 +26,17 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (livingAllies.count <= 0) {
+            //TODO: Implement loss functionality
+        } else if (livingEnemies.count <= 0) {
+
+        }
         
     }
+
+    //GameObject createBreedingMenu() {
+        //Game
+    //}
 
     void SpawnEnemy(Vector2 pos) {
         GameObject enemy = spawnDrone(enemyDroneObject, pos);
@@ -42,4 +54,5 @@ public class Game : MonoBehaviour
         //TODO: add traits and stats
         return drone;
     }
+
 }
