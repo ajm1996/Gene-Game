@@ -148,7 +148,7 @@ public class Drone : MonoBehaviour
         
     // }
     
-     private void Die()
+    private void Die()
     {
         Destroy(gameObject);
         Game g = Camera.main.GetComponent<Game>();
