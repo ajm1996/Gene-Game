@@ -113,12 +113,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3983986096769079858}
   - component: {fileID: 7242625556172845483}
-  - component: {fileID: -3159514381734830285}
   - component: {fileID: 3371580178765769736}
   - component: {fileID: 7830080370015163883}
+  - component: {fileID: -6624723241443357369}
   m_Layer: 0
-  m_Name: Drone
-  m_TagString: Drone
+  m_Name: EnemyDrone
+  m_TagString: Critter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,26 +191,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3159514381734830285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3057617168636997549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa500dae3b59eee4ea0a69e6ce68b640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
-  damage: 5
-  speed: 5
-  AttackSpeed: 2
-  AttackDistance: 0.9
-  color: {r: 1, g: 0, b: 0, a: 0}
-  healthbar: {fileID: 1233967103461217159}
 --- !u!58 &3371580178765769736
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -273,6 +253,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6624723241443357369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3057617168636997549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7f7da9be667e54eb77e02b9ae1ad56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 100
+  damage: 5
+  speed: 5
+  AttackSpeed: 1
+  AttackDistance: 1.1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  attackList: []
+  healthbar: {fileID: 1233967103461217159}
 --- !u!1 &4907439880721480064
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.07041359, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.15181875, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -483,7 +484,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &8292052401922793100
 MonoBehaviour:

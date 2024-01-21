@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -5,20 +6,22 @@ using UnityEngine.UIElements;
 public class Drone : MonoBehaviour
 {
     // default values subject to change
-    public int maxHealth;
-    public int currentHealth;
-    public int damage;
-    public int speed;
-    public int AttackSpeed; //in seconds
-    public float AttackDistance;
-    public Color color;
+    [SerializeField] public  int maxHealth;
+    [SerializeField] public  int currentHealth;
+    [SerializeField] public  int damage;
+    [SerializeField] public  float speed;
+    [SerializeField] public  float AttackSpeed; //in seconds
+    [SerializeField] public  float AttackDistance;
+    [SerializeField] public  Color color;
 
-    private Game game;
+    public List<GameObject> attackList;
     private List<Trait> traits = new List<Trait>();
     private Vector2 moveTarget;
+    private bool moving;
     private float timeOfLastAttack = Mathf.NegativeInfinity;
 
-    [SerializeField] Healthbar healthbar;
+
+    [SerializeField] private Healthbar healthbar;
 
     void Start()
     {
@@ -28,11 +31,12 @@ public class Drone : MonoBehaviour
         //initialize healthbar and update it to full
         healthbar = GetComponentInChildren<Healthbar>();
         healthbar.UpdateHealthbar(currentHealth, maxHealth);
+        
+        moveTarget = transform.position;
 
-        game = Camera.main.GetComponent<Game>();
     }
 
-    void Update()
+    public virtual void Update()
     {
         // Update sprite color based on the last trait
         if (traits.Count > 0)
@@ -40,14 +44,17 @@ public class Drone : MonoBehaviour
             GetComponent<SpriteRenderer>().color = traits[traits.Count - 1].Color;
         }
 
+        Debug.Log(moving);
+
 
         //if enemies exist, set the moveTarget with MoveTo
-        if (game.livingEnemies.Count > 0) {
+        if (attackList.Count > 0) {
             
             GameObject closestEnemy = null;
             float closestDistance = Mathf.Infinity;
 
-            foreach (GameObject g in game.livingEnemies) {
+            //find closest target in attacklist
+            foreach (GameObject g in attackList) {
 
                 if (closestEnemy == null) {
                     closestEnemy = g;
@@ -62,27 +69,33 @@ public class Drone : MonoBehaviour
                 }
             }
 
-            MoveTo(closestEnemy);
-
-            Debug.Log(closestDistance);
             if (closestDistance <= AttackDistance) {
+                moving = false;
                 Attack(closestEnemy);
+            } else {
+                MoveTo(closestEnemy);
             }
         }
     }
 
      void FixedUpdate() {
-
-        if(moveTarget != null) {
-            transform.position = Vector2.MoveTowards(transform.position, moveTarget, speed * Time.deltaTime);
+        //move towards target
+        if(moving) {
+            if (Vector2.Distance(transform.position, moveTarget) < 0.01f) { //change value for more or less moving percision
+                moving = false;
+            } else {
+                transform.position = Vector2.MoveTowards(transform.position, moveTarget, speed * Time.deltaTime);
+            }
         }
     }
 
     public void MoveTo(Vector2 target) {
+        moving = true;
         moveTarget = target;
     }
 
     public void MoveTo(GameObject g) {
+        moving = true;
         moveTarget = g.transform.position;
     }
 
