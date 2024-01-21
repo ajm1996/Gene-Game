@@ -13,6 +13,8 @@ public class Drone : MonoBehaviour
 
     private List<Trait> traits = new List<Trait>();
 
+    [SerializeField] Healthbar healthbar;
+
     void Start()
     {
         // Test: Add a default trait
@@ -24,6 +26,9 @@ public class Drone : MonoBehaviour
         currentHealth = newHealth;
         damage = newDamage;
         speed = newSpeed;
+
+        healthbar = GetComponentInChildren<Healthbar>();
+        healthbar.UpdateHealthbar(currentHealth, maxHealth);
     }
 
     void Update()
@@ -55,12 +60,14 @@ public class Drone : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
+        healthbar.UpdateHealthbar(currentHealth, maxHealth);
         if (currentHealth <= 0) Die();
     }
 
     public void HealDamage(int healAmount)
     {
         currentHealth += healAmount;
+        healthbar.UpdateHealthbar(currentHealth, maxHealth);
         if (currentHealth > maxHealth) currentHealth = maxHealth;
     }
     
