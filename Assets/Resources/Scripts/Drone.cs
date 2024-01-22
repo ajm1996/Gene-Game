@@ -154,13 +154,14 @@ public class Drone : MonoBehaviour
     
     private void Die()
     {
-        Destroy(gameObject);
         Game g = Camera.main.GetComponent<Game>();
         g.livingAllies.Remove(gameObject);
         g.livingEnemies.Remove(gameObject);
 
         if (g.livingAllies.Count == 0) g.GameOver();
         if (g.livingEnemies.Count == 0) g.EndCombat();
+
+        Destroy(gameObject);
     }
 
     public void showHealthbar() {
