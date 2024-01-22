@@ -54,5 +54,4 @@ public class Game : MonoBehaviour
         //TODO: add traits and stats
         return drone;
     }
-
 }
