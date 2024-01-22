@@ -13,7 +13,6 @@ public class Game : MonoBehaviour
     public List<GameObject> livingAllies;
 
     public GameObject pauseMenu;
-    public GameObject breedingMenu;
     public GameObject traversalMenu;
     public GameObject gameOverMenu;
 
@@ -22,13 +21,15 @@ public class Game : MonoBehaviour
     private GameObject middleTile;
     private GameObject rightTile;
 
+    public GameObject breedingMenu;
+    public Drone breedingTarget1;
+    public Drone breedingTarget2;
+
     // Start is called before the first frame update
     void Start()
     {
         //spawn in 5 starter drones with default traits
-        Trait[] defaultTraits = {
-
-        };
+        List<Trait> defaultTraits = new List<Trait>();
         
         SpawnAlly(new Vector2(0, -1), defaultTraits);
         SpawnAlly(new Vector2(2, 0), defaultTraits);
@@ -49,26 +50,32 @@ public class Game : MonoBehaviour
     }
 
     public void StartCombat() {
+        //show healthbar
+        foreach(GameObject g in livingAllies) g.GetComponent<AllyDrone>().showHealthbar();
+
         //TODO: come up with some logic on where we spawn enemies and what traits we will spawn them with
     }
 
     public void EndCombat() {
+        //hide healthbar
+        foreach(GameObject g in livingAllies) g.GetComponent<AllyDrone>().hideHealthbar();
+
         //set to night
         GetComponent<DayNightCycleManager>().SetNight();
         OpenBreedingMenu();
     }
 
-    void SpawnEnemy(Vector2 pos, Trait[] traits) {
+    void SpawnEnemy(Vector2 pos, List<Trait> traits) {
         GameObject enemy = SpawnDrone(enemyDroneObject, pos, traits);
         livingEnemies.Add(enemy);
     }
 
-    void SpawnAlly(Vector2 pos, Trait[] traits) {
+    void SpawnAlly(Vector2 pos, List<Trait> traits) {
         GameObject ally = SpawnDrone(allyDroneObject, pos, traits);
         livingAllies.Add(ally);
     }
 
-    GameObject SpawnDrone(GameObject g, Vector2 pos, Trait[] traits) {
+    GameObject SpawnDrone(GameObject g, Vector2 pos, List<Trait> traits) {
         
         GameObject drone = Instantiate(g);
         drone.transform.position = pos;
@@ -94,17 +101,73 @@ public class Game : MonoBehaviour
         OpenTraversalMenu();
     }
 
+    public void Breed() {
+        breedingMenu.SetActive(false);
+
+        //move them away from the group first? to a dedicated breeding area
+        //smooching time
+        breedingTarget1.MoveTo(breedingTarget2.transform.position);
+        breedingTarget2.MoveTo(breedingTarget1.transform.position);
+        //TODO: add heart animation
+        //TODO: add wait time for full breeding animation to complete
+
+        //average of the parents positions (for birth positions)
+        Vector2 averagePos = (breedingTarget1.transform.position + breedingTarget2.transform.position) / 2f;
+
+        List<Trait> traitList1 = breedingTarget1.GetTraits();
+        List<Trait> traitList2 = breedingTarget2.GetTraits();
+        List<Trait> sharedList = new List<Trait>();
+
+        //find traits in common and remove them into their own list
+        foreach(Trait t in traitList1) {
+            if (traitList2.Contains(t)) {
+                sharedList.Add(t);
+                traitList1.Remove(t);
+                traitList2.Remove(t);
+            }
+        }
+
+        //create 3 baby drones
+        for (int i = 0; i < 3; i++) {
+            AllyDrone d = Instantiate(allyDroneObject).GetComponent<AllyDrone>();
+
+            //100% chance for common traits
+            d.AddTraits(sharedList); 
+
+            //50% chance for all uncommon traits
+            foreach (Trait t in traitList1) {
+                if(Random.value > 0.5f) d.AddTrait(t);
+            }
+            foreach (Trait t in traitList2) {
+                if(Random.value > 0.5f) d.AddTrait(t);
+            }
+
+            //set their birthing position and their move target
+            d.transform.position = new Vector2(averagePos.x - 2 + (i * 2), averagePos.y - 1);
+            d.MoveTo(new Vector2(0,0)); //TODO: move them back to the group after a small wait time
+        }
+
+        //reset breeding targets
+        breedingTarget1 = null;
+        breedingTarget2 = null;
+
+        OpenBreedingMenu();
+    }
+
     public void OpenTraversalMenu() {
         //TODO: traversal menu for choosing directions of travel with descriptions both specific and vague on what will be found there
 
-        leftTile = worldTiles[Random.Range(0, worldTiles.Length)];
-        middleTile = worldTiles[Random.Range(0, worldTiles.Length)];
-        rightTile = worldTiles[Random.Range(0, worldTiles.Length)];
+        if(worldTiles.Length != 0) {
+            leftTile = worldTiles[Random.Range(0, worldTiles.Length)];
+            middleTile = worldTiles[Random.Range(0, worldTiles.Length)];
+            rightTile = worldTiles[Random.Range(0, worldTiles.Length)];
+        }
+        else Debug.Log("worldTiles array is empty, no world tiles to choose from");
+        
 
         traversalMenu.SetActive(true);
     }
     public void CloseTraversalMenu() {
-        //TODO: traversal menu for choosing directions of travel with descriptions both specific and vague on what will be found there
         traversalMenu.SetActive(false);
     }
 
