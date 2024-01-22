@@ -26,12 +26,13 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (livingAllies.count <= 0) {
             //TODO: Implement loss functionality
         } else if (livingEnemies.count <= 0) {
 
         }
-        
+        */
     }
 
     //GameObject createBreedingMenu() {
