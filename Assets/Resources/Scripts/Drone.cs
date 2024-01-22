@@ -46,8 +46,6 @@ public class Drone : MonoBehaviour
 
         //if enemies exist, set the moveTarget with MoveTo
         if (attackList.Count > 0) {
-
-            showHealthbar(); //TODO: move this to game script once there is an initiate combat method
             
             GameObject closestEnemy = null;
             float closestDistance = Mathf.Infinity;
@@ -75,7 +73,6 @@ public class Drone : MonoBehaviour
                 MoveTo(closestEnemy);
             }
         }
-        else hideHealthbar(); //TODO: move this to game script once there is an end combat method
     }
 
      void FixedUpdate() {

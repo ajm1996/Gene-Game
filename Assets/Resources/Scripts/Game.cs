@@ -50,10 +50,16 @@ public class Game : MonoBehaviour
     }
 
     public void StartCombat() {
+        //show healthbar
+        foreach(GameObject g in livingAllies) g.GetComponent<AllyDrone>().showHealthbar();
+
         //TODO: come up with some logic on where we spawn enemies and what traits we will spawn them with
     }
 
     public void EndCombat() {
+        //hide healthbar
+        foreach(GameObject g in livingAllies) g.GetComponent<AllyDrone>().hideHealthbar();
+
         //set to night
         GetComponent<DayNightCycleManager>().SetNight();
         OpenBreedingMenu();
