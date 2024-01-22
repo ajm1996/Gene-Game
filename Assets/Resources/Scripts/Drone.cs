@@ -115,7 +115,7 @@ public class Drone : MonoBehaviour
         // calculateColor();
     }
 
-    public void AddTraits(Trait[] traits) {
+    public void AddTraits(List<Trait> traits) {
         foreach (Trait trait in traits) AddTrait(trait);
     }
 
