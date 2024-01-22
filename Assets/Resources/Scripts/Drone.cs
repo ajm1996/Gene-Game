@@ -44,11 +44,10 @@ public class Drone : MonoBehaviour
             GetComponent<SpriteRenderer>().color = traits[traits.Count - 1].Color;
         }
 
-        Debug.Log(moving);
-
-
         //if enemies exist, set the moveTarget with MoveTo
         if (attackList.Count > 0) {
+
+            showHealthbar(); //TODO: move this to game script once there is an initiate combat method
             
             GameObject closestEnemy = null;
             float closestDistance = Mathf.Infinity;
@@ -76,6 +75,7 @@ public class Drone : MonoBehaviour
                 MoveTo(closestEnemy);
             }
         }
+        else hideHealthbar(); //TODO: move this to game script once there is an end combat method
     }
 
      void FixedUpdate() {
@@ -151,5 +151,16 @@ public class Drone : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+        Game g = Camera.main.GetComponent<Game>();
+        g.livingAllies.Remove(gameObject);
+        g.livingEnemies.Remove(gameObject);
+    }
+
+    public void showHealthbar() {
+        healthbar.gameObject.SetActive(true);
+    }
+
+    public void hideHealthbar() {
+        healthbar.gameObject.SetActive(false);
     }
 }
