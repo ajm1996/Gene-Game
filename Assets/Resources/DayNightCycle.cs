@@ -1,48 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+/*
+    This script will turn on and off the Global Light object with a small transition between the Day cycle and night cycle.
+    For this script to work, attach it to the main camera and set the globalLight to the Global Light 2D game object
+*/
+
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
+using System.Collections;
+using UnityEngine.Rendering.Universal;
 
-public class DayNightCycle : MonoBehaviour
+public class DayNightCycleManager : MonoBehaviour
 {
-    private float TIMECYCLELENGTH = 3f;
-    public float DayTimeLength = 3f;
-    public Drone defaultDrone;
+    public Light2D globalLight; // Global Light 2D object in scene
+    public float dayDuration = 30.0f; // Duration of day/night in seconds
+    public float transitionDuration = 4.0f; // Duration of the light transition in seconds
+    private float timer = 0.0f;
+    private bool isDaytime = true;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //Simply assigning colors to the 4 starting Drones at the start
-        var playerDrones = GameObject.FindGameObjectsWithTag("Drone");
-        for(int i = 0; i < playerDrones.Length; i++)
+        if (globalLight == null)
         {
-            if (UnityEngine.Random.Range(0, 2) < 1)
-            {
-                playerDrones[i].GetComponent<Drone>().AddTrait(new TestTrait());
-            }
-            else
-            {
-                playerDrones[i].GetComponent<Drone>().AddTrait(new TestTrait());
-            }
+            Debug.LogError("Global light not assigned in DayNightCycleManager.");
+            return;
+        }
+        StartCoroutine(TransitionLight(isDaytime));
+    }
+
+    void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer > dayDuration)
+        {
+            timer = 0.0f;
+            isDaytime = !isDaytime;
+            StartCoroutine(TransitionLight(isDaytime));
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator TransitionLight(bool isDay)
     {
-        if (DayTimeLength > 0f)
+        float targetIntensity = isDay ? .85f : 0.1f;
+        float startIntensity = globalLight.intensity;
+        float time = 0;
+
+        while (time < transitionDuration)
         {
-            DayTimeLength -= Time.deltaTime;
+            globalLight.intensity = Mathf.Lerp(startIntensity, targetIntensity, time / transitionDuration);
+            time += Time.deltaTime;
+            yield return null; // Wait until next frame
         }
-        else
-        {
-            var spawningPools = GameObject.FindGameObjectsWithTag("SpawningPool");
-;           for(int i = 0; i < spawningPools.Length; i++)
-            {
-                spawningPools[i].GetComponent<SpawningPool>().BreedTime();
-            }
-            DayTimeLength = TIMECYCLELENGTH;
-        }
+
+        globalLight.intensity = targetIntensity; // Ensure the final intensity is set
     }
 }
