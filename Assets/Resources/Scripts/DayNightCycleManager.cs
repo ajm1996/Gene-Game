@@ -10,13 +10,11 @@ using UnityEngine.Rendering.Universal;
 public class DayNightCycleManager : MonoBehaviour
 {
     public Light2D globalLight; // Global Light 2D object in scene
-    public float dayDuration = 30.0f; // Duration of day/night in seconds
     public float transitionDuration = 4.0f; // Duration of the light transition in seconds
 
     public float dayFinalIntensity = 0.85f; // Final intenisty value for daytime for the global light
     public float nightFinalIntensity = 0.1f; // Final intenisty value for nighttime for the global light
-    private float timer = 0.0f;
-    private bool isDaytime = true;
+    public bool isDaytime = true;
 
     void Start()
     {
@@ -25,19 +23,18 @@ public class DayNightCycleManager : MonoBehaviour
             Debug.LogError("Global light not assigned in DayNightCycleManager.");
             return;
         }
-        // set to day
+        // Initialize global light to day 
         globalLight.intensity = dayFinalIntensity; 
     }
 
-    void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer > dayDuration)
-        {
-            timer = 0.0f;
-            isDaytime = !isDaytime;
-            StartCoroutine(TransitionLight(isDaytime));
-        }
+    public void SetDay() {
+        isDaytime = true;
+        StartCoroutine(TransitionLight(isDaytime));
+    }
+
+    public void SetNight() {
+        isDaytime = false;
+        StartCoroutine(TransitionLight(isDaytime));
     }
 
     IEnumerator TransitionLight(bool isDay)
