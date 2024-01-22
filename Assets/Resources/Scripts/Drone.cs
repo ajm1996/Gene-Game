@@ -23,7 +23,7 @@ public class Drone : MonoBehaviour
 
     [SerializeField] private Healthbar healthbar;
 
-    void Start()
+    public virtual void Start()
     {
         // Test: Add a default trait
         AddTrait(new TestTrait());

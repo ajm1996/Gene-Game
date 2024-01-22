@@ -157,9 +157,13 @@ public class Game : MonoBehaviour
     public void OpenTraversalMenu() {
         //TODO: traversal menu for choosing directions of travel with descriptions both specific and vague on what will be found there
 
-        leftTile = worldTiles[Random.Range(0, worldTiles.Length)];
-        middleTile = worldTiles[Random.Range(0, worldTiles.Length)];
-        rightTile = worldTiles[Random.Range(0, worldTiles.Length)];
+        if(worldTiles.Length != 0) {
+            leftTile = worldTiles[Random.Range(0, worldTiles.Length)];
+            middleTile = worldTiles[Random.Range(0, worldTiles.Length)];
+            rightTile = worldTiles[Random.Range(0, worldTiles.Length)];
+        }
+        else Debug.Log("worldTiles array is empty, no world tiles to choose from");
+        
 
         traversalMenu.SetActive(true);
     }
