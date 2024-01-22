@@ -12,6 +12,9 @@ public class DayNightCycleManager : MonoBehaviour
     public Light2D globalLight; // Global Light 2D object in scene
     public float dayDuration = 30.0f; // Duration of day/night in seconds
     public float transitionDuration = 4.0f; // Duration of the light transition in seconds
+
+    public float dayFinalIntensity = 0.85f; // Final intenisty value for daytime for the global light
+    public float nightFinalIntensity = 0.1f; // Final intenisty value for nighttime for the global light
     private float timer = 0.0f;
     private bool isDaytime = true;
 
@@ -22,7 +25,8 @@ public class DayNightCycleManager : MonoBehaviour
             Debug.LogError("Global light not assigned in DayNightCycleManager.");
             return;
         }
-        StartCoroutine(TransitionLight(isDaytime));
+        // set to day
+        globalLight.intensity = dayFinalIntensity; 
     }
 
     void Update()
@@ -38,7 +42,7 @@ public class DayNightCycleManager : MonoBehaviour
 
     IEnumerator TransitionLight(bool isDay)
     {
-        float targetIntensity = isDay ? .85f : 0.1f;
+        float targetIntensity = isDay ? dayFinalIntensity : nightFinalIntensity;
         float startIntensity = globalLight.intensity;
         float time = 0;
 
