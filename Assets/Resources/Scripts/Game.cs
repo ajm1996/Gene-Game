@@ -11,14 +11,21 @@ public class Game : MonoBehaviour
     public GameObject allyDroneObject;
     public List<GameObject> livingEnemies;
     public List<GameObject> livingAllies;
+
+    //Using int counters for count so we don't have to use loops to calculate it
+    public int livingEnemiesCount;
+    public int livingAlliesCount; 
+
     public GameObject breedingMenu;
 
     // Start is called before the first frame update
     void Start()
     {
         //Menu initialization
-        //breedingMenu = createBreedingMenu();
+        breedingMenu = createBreedingMenu();
         //temp spawning for testing
+        livingAlliesCount = 0;
+        livingEnemiesCount = 0;
         SpawnEnemy(new Vector2(2, 2));
         SpawnAlly(new Vector2(-4, -4));
     }
@@ -26,27 +33,28 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (livingAllies.count <= 0) {
+        if (livingAlliesCount <= 0) {
             //TODO: Implement loss functionality
-        } else if (livingEnemies.count <= 0) {
-
+        } else if (livingEnemiesCount <= 0) {
+            breedingMenu.SetActive = true;
         }
-        */
     }
 
-    //GameObject createBreedingMenu() {
-        //Game
-    //}
+    GameObject createBreedingMenu() {
+        GameObject menu = Instantiate(breedingMenu);
+        return menu;
+    }
 
     void SpawnEnemy(Vector2 pos) {
         GameObject enemy = spawnDrone(enemyDroneObject, pos);
         livingEnemies.Add(enemy);
+        livingEnemiesCount++;
     }
 
     void SpawnAlly(Vector2 pos) {
         GameObject ally = spawnDrone(allyDroneObject, pos);
         livingAllies.Add(ally);
+        livingAlliesCount++;
     }
 
     GameObject spawnDrone(GameObject g, Vector2 pos) {
