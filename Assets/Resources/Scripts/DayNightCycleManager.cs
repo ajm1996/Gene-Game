@@ -11,7 +11,6 @@ public class DayNightCycleManager : MonoBehaviour
 {
     public Light2D globalLight; // Global Light 2D object in scene
     public float transitionDuration = 4.0f; // Duration of the light transition in seconds
-
     public float dayFinalIntensity = 0.85f; // Final intenisty value for daytime for the global light
     public float nightFinalIntensity = 0.1f; // Final intenisty value for nighttime for the global light
     public bool isDaytime = true;
