@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Gene Game.sln"
+    "dotnet.defaultSolution": "Gene-Game.sln"
 }
