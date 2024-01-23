@@ -40,6 +40,7 @@ public class Game : MonoBehaviour
         SpawnAlly(new Vector2(4, 1), defaultTraits);
         SpawnAlly(new Vector2(-4, 1), defaultTraits);
 
+        //TODO: Change this back to OpenTraversalMenu when breeding menu is ready
         OpenBreedingMenu();
     }
 
