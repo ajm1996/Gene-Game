@@ -22,6 +22,7 @@ public class Game : MonoBehaviour
     private GameObject rightTile;
 
     public GameObject breedingMenu;
+    public GameObject breedingMenuPrefab;
     public Drone breedingTarget1;
     public Drone breedingTarget2;
 
@@ -89,11 +90,11 @@ public class Game : MonoBehaviour
     }
 
     public void InstantiateMenus() {
-        Instantiate(breedingMenu);
+        breedingMenu = Instantiate(breedingMenuPrefab);
         breedingMenu.transform.position = Camera.main.transform.position;
         breedingMenu.SetActive(false);
 
-        //TODO: Instantiate traversal and camera menus
+        //TODO: Instantiate traversal menu
     }
 
     public void TogglePauseMenu() {
@@ -103,6 +104,7 @@ public class Game : MonoBehaviour
     }
     public void OpenBreedingMenu()
     {
+        Debug.Log("open breeding menu");
         breedingMenu.transform.position = Camera.main.transform.position;
         breedingMenu.SetActive(true);
     }
@@ -115,6 +117,7 @@ public class Game : MonoBehaviour
     }
 
     public void Breed() {
+        Debug.Log("setting breeding menu false");
         breedingMenu.SetActive(false);
 
         //move them away from the group first? to a dedicated breeding area
