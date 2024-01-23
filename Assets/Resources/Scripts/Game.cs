@@ -28,6 +28,9 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Instantiate and hide menus for later use
+        InstantiateMenus();
+
         //spawn in 5 starter drones with default traits
         List<Trait> defaultTraits = new List<Trait>();
         
@@ -37,7 +40,7 @@ public class Game : MonoBehaviour
         SpawnAlly(new Vector2(4, 1), defaultTraits);
         SpawnAlly(new Vector2(-4, 1), defaultTraits);
 
-        OpenTraversalMenu();
+        OpenBreedingMenu();
     }
 
     // Update is called once per frame
@@ -84,6 +87,14 @@ public class Game : MonoBehaviour
         return drone;
     }
 
+    public void InstantiateMenus() {
+        Instantiate(breedingMenu);
+        breedingMenu.transform.position = Camera.main.transform.position;
+        breedingMenu.SetActive(false);
+
+        //TODO: Instantiate traversal and camera menus
+    }
+
     public void TogglePauseMenu() {
         //TODO: make pause menu with settings, quit, restart, etc
         if (!pauseMenu.activeSelf) pauseMenu.SetActive(true);
@@ -91,6 +102,7 @@ public class Game : MonoBehaviour
     }
     public void OpenBreedingMenu()
     {
+        breedingMenu.transform.position = Camera.main.transform.position;
         breedingMenu.SetActive(true);
     }
 
