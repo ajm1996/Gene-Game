@@ -130,7 +130,10 @@ public class Drone : MonoBehaviour
     {
         currentHealth -= damageAmount;
         healthbar.UpdateHealthbar(currentHealth, maxHealth);
-        if (currentHealth <= 0) Die();
+        if (currentHealth <= 0) {
+            Die();
+            CheckForWinCondition();
+        }
     }
 
     public void HealDamage(int healAmount)
@@ -149,16 +152,19 @@ public class Drone : MonoBehaviour
         
     // }
     
-    private void Die()
+    public void Die()
     {
         Game g = Camera.main.GetComponent<Game>();
         g.livingAllies.Remove(gameObject);
         g.livingEnemies.Remove(gameObject);
 
+        Destroy(gameObject);
+    }
+
+    public void CheckForWinCondition() {
+        Game g = Camera.main.GetComponent<Game>();
         if (g.livingAllies.Count == 0) g.GameOver();
         if (g.livingEnemies.Count == 0) g.EndCombat();
-
-        Destroy(gameObject);
     }
 
     public void showHealthbar() {

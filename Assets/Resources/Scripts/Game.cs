@@ -23,8 +23,6 @@ public class Game : MonoBehaviour
 
     public GameObject breedingMenu;
     public GameObject breedingMenuPrefab;
-    public Drone breedingTarget1;
-    public Drone breedingTarget2;
 
     // Start is called before the first frame update
     void Start()
@@ -83,9 +81,10 @@ public class Game : MonoBehaviour
         livingEnemies.Add(enemy);
     }
 
-    void SpawnAlly(Vector2 pos, List<Trait> traits) {
+    public GameObject SpawnAlly(Vector2 pos, List<Trait> traits) {
         GameObject ally = SpawnDrone(allyDroneObject, pos, traits);
         livingAllies.Add(ally);
+        return ally;
     }
 
     GameObject SpawnDrone(GameObject g, Vector2 pos, List<Trait> traits) {
@@ -122,60 +121,6 @@ public class Game : MonoBehaviour
         breedingMenu.SetActive(false);
         GetComponent<DayNightCycleManager>().SetDay();
         OpenTraversalMenu();
-    }
-
-    public void Breed() {
-        Debug.Log("setting breeding menu false");
-        breedingMenu.SetActive(false);
-
-        //move them away from the group first? to a dedicated breeding area
-        //smooching time
-        breedingTarget1.MoveTo(breedingTarget2.transform.position);
-        breedingTarget2.MoveTo(breedingTarget1.transform.position);
-        //TODO: add heart animation
-        //TODO: add wait time for full breeding animation to complete
-
-        //average of the parents positions (for birth positions)
-        Vector2 averagePos = (breedingTarget1.transform.position + breedingTarget2.transform.position) / 2f;
-
-        List<Trait> traitList1 = breedingTarget1.GetTraits();
-        List<Trait> traitList2 = breedingTarget2.GetTraits();
-        List<Trait> sharedList = new List<Trait>();
-
-        //find traits in common and remove them into their own list
-        foreach(Trait t in traitList1) {
-            if (traitList2.Contains(t)) {
-                sharedList.Add(t);
-                traitList1.Remove(t);
-                traitList2.Remove(t);
-            }
-        }
-
-        //create 3 baby drones
-        for (int i = 0; i < 3; i++) {
-            AllyDrone d = Instantiate(allyDroneObject).GetComponent<AllyDrone>();
-
-            //100% chance for common traits
-            d.AddTraits(sharedList); 
-
-            //50% chance for all uncommon traits
-            foreach (Trait t in traitList1) {
-                if(Random.value > 0.5f) d.AddTrait(t);
-            }
-            foreach (Trait t in traitList2) {
-                if(Random.value > 0.5f) d.AddTrait(t);
-            }
-
-            //set their birthing position and their move target
-            d.transform.position = new Vector2(averagePos.x - 2 + (i * 2), averagePos.y - 1);
-            d.MoveTo(new Vector2(0,0)); //TODO: move them back to the group after a small wait time
-        }
-
-        //reset breeding targets
-        breedingTarget1 = null;
-        breedingTarget2 = null;
-
-        OpenBreedingMenu();
     }
 
     public void OpenTraversalMenu() {
