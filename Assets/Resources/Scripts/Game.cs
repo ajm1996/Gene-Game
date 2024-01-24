@@ -9,8 +9,8 @@ public class Game : MonoBehaviour
     //TODO: enemy prefab is set to drone prefab until a default enemy prefab is made
     public GameObject enemyDroneObject;
     public GameObject allyDroneObject;
-    public List<GameObject> livingEnemies;
-    public List<GameObject> livingAllies;
+    public List<Drone> livingEnemies;
+    public List<Drone> livingAllies;
 
     public GameObject pauseMenu;
     public GameObject traversalMenu;
@@ -62,34 +62,36 @@ public class Game : MonoBehaviour
 
     public void StartCombat() {
         //show healthbar
-        foreach(GameObject g in livingAllies) g.GetComponent<AllyDrone>().showHealthbar();
+        foreach(Drone g in livingAllies) g.GetComponent<AllyDrone>().showHealthbar();
 
         //TODO: come up with some logic on where we spawn enemies and what traits we will spawn them with
     }
 
     public void EndCombat() {
         //hide healthbar
-        foreach(GameObject g in livingAllies) g.GetComponent<AllyDrone>().hideHealthbar();
+        foreach(Drone g in livingAllies) g.GetComponent<AllyDrone>().hideHealthbar();
 
         //set to night
         GetComponent<DayNightCycleManager>().SetNight();
         OpenBreedingMenu();
     }
 
-    void SpawnEnemy(Vector2 pos, List<Trait> traits) {
-        GameObject enemy = SpawnDrone(enemyDroneObject, pos, traits);
+    Drone SpawnEnemy(Vector2 pos, List<Trait> traits) {
+        Drone enemy = SpawnDrone(enemyDroneObject, pos, traits);
         livingEnemies.Add(enemy);
+
+        return enemy;
     }
 
-    public GameObject SpawnAlly(Vector2 pos, List<Trait> traits) {
-        GameObject ally = SpawnDrone(allyDroneObject, pos, traits);
+    public Drone SpawnAlly(Vector2 pos, List<Trait> traits) {
+        Drone ally = SpawnDrone(allyDroneObject, pos, traits);
         livingAllies.Add(ally);
         return ally;
     }
 
-    GameObject SpawnDrone(GameObject g, Vector2 pos, List<Trait> traits) {
+    Drone SpawnDrone(GameObject g, Vector2 pos, List<Trait> traits) {
         
-        GameObject drone = Instantiate(g);
+        Drone drone = Instantiate(g).GetComponent<Drone>();
         drone.transform.position = pos;
         drone.GetComponent<Drone>().AddTraits(traits);
         

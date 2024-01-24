@@ -155,8 +155,8 @@ public class Drone : MonoBehaviour
     public void Die()
     {
         Game g = Camera.main.GetComponent<Game>();
-        g.livingAllies.Remove(gameObject);
-        g.livingEnemies.Remove(gameObject);
+        g.livingAllies.Remove(gameObject.GetComponent<Drone>());
+        g.livingEnemies.Remove(gameObject.GetComponent<Drone>());
 
         Destroy(gameObject);
     }

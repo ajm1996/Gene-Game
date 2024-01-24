@@ -28,7 +28,7 @@ public class BreedingMenu : MonoBehaviour
     void Start()
     {
         g = Camera.main.GetComponent<Game>();
-        List<GameObject> droneList = g.livingAllies;
+        List<Drone> droneList = g.livingAllies;
         SetupDroneScrollView(droneList);
     }
 
@@ -82,8 +82,8 @@ public class BreedingMenu : MonoBehaviour
             }
 
             //set their birthing position and their move target
-            GameObject newSpawn  = g.SpawnAlly(new Vector2(averagePos.x - 2 + (i * 2), averagePos.y - 1), traitList);
-            newSpawn.GetComponent<Drone>().MoveTo(new Vector2(0,0)); //TODO: move them back to the group after a small wait time
+            Drone newSpawn  = g.SpawnAlly(new Vector2(averagePos.x - 2 + (i * 2), averagePos.y - 1), traitList);
+            newSpawn.MoveTo(new Vector2(0,0)); //TODO: move them back to the group after a small wait time
         }
 
         //kill breeding targets
@@ -192,13 +192,13 @@ public class BreedingMenu : MonoBehaviour
     }
 
 
-    void SetupDroneScrollView(List<GameObject> livingAllies) {
+    void SetupDroneScrollView(List<Drone> livingAllies) {
         for (var i = 0; i < livingAllies.Count; i++) {
             AddDroneToScrollView(livingAllies[i]);
         }
     }
 
-    void AddDroneToScrollView(GameObject allyDrone) {
+    void AddDroneToScrollView(Drone allyDrone) {
         GameObject drone = Instantiate(droneImage);
         drone.transform.SetParent(scrollMenuContent.transform, false);
         drone.GetComponent<DroneImage>().AddLinkedDrone(allyDrone);

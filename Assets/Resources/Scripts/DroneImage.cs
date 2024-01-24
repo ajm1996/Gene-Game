@@ -5,12 +5,12 @@ using UnityEngine;
 public class DroneImage : MonoBehaviour
 {
 
-    public GameObject linkedDrone;
+    public Drone linkedDrone;
     public bool wasSelected;
     
     // Start is called before the first frame update
 
-    public void AddLinkedDrone(GameObject drone) {
+    public void AddLinkedDrone(Drone drone) {
         linkedDrone = drone;
     }
 
