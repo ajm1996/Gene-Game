@@ -60,9 +60,9 @@ public class BreedingMenu : MonoBehaviour
             return;
         }
 
-        GameObject.Find("Main Camera").GetComponent<Game>().breedingTarget1 = firstSelectedDrone.GetComponent<DroneImage>().linkedDrone.GetComponent<Drone>();
-        GameObject.Find("Main Camera").GetComponent<Game>().breedingTarget2 = secondSelectedDrone.GetComponent<DroneImage>().linkedDrone.GetComponent<Drone>();
-        GameObject.Find("Main Camera").GetComponent<Game>().Breed();
+        Drone breedingTarget1 = firstSelectedDrone.GetComponent<DroneImage>().linkedDrone.GetComponent<Drone>();
+        Drone breedingTarget2 = secondSelectedDrone.GetComponent<DroneImage>().linkedDrone.GetComponent<Drone>();
+        GameObject.Find("Main Camera").GetComponent<Game>().Breed(breedingTarget1, breedingTarget2);
     }
 
     public void SelectOne() {

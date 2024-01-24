@@ -23,8 +23,6 @@ public class Game : MonoBehaviour
 
     public GameObject breedingMenu;
     public GameObject breedingMenuPrefab;
-    public Drone breedingTarget1;
-    public Drone breedingTarget2;
 
     // Start is called before the first frame update
     void Start()
@@ -116,7 +114,7 @@ public class Game : MonoBehaviour
         OpenTraversalMenu();
     }
 
-    public void Breed() {
+    public void Breed(Drone breedingTarget1, Drone breedingTarget2) {
         Debug.Log("setting breeding menu false");
         breedingMenu.SetActive(false);
 
