@@ -38,6 +38,7 @@ public class Game : MonoBehaviour
         SpawnAlly(new Vector2(-2, 0), defaultTraits);
         SpawnAlly(new Vector2(4, 1), defaultTraits);
         SpawnAlly(new Vector2(-4, 1), defaultTraits);
+
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
@@ -79,6 +80,12 @@ public class Game : MonoBehaviour
     Drone SpawnEnemy(Vector2 pos, List<Trait> traits) {
         Drone enemy = SpawnDrone(enemyDroneObject, pos, traits);
         livingEnemies.Add(enemy);
+
+        //update everyone's attack lists to fight each other
+        foreach (Drone ally in livingAllies) {
+            ally.attackList.Add(enemy);
+            enemy.attackList.Add(ally);
+        }
 
         return enemy;
     }
