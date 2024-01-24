@@ -14,13 +14,16 @@ public class BreedingMenu : MonoBehaviour
     private bool selectTwoSelecting;
     public GameObject firstSelectedDrone;
     public GameObject secondSelectedDrone;
+    private Game gameComponent;
 
     // Start is called before the first frame update
     void Start()
     {
         //Get list of living ally drones and populate scroll view with it
-        List<GameObject> droneList = GameObject.Find("Main Camera").GetComponent<Game>().livingAllies;
-        SetupDroneScrollView(droneList);
+        if (gameComponent != null)
+        {
+            SetupDroneScrollView(gameComponent.livingAllies);
+        }
 
         //Preset select buttons to not be selecting
         DisableSelection();
@@ -50,6 +53,24 @@ public class BreedingMenu : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        // Cache the Game component reference
+        GameObject mainCamera = GameObject.Find("Main Camera");
+        if (mainCamera != null)
+        {
+            gameComponent = mainCamera.GetComponent<Game>();
+            if (gameComponent == null)
+            {
+                Debug.LogError("Game component not found on Main Camera.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Main Camera not found.");
+        }
+    }
+
     public void Breed() {
 
         DisableSelection();
@@ -62,7 +83,7 @@ public class BreedingMenu : MonoBehaviour
 
         Drone breedingTarget1 = firstSelectedDrone.GetComponent<DroneImage>().linkedDrone.GetComponent<Drone>();
         Drone breedingTarget2 = secondSelectedDrone.GetComponent<DroneImage>().linkedDrone.GetComponent<Drone>();
-        GameObject.Find("Main Camera").GetComponent<Game>().Breed(breedingTarget1, breedingTarget2);
+        gameComponent.Breed(breedingTarget1, breedingTarget2);
     }
 
     public void SelectOne() {
