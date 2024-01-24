@@ -22,12 +22,14 @@ public class Game : MonoBehaviour
     private GameObject rightTile;
 
     public GameObject breedingMenu;
-    public Drone breedingTarget1;
-    public Drone breedingTarget2;
+    public GameObject breedingMenuPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Instantiate and hide menus for later use
+        InstantiateMenus();
+
         //spawn in 5 starter drones with default traits
         List<Trait> defaultTraits = new List<Trait>();
         
@@ -37,7 +39,8 @@ public class Game : MonoBehaviour
         SpawnAlly(new Vector2(4, 1), defaultTraits);
         SpawnAlly(new Vector2(-4, 1), defaultTraits);
 
-        OpenTraversalMenu();
+        //TODO: Change this back to OpenTraversalMenu when breeding menu is ready
+        OpenBreedingMenu();
     }
 
     // Update is called once per frame
@@ -84,6 +87,14 @@ public class Game : MonoBehaviour
         return drone;
     }
 
+    public void InstantiateMenus() {
+        breedingMenu = Instantiate(breedingMenuPrefab);
+        breedingMenu.transform.position = Camera.main.transform.position;
+        breedingMenu.SetActive(false);
+
+        //TODO: Instantiate traversal menu
+    }
+
     public void TogglePauseMenu() {
         //TODO: make pause menu with settings, quit, restart, etc
         if (!pauseMenu.activeSelf) pauseMenu.SetActive(true);
@@ -91,6 +102,8 @@ public class Game : MonoBehaviour
     }
     public void OpenBreedingMenu()
     {
+        Debug.Log("open breeding menu");
+        breedingMenu.transform.position = Camera.main.transform.position;
         breedingMenu.SetActive(true);
     }
 
@@ -101,7 +114,8 @@ public class Game : MonoBehaviour
         OpenTraversalMenu();
     }
 
-    public void Breed() {
+    public void Breed(Drone breedingTarget1, Drone breedingTarget2) {
+        Debug.Log("setting breeding menu false");
         breedingMenu.SetActive(false);
 
         //move them away from the group first? to a dedicated breeding area
