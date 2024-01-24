@@ -116,7 +116,7 @@ public class Game : MonoBehaviour
         breedingMenu.SetActive(true);
     }
 
-    public void CloseBreedingMenu()
+    public void EndBreedingPhase()
     {
         breedingMenu.SetActive(false);
         GetComponent<DayNightCycleManager>().SetDay();
@@ -124,6 +124,7 @@ public class Game : MonoBehaviour
     }
 
     public void OpenTraversalMenu() {
+        if (traversalMenu == null) return;
         //TODO: traversal menu for choosing directions of travel with descriptions both specific and vague on what will be found there
 
         if(worldTiles.Length != 0) {

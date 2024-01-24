@@ -16,6 +16,8 @@ public class BreedingMenu : MonoBehaviour
     public GameObject selectTwoContent;
     public GameObject droneOneTraitScrollMenuContent;
     public GameObject droneTwoTraitScrollMenuContent;
+    public GameObject deselectButton1;
+    public GameObject deselectButton2;
     public GameObject traitText;
 
     private Game g;
@@ -37,6 +39,8 @@ public class BreedingMenu : MonoBehaviour
     }
 
     public void Breed() {
+        if (breedingTarget1 == null || breedingTarget2 == null) return;
+
         transform.GetChild(0).gameObject.SetActive(false);
 
         //move them away from the group first? to a dedicated breeding area
@@ -86,9 +90,13 @@ public class BreedingMenu : MonoBehaviour
         breedingTarget1.Die();
         breedingTarget2.Die();
 
-        //destroy buttons for those breeders
-        Destroy(selectOneContent.transform.GetChild(0).gameObject);
-        Destroy(selectTwoContent.transform.GetChild(0).gameObject);
+        //destroy image for those breeders
+        Destroy(selectOneContent.transform.GetChild(1).gameObject);
+        Destroy(selectTwoContent.transform.GetChild(1).gameObject);
+
+        //hide deselect buttons
+        deselectButton1.SetActive(false);
+        deselectButton2.SetActive(false);
 
         //destroy all trait text
         var droneOneTraitsList = droneOneTraitScrollMenuContent.GetComponentsInChildren<TextMeshProUGUI>();
@@ -151,6 +159,10 @@ public class BreedingMenu : MonoBehaviour
         //set proper breeding target
         if (isOne)  breedingTarget1 = d;
         else breedingTarget2 = d;
+
+        //show deselect buttons
+        if (isOne) deselectButton1.SetActive(true);
+        else deselectButton2.SetActive(true);
     }
 
     public void DeselectBreedingContent(bool isOne) {
@@ -158,7 +170,7 @@ public class BreedingMenu : MonoBehaviour
         GameObject target = isOne ? selectOneContent : selectTwoContent;
 
         //send back to scroll menu
-        target.transform.GetChild(0).SetParent(scrollMenuContent.transform, false);
+        target.transform.GetChild(1).SetParent(scrollMenuContent.transform, false);
 
         //delete appropriate trait list
         var targetTraitsList = isOne ? 
@@ -173,6 +185,10 @@ public class BreedingMenu : MonoBehaviour
         //reset breeding target values
         if (isOne) breedingTarget1 = null;
         else breedingTarget2 = null;
+
+        //hide deselect buttons
+        if (isOne) deselectButton1.SetActive(false);
+        else deselectButton2.SetActive(false);
     }
 
 
@@ -187,5 +203,9 @@ public class BreedingMenu : MonoBehaviour
         drone.transform.SetParent(scrollMenuContent.transform, false);
         drone.GetComponent<DroneImage>().AddLinkedDrone(allyDrone);
         allyDroneList.Add(drone);
+    }
+
+    public void EndBreedingPhase() {
+        g.EndBreedingPhase();
     }
 }
