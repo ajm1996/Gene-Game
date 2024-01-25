@@ -161,7 +161,6 @@ public class BreedingMenu : MonoBehaviour
         } else { //we're in the inspector menu
             SelectInspectorContent(droneImage);
         }
-
     }
 
     public void SelectBreedingContent(bool isOne, DroneImage droneImage) {
