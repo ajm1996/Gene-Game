@@ -9,8 +9,8 @@ public class Game : MonoBehaviour
     //TODO: enemy prefab is set to drone prefab until a default enemy prefab is made
     public GameObject enemyDroneObject;
     public GameObject allyDroneObject;
-    public List<GameObject> livingEnemies;
-    public List<GameObject> livingAllies;
+    public List<Drone> livingEnemies;
+    public List<Drone> livingAllies;
 
     public GameObject pauseMenu;
     public GameObject traversalMenu;
@@ -24,11 +24,17 @@ public class Game : MonoBehaviour
     public GameObject breedingMenu;
     public GameObject breedingMenuPrefab;
 
+    public int foodCount;
+    public int breedingCost;
+
     // Start is called before the first frame update
     void Start()
     {
         //Instantiate and hide menus for later use
         InstantiateMenus();
+
+        livingAllies = new List<Drone>();
+        livingEnemies = new List<Drone>();
 
         //spawn in 5 starter drones with default traits
         List<Trait> defaultTraits = new List<Trait>();
@@ -38,9 +44,17 @@ public class Game : MonoBehaviour
         SpawnAlly(new Vector2(-2, 0), defaultTraits);
         SpawnAlly(new Vector2(4, 1), defaultTraits);
         SpawnAlly(new Vector2(-4, 1), defaultTraits);
+        
+        SpawnEnemy(new Vector2(-4, 1), defaultTraits);
 
-        //TODO: Change this back to OpenTraversalMenu when breeding menu is ready
-        OpenBreedingMenu();
+        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
     }
 
     // Update is called once per frame
@@ -54,33 +68,42 @@ public class Game : MonoBehaviour
 
     public void StartCombat() {
         //show healthbar
-        foreach(GameObject g in livingAllies) g.GetComponent<AllyDrone>().showHealthbar();
+        foreach(Drone g in livingAllies) g.GetComponent<AllyDrone>().showHealthbar();
 
         //TODO: come up with some logic on where we spawn enemies and what traits we will spawn them with
     }
 
     public void EndCombat() {
         //hide healthbar
-        foreach(GameObject g in livingAllies) g.GetComponent<AllyDrone>().hideHealthbar();
+        foreach(Drone g in livingAllies) g.GetComponent<AllyDrone>().hideHealthbar();
 
         //set to night
         GetComponent<DayNightCycleManager>().SetNight();
         OpenBreedingMenu();
     }
 
-    void SpawnEnemy(Vector2 pos, List<Trait> traits) {
-        GameObject enemy = SpawnDrone(enemyDroneObject, pos, traits);
+    Drone SpawnEnemy(Vector2 pos, List<Trait> traits) {
+        Drone enemy = SpawnDrone(enemyDroneObject, pos, traits);
         livingEnemies.Add(enemy);
+
+        //update everyone's attack lists to fight each other
+        foreach (Drone ally in livingAllies) {
+            ally.attackList.Add(enemy);
+            enemy.attackList.Add(ally);
+        }
+
+        return enemy;
     }
 
-    void SpawnAlly(Vector2 pos, List<Trait> traits) {
-        GameObject ally = SpawnDrone(allyDroneObject, pos, traits);
+    public Drone SpawnAlly(Vector2 pos, List<Trait> traits) {
+        Drone ally = SpawnDrone(allyDroneObject, pos, traits);
         livingAllies.Add(ally);
+        return ally;
     }
 
-    GameObject SpawnDrone(GameObject g, Vector2 pos, List<Trait> traits) {
+    Drone SpawnDrone(GameObject g, Vector2 pos, List<Trait> traits) {
         
-        GameObject drone = Instantiate(g);
+        Drone drone = Instantiate(g).GetComponent<Drone>();
         drone.transform.position = pos;
         drone.GetComponent<Drone>().AddTraits(traits);
         
@@ -104,71 +127,21 @@ public class Game : MonoBehaviour
     {
         Debug.Log("open breeding menu");
         breedingMenu.transform.position = Camera.main.transform.position;
+        breedingMenu.GetComponent<BreedingMenu>().Init();
         breedingMenu.SetActive(true);
     }
 
-    public void CloseBreedingMenu()
+    public void EndBreedingPhase()
     {
         breedingMenu.SetActive(false);
+        foodCount = 0;
         GetComponent<DayNightCycleManager>().SetDay();
         OpenTraversalMenu();
-    }
-
-    public void Breed(Drone breedingTarget1, Drone breedingTarget2) {
-        Debug.Log("setting breeding menu false");
-        breedingMenu.SetActive(false);
-
-        //move them away from the group first? to a dedicated breeding area
-        //smooching time
-        breedingTarget1.MoveTo(breedingTarget2.transform.position);
-        breedingTarget2.MoveTo(breedingTarget1.transform.position);
-        //TODO: add heart animation
-        //TODO: add wait time for full breeding animation to complete
-
-        //average of the parents positions (for birth positions)
-        Vector2 averagePos = (breedingTarget1.transform.position + breedingTarget2.transform.position) / 2f;
-
-        List<Trait> traitList1 = breedingTarget1.GetTraits();
-        List<Trait> traitList2 = breedingTarget2.GetTraits();
-        List<Trait> sharedList = new List<Trait>();
-
-        //find traits in common and remove them into their own list
-        foreach(Trait t in traitList1) {
-            if (traitList2.Contains(t)) {
-                sharedList.Add(t);
-                traitList1.Remove(t);
-                traitList2.Remove(t);
-            }
-        }
-
-        //create 3 baby drones
-        for (int i = 0; i < 3; i++) {
-            AllyDrone d = Instantiate(allyDroneObject).GetComponent<AllyDrone>();
-
-            //100% chance for common traits
-            d.AddTraits(sharedList); 
-
-            //50% chance for all uncommon traits
-            foreach (Trait t in traitList1) {
-                if(Random.value > 0.5f) d.AddTrait(t);
-            }
-            foreach (Trait t in traitList2) {
-                if(Random.value > 0.5f) d.AddTrait(t);
-            }
-
-            //set their birthing position and their move target
-            d.transform.position = new Vector2(averagePos.x - 2 + (i * 2), averagePos.y - 1);
-            d.MoveTo(new Vector2(0,0)); //TODO: move them back to the group after a small wait time
-        }
-
-        //reset breeding targets
-        breedingTarget1 = null;
-        breedingTarget2 = null;
-
-        OpenBreedingMenu();
+        SpawnEnemy(Vector2.zero, new List<Trait>()); //TODO: REMOVE! for testing purposes
     }
 
     public void OpenTraversalMenu() {
+        if (traversalMenu == null) return;
         //TODO: traversal menu for choosing directions of travel with descriptions both specific and vague on what will be found there
 
         if(worldTiles.Length != 0) {

@@ -329,8 +329,8 @@ MonoBehaviour:
   worldTiles: []
   breedingMenu: {fileID: 0}
   breedingMenuPrefab: {fileID: 1185763526631766321, guid: aa9741e15267b1f4a966927724f88578, type: 3}
-  breedingTarget1: {fileID: 0}
-  breedingTarget2: {fileID: 0}
+  foodCount: 50
+  breedingCost: 10
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
