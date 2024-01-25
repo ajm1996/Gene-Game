@@ -36,6 +36,11 @@ public class BreedingMenu : MonoBehaviour
     public GameObject inspectorSubMenu;
     public Button breedingButton;
 
+    public TextMeshProUGUI foodCostLabel;
+    
+    public TextMeshProUGUI foodAmountLabel1;
+    public TextMeshProUGUI foodAmountLabel2;
+
 
     // Start is called before the first frame update
     public void Start()
@@ -48,6 +53,9 @@ public class BreedingMenu : MonoBehaviour
         List<Drone> droneList = g.livingAllies;
         SetupDroneScrollView(droneList);
         breedingButton.interactable = true;
+        foodAmountLabel1.text = "Food: " + g.foodCount;
+        foodAmountLabel2.text = "Food: " + g.foodCount;
+        foodCostLabel.text = "" + g.breedingCost;
     }
 
     // Update is called once per frame
@@ -62,6 +70,12 @@ public class BreedingMenu : MonoBehaviour
             Debug.Log("breeding method entered without enough food!");
             return;
         }
+
+        //subtract the food cost and update the labels
+        g.foodCount -= g.breedingCost;
+        
+        foodAmountLabel1.text = "Food: " + g.foodCount;
+        foodAmountLabel2.text = "Food: " + g.foodCount;
             
 
         transform.GetChild(0).gameObject.SetActive(false);
@@ -74,7 +88,7 @@ public class BreedingMenu : MonoBehaviour
         //TODO: add wait time for full breeding animation to complete
 
         //average of the parents positions (for birth positions)
-        Vector2 averagePos = (breedingTarget1.transform.position + breedingTarget2.transform.position) / 2f;
+        Vector2 averagePos = (breedingTarget1.linkedDrone.transform.position + breedingTarget2.linkedDrone.transform.position) / 2f;
 
         List<Trait> traitList1 = breedingTarget1.linkedDrone.GetTraits();
         List<Trait> traitList2 = breedingTarget2.linkedDrone.GetTraits();
@@ -106,10 +120,14 @@ public class BreedingMenu : MonoBehaviour
 
             //set their birthing position and their move target
             Drone newSpawn  = g.SpawnAlly(new Vector2(averagePos.x - 2 + (i * 2), averagePos.y - 1), traitList);
-            newSpawn.MoveTo(new Vector2(0,0)); //TODO: move them back to the group after a small wait time
+            //newSpawn.MoveTo(new Vector2(0,0)); //TODO: move them back to the group after a small wait time
             DroneImage di = AddDroneToScrollView(newSpawn);
             di.isChild = true;
         }
+
+        //remove them from the tracked list because will die
+        droneImages.Remove(breedingTarget1);
+        droneImages.Remove(breedingTarget2);
 
         //kill breeding targets
         breedingTarget1.linkedDrone.Die();
@@ -142,6 +160,8 @@ public class BreedingMenu : MonoBehaviour
     }
 
     public void SelectDrone(DroneImage droneImage) {
+
+        if (breedingTarget1 == droneImage || breedingTarget2 == droneImage || inspectorSelection == droneImage) return; //make them unclickable when already selected
 
         if(breedingSubMenu.activeSelf) { //check which menu state we're in
             //if square 1 is empty, fill it
@@ -188,6 +208,8 @@ public class BreedingMenu : MonoBehaviour
         if (isOne)  breedingTarget1 = droneImage;
         else breedingTarget2 = droneImage;
 
+        if (breedingTarget1 != null && breedingTarget2 != null && g.foodCount >= g.breedingCost) breedingButton.interactable = true;
+
         //show deselect buttons
         if (isOne) deselectButton1.SetActive(true);
         else deselectButton2.SetActive(true);
@@ -213,10 +235,7 @@ public class BreedingMenu : MonoBehaviour
         if (isOne) breedingTarget1 = null;
         else breedingTarget2 = null;
 
-        //make button interactable if both targets aren't children
-        if ((breedingTarget1 == null || !breedingTarget1.isChild) && (breedingTarget2 == null || !breedingTarget2.isChild)) {
-            breedingButton.interactable = true;
-        }
+        breedingButton.interactable = false;
 
         //hide deselect buttons
         if (isOne) deselectButton1.SetActive(false);
@@ -293,6 +312,8 @@ public class BreedingMenu : MonoBehaviour
                 Debug.Log("disable interactable");
             }
         }
+
+        if(inspectorSelection != null && inspectorSelection.isChild) DeselectInspectorContent(true);
 
         if (inspectorSelection != null) {
             SelectBreedingContent(true, inspectorSelection);
