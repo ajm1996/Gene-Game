@@ -24,11 +24,17 @@ public class Game : MonoBehaviour
     public GameObject breedingMenu;
     public GameObject breedingMenuPrefab;
 
+    public int foodCount;
+    public int breedingCost;
+
     // Start is called before the first frame update
     void Start()
     {
         //Instantiate and hide menus for later use
         InstantiateMenus();
+
+        livingAllies = new List<Drone>();
+        livingEnemies = new List<Drone>();
 
         //spawn in 5 starter drones with default traits
         List<Trait> defaultTraits = new List<Trait>();
@@ -38,6 +44,8 @@ public class Game : MonoBehaviour
         SpawnAlly(new Vector2(-2, 0), defaultTraits);
         SpawnAlly(new Vector2(4, 1), defaultTraits);
         SpawnAlly(new Vector2(-4, 1), defaultTraits);
+        
+        SpawnEnemy(new Vector2(-4, 1), defaultTraits);
 
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
@@ -47,9 +55,6 @@ public class Game : MonoBehaviour
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-
-        //TODO: Change this back to OpenTraversalMenu when breeding menu is ready
-        OpenBreedingMenu();
     }
 
     // Update is called once per frame
@@ -122,14 +127,17 @@ public class Game : MonoBehaviour
     {
         Debug.Log("open breeding menu");
         breedingMenu.transform.position = Camera.main.transform.position;
+        breedingMenu.GetComponent<BreedingMenu>().Init();
         breedingMenu.SetActive(true);
     }
 
     public void EndBreedingPhase()
     {
         breedingMenu.SetActive(false);
+        foodCount = 0;
         GetComponent<DayNightCycleManager>().SetDay();
         OpenTraversalMenu();
+        SpawnEnemy(Vector2.zero, new List<Trait>()); //TODO: REMOVE! for testing purposes
     }
 
     public void OpenTraversalMenu() {

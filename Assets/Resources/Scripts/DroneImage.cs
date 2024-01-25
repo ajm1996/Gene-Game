@@ -7,6 +7,7 @@ public class DroneImage : MonoBehaviour
 
     public Drone linkedDrone;
     public bool wasSelected;
+    public bool isChild = false;
     
     // Start is called before the first frame update
 
@@ -15,6 +16,6 @@ public class DroneImage : MonoBehaviour
     }
 
     public void WasSelected() {
-        transform.root.GetComponent<BreedingMenu>().SelectToBreed(this);
+        transform.root.GetComponent<BreedingMenu>().SelectDrone(this);
     }
 }
