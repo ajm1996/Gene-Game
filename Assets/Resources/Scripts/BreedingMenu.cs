@@ -30,12 +30,31 @@ public class BreedingMenu : MonoBehaviour
         g = Camera.main.GetComponent<Game>();
         List<Drone> droneList = g.livingAllies;
         SetupDroneScrollView(droneList);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    void Awake()
+    {
+        // Cache the Game component reference
+        GameObject mainCamera = GameObject.Find("Main Camera");
+        if (mainCamera != null)
+        {
+            gameComponent = mainCamera.GetComponent<Game>();
+            if (gameComponent == null)
+            {
+                Debug.LogError("Game component not found on Main Camera.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Main Camera not found.");
+        }
     }
 
     public void Breed() {
@@ -116,6 +135,7 @@ public class BreedingMenu : MonoBehaviour
         breedingTarget2 = null;
 
         transform.GetChild(0).gameObject.SetActive(true);
+
     }
 
     public void SelectToBreed(DroneImage droneImage) {
