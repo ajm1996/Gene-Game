@@ -701,9 +701,9 @@ MonoBehaviour:
   breedingSelectTwoContent: {fileID: 6957039136399891675}
   inspectorSelectOneContent: {fileID: 2116052317900486031}
   inspectorSelection: {fileID: 0}
-  breedingOneTraitScrollMenuContent: {fileID: 7200765442580591418}
-  breedingTwoTraitScrollMenuContent: {fileID: 7838911396670127728}
-  inspectorTraitScrollMenuContent: {fileID: 2184099870603368202}
+  breedingOneTraitScrollMenuContent: {fileID: 538704102264994759}
+  breedingTwoTraitScrollMenuContent: {fileID: 1092606748636563333}
+  inspectorTraitScrollMenuContent: {fileID: 6272785773707051641}
   deselectButton1: {fileID: 3496439615259712983}
   deselectButton2: {fileID: 2488261477646747061}
   inspectorDeselectButton: {fileID: 4260421569330480554}
@@ -4528,7 +4528,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3257390787344544725}
   m_HandleRect: {fileID: 797633537674985357}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 11
   m_OnValueChanged:
