@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Drone : MonoBehaviour
+public abstract class Drone : MonoBehaviour
 {
     // default values subject to change
     [SerializeField] public  int maxHealth;
@@ -14,7 +14,7 @@ public class Drone : MonoBehaviour
     [SerializeField] public  float AttackDistance;
     [SerializeField] public  Color color;
 
-    public List<GameObject> attackList;
+    public List<Drone> attackList;
     private List<Trait> traits = new List<Trait>();
     private Vector2 moveTarget;
     private bool moving;
@@ -47,21 +47,21 @@ public class Drone : MonoBehaviour
         //if enemies exist, set the moveTarget with MoveTo
         if (attackList.Count > 0) {
             
-            GameObject closestEnemy = null;
+            Drone closestEnemy = null;
             float closestDistance = Mathf.Infinity;
 
             //find closest target in attacklist
-            foreach (GameObject g in attackList) {
+            foreach (Drone d in attackList) {
 
                 if (closestEnemy == null) {
-                    closestEnemy = g;
-                    closestDistance = Vector2.Distance(g.transform.position, transform.position);
+                    closestEnemy = d;
+                    closestDistance = Vector2.Distance(d.transform.position, transform.position);
                     continue;
                 }
 
-                float currentDsitance =  Vector2.Distance(g.transform.position, transform.position);
+                float currentDsitance =  Vector2.Distance(d.transform.position, transform.position);
                 if (closestDistance > currentDsitance) {
-                    closestEnemy = g;
+                    closestEnemy = d;
                     closestDistance = currentDsitance;
                 }
             }
@@ -91,15 +91,15 @@ public class Drone : MonoBehaviour
         moveTarget = target;
     }
 
-    public void MoveTo(GameObject g) {
+    public void MoveTo(Drone d) {
         moving = true;
-        moveTarget = g.transform.position;
+        moveTarget = d.transform.position;
     }
 
-    public void Attack(GameObject enemy) {
+    public void Attack(Drone enemy) {
 
         if (Time.time - timeOfLastAttack >= AttackSpeed) {
-            enemy.GetComponent<Drone>().DealDamage(damage);
+            enemy.GetComponent<Drone>().DealDamageCombat(damage);
             timeOfLastAttack = Time.time;
         }
     }
@@ -126,11 +126,14 @@ public class Drone : MonoBehaviour
         return traits;
     }
 
-    public void DealDamage(int damageAmount)
+    public void DealDamageCombat(int damageAmount)
     {
         currentHealth -= damageAmount;
         healthbar.UpdateHealthbar(currentHealth, maxHealth);
-        if (currentHealth <= 0) Die();
+        if (currentHealth <= 0) {
+            Die();
+            CheckForWinCondition();
+        }
     }
 
     public void HealDamage(int healAmount)
@@ -149,16 +152,12 @@ public class Drone : MonoBehaviour
         
     // }
     
-    private void Die()
-    {
-        Game g = Camera.main.GetComponent<Game>();
-        g.livingAllies.Remove(gameObject);
-        g.livingEnemies.Remove(gameObject);
+    public abstract void Die();
 
+    public void CheckForWinCondition() {
+        Game g = Camera.main.GetComponent<Game>();
         if (g.livingAllies.Count == 0) g.GameOver();
         if (g.livingEnemies.Count == 0) g.EndCombat();
-
-        Destroy(gameObject);
     }
 
     public void showHealthbar() {
