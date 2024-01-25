@@ -47,6 +47,7 @@ public class BreedingMenu : MonoBehaviour
         g = Camera.main.GetComponent<Game>();
         List<Drone> droneList = g.livingAllies;
         SetupDroneScrollView(droneList);
+
     }
 
     // Update is called once per frame
@@ -137,6 +138,7 @@ public class BreedingMenu : MonoBehaviour
         CloseBreedingSubMenu();
     }
 
+
     public void SelectToBreed(DroneImage droneImage) {
 
         if(breedingSubMenu.activeSelf) { //check which menu state we're in
@@ -178,7 +180,6 @@ public class BreedingMenu : MonoBehaviour
             //show deselect button
             inspectorDeselectButton.SetActive(true);
         }
-
     }
 
     public void SelectBreedingContent(bool isOne, DroneImage droneImage) {
