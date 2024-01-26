@@ -169,25 +169,22 @@ public class Game : MonoBehaviour
         switch (choice) {
             case 1:
             //travel diaganol left
-            TransitionCamera(leftTile);
+            GetComponent<CameraZoom>().StartMoveCamera(transform.position, transform.position + new Vector3(-24, 0, -10));
             break;
 
             case 2:
-            TransitionCamera(middleTile);
             //travel straight
+            GetComponent<CameraZoom>().StartMoveCamera(transform.position, transform.position + new Vector3(0, 16, -10));
             break;
 
             case 3:
-            TransitionCamera(rightTile);
             //travel diaganol right
+            GetComponent<CameraZoom>().StartMoveCamera(transform.position, transform.position + new Vector3(24, 0, -10));
             break;
         }
 
         //add wait time before combat begins?
         StartCombat();
-    }
-    void TransitionCamera (GameObject tile) {
-        //add some sort of logic to zoom out camera and zoom in out tile.transform.position
     }
 
     public void GameOver()
