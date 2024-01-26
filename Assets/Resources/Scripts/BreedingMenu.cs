@@ -145,8 +145,7 @@ public class BreedingMenu : MonoBehaviour
 
             //set their birthing position and their move target
             Drone newSpawn  = g.SpawnAlly(new Vector2(averagePos.x - 2 + (i * 2), averagePos.y - 1), traitList);
-            newSpawn.MoveTo(new Vector2(-4 + i, 0)); //TODO: FIX BUG THAT PREVENTS MOVEMENT and move them back to a proper waiting position
-            Debug.Log(newSpawn.moveTarget); //move target resets to their current position after this point
+            newSpawn.MoveTo(new Vector2(-4 + i, 0));
 
             DroneImage di = AddDroneToScrollView(newSpawn);
             di.isChild = true;

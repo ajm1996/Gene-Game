@@ -45,6 +45,9 @@ public class AllyDrone : Drone
                 bm.StartBreeding();
             }
             breedingTarget = null;
+        } 
+        else if (collision.gameObject.GetComponent<AllyDrone>() != null) {
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());  //ignore friendly collisions
         }
     }
 

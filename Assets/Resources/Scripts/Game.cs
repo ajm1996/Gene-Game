@@ -36,12 +36,17 @@ public class Game : MonoBehaviour
 
         //spawn in 5 starter drones with default traits
         List<Trait> defaultTraits = new List<Trait>();
-        
+        SpawnAlly(new Vector2(-4, 1), defaultTraits);
+        SpawnAlly(new Vector2(-2, 0), defaultTraits);
         SpawnAlly(new Vector2(0, -1), defaultTraits);
         SpawnAlly(new Vector2(2, 0), defaultTraits);
-        SpawnAlly(new Vector2(-2, 0), defaultTraits);
         SpawnAlly(new Vector2(4, 1), defaultTraits);
-        SpawnAlly(new Vector2(-4, 1), defaultTraits);
+
+        // SpawnAlly(new Vector2(-4, 3), defaultTraits);
+        // SpawnAlly(new Vector2(-2, 2), defaultTraits);
+        // SpawnAlly(new Vector2(0, -3), defaultTraits);
+        // SpawnAlly(new Vector2(2, 2), defaultTraits);
+        // SpawnAlly(new Vector2(4, 3), defaultTraits);
         
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
@@ -64,16 +69,27 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void StartCombat() {
+    public IEnumerator StartCombat(int direction, int enemyCount, List<Trait> traits) {
         //show healthbar
         foreach(Drone g in livingAllies) g.GetComponent<AllyDrone>().showHealthbar();
 
-        //TESTING
-        List<Trait> defaultTraits = new List<Trait>();
-        SpawnEnemy(transform.position, defaultTraits);
-        SpawnEnemy(transform.position + new Vector3(1, 1), defaultTraits);
-        SpawnEnemy(transform.position + new Vector3(-1, -1), defaultTraits);
-        SpawnEnemy(transform.position + new Vector3(2, 2), defaultTraits);
+        Vector3 spawnPoint = new Vector3();
+        switch (direction) {
+            case 0: 
+                spawnPoint = transform.position + new Vector3(-12.5f, 0);
+                break;
+            case 1: 
+                spawnPoint = transform.position + new Vector3(0, 8.5f);
+                break;
+            case 2: 
+                spawnPoint = transform.position + new Vector3(12.5f, 0);
+                break;
+        }
+        for (int i=0; i < enemyCount; i++) {
+            StartCoroutine(SpawnEnemy(transform.position, traits, spawnPoint));
+            yield return new WaitForSeconds(0.3f);
+        }
+        
 
         //TODO: come up with some logic on where we spawn enemies and what traits we will spawn them with
     }
@@ -87,17 +103,16 @@ public class Game : MonoBehaviour
         OpenBreedingMenu();
     }
 
-    Drone SpawnEnemy(Vector2 pos, List<Trait> traits) {
+    IEnumerator SpawnEnemy(Vector2 pos, List<Trait> traits, Vector2 spawnPoint) {
         Drone enemy = SpawnDrone(enemyDroneObject, pos, traits);
+        enemy.transform.position = spawnPoint;
         livingEnemies.Add(enemy);
 
         //update everyone's attack lists to fight each other
-        foreach (Drone ally in livingAllies) {
-            ally.attackList.Add(enemy);
-            enemy.attackList.Add(ally);
-        }
+        foreach (Drone ally in livingAllies) enemy.attackList.Add(ally);
 
-        return enemy;
+        yield return new WaitForSeconds(1);
+        foreach (Drone ally in livingAllies) ally.attackList.Add(enemy);    //wait 1 second for enemy to aggro allies
     }
 
     public Drone SpawnAlly(Vector2 pos, List<Trait> traits) {
@@ -150,7 +165,6 @@ public class Game : MonoBehaviour
         if (traversalMenu == null) return;
 
         //make a grid of randomly generate tiles surrounding the current tile
-        Debug.Log("reached");
         for (int i=0; i < 3; i++) {
             for (int j=0; j < 3; j++) {
                 if (i == 1 && j == 1) continue;
@@ -184,8 +198,53 @@ public class Game : MonoBehaviour
             GetComponent<CameraZoom>().StartMoveCamera(transform.position, transform.position + new Vector3(24, 0, -10));
             break;
         }
-
         CloseTraversalMenu();
+        StartCoroutine(MoveDronesToCombat(choice, transform.position));
+    }
+
+    public IEnumerator MoveDronesToCombat(int direction, Vector3 startPosition) {
+
+        for (int i=0; i < livingAllies.Count; i++) {
+
+            if (direction == 0) {
+                livingAllies[i].MoveToQueue(startPosition + new Vector3(-5.5f, 0));
+                livingAllies[i].MoveToQueue(startPosition + new Vector3(-17, 0));
+
+                int rowLimit = 7;
+                int row = (int) (livingAllies.Count - i - 1) / rowLimit;
+                Vector3 droneSlot = new Vector2(-19.5f - (1.5f * row), (1.5f * (i % rowLimit)) - ((Mathf.Min(rowLimit, livingAllies.Count) / 2) * 1.5f));
+                livingAllies[i].MoveToQueue(startPosition + droneSlot);
+
+                yield return new WaitForSeconds(0.2f);
+            }
+
+            if (direction == 1) {
+                livingAllies[i].MoveToQueue(startPosition + new Vector3(0, 4));
+                livingAllies[i].MoveToQueue(startPosition + new Vector3(0, 10));
+
+                int rowLimit = 9;
+                int row = (int) (livingAllies.Count - i - 1) / rowLimit;
+                Vector3 droneSlot = new Vector2((1.5f * (i % rowLimit)) - ((Mathf.Min(rowLimit, livingAllies.Count) / 2) * 1.5f), 12 + (1.5f * row));
+                livingAllies[i].MoveToQueue(startPosition + droneSlot);
+                
+                yield return new WaitForSeconds(0.2f);
+            }
+
+            if (direction == 2) {
+                livingAllies[i].MoveToQueue(startPosition + new Vector3(5.5f, 0));
+                livingAllies[i].MoveToQueue(startPosition + new Vector3(17, 0));
+
+                int rowLimit = 7;
+                int row = (int) (livingAllies.Count - i - 1) / rowLimit;
+                Vector3 droneSlot = new Vector2(19.5f + (1.5f * row), (1.5f * (i % rowLimit)) - ((Mathf.Min(rowLimit, livingAllies.Count) / 2) * 1.5f));
+                livingAllies[i].MoveToQueue(startPosition + droneSlot);
+
+                yield return new WaitForSeconds(0.2f);
+            }
+        }
+
+        yield return new WaitForSeconds(6);
+        StartCoroutine(StartCombat(direction, 5, new List<Trait>())); //TODO: change default values
     }
 
     public void GameOver()
