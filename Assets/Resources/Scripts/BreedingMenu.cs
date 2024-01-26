@@ -309,7 +309,6 @@ public class BreedingMenu : MonoBehaviour
             
             if (di.isChild) {
                 di.GetComponent<Button>().interactable = false;
-                Debug.Log("disable interactable");
             }
         }
 
@@ -333,7 +332,6 @@ public class BreedingMenu : MonoBehaviour
         foreach(DroneImage di in droneImages) {
             if (di.isChild) {
                 di.GetComponent<Button>().interactable = true;
-                Debug.Log("make interactable");
             }
         }
 

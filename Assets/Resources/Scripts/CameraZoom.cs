@@ -41,6 +41,8 @@ public class CameraZoom : MonoBehaviour
 
             yield return null;
         }
+
+        Camera.main.GetComponent<Game>().StartCombat();
     }
 
     //example of how to use from the game script

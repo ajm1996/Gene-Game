@@ -68,6 +68,13 @@ public class Game : MonoBehaviour
         //show healthbar
         foreach(Drone g in livingAllies) g.GetComponent<AllyDrone>().showHealthbar();
 
+        //TESTING
+        List<Trait> defaultTraits = new List<Trait>();
+        SpawnEnemy(transform.position, defaultTraits);
+        SpawnEnemy(transform.position + new Vector3(1, 1), defaultTraits);
+        SpawnEnemy(transform.position + new Vector3(-1, -1), defaultTraits);
+        SpawnEnemy(transform.position + new Vector3(2, 2), defaultTraits);
+
         //TODO: come up with some logic on where we spawn enemies and what traits we will spawn them with
     }
 
@@ -137,17 +144,17 @@ public class Game : MonoBehaviour
         foodCount = 0;
         GetComponent<DayNightCycleManager>().SetDay();
         OpenTraversalMenu();
-        SpawnEnemy(Vector2.zero, new List<Trait>()); //TODO: REMOVE! for testing purposes
     }
 
     public void OpenTraversalMenu() {
         if (traversalMenu == null) return;
 
         //make a grid of randomly generate tiles surrounding the current tile
+        Debug.Log("reached");
         for (int i=0; i < 3; i++) {
             for (int j=0; j < 3; j++) {
                 if (i == 1 && j == 1) continue;
-                Instantiate(worldTiles[Random.Range(0, worldTiles.Length)]).transform.position += new Vector3(-24 + 24 * i, -16 + 16 * j);
+                Instantiate(worldTiles[Random.Range(0, worldTiles.Length)]).transform.position = transform.position + new Vector3(-24 + 24 * i, -16 + 16 * j);
             }
         }
         
@@ -162,24 +169,23 @@ public class Game : MonoBehaviour
     public void TraversalChooseDirection(int choice) {
 
         switch (choice) {
-            case 1:
-            //travel diaganol left
+            case 0:
+            //travel left
             GetComponent<CameraZoom>().StartMoveCamera(transform.position, transform.position + new Vector3(-24, 0, -10));
             break;
 
-            case 2:
+            case 1:
             //travel straight
             GetComponent<CameraZoom>().StartMoveCamera(transform.position, transform.position + new Vector3(0, 16, -10));
             break;
 
-            case 3:
-            //travel diaganol right
+            case 2:
+            //travel right
             GetComponent<CameraZoom>().StartMoveCamera(transform.position, transform.position + new Vector3(24, 0, -10));
             break;
         }
 
-        //add wait time before combat begins?
-        StartCombat();
+        CloseTraversalMenu();
     }
 
     public void GameOver()

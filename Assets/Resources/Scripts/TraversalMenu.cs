@@ -33,7 +33,7 @@ public class TraversalMenu : MonoBehaviour
     }
 
     public void Init() {
-        //g = Camera.main.GetComponent<Game>();
+        g = Camera.main.GetComponent<Game>();
         RandomizeFoodRewards();
         DisableOutlines();
         travelButton.GetComponent<Button>().interactable = false;
@@ -68,6 +68,10 @@ public class TraversalMenu : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void Travel() {
+        g.TraversalChooseDirection(destination);
     }
 
     public void DisableOutlines() {
