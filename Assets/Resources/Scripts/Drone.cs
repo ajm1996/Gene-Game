@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -9,6 +10,9 @@ public abstract class Drone : MonoBehaviour
     [SerializeField] public  int maxHealth;
     [SerializeField] public  int currentHealth;
     [SerializeField] public  int damage;
+    [SerializeField] public  int armor;
+    [SerializeField] public  int lifesteal;
+    [SerializeField] public  int thorns;
     [SerializeField] public  float speed;
     [SerializeField] public  float AttackSpeed; //in seconds
     [SerializeField] public  float AttackDistance;
@@ -16,7 +20,7 @@ public abstract class Drone : MonoBehaviour
 
     public List<Drone> attackList;
     private List<Trait> traits = new List<Trait>();
-    private Vector2 moveTarget;
+    public Vector2 moveTarget;
     private bool moving;
     private float timeOfLastAttack = Mathf.NegativeInfinity;
 
@@ -26,7 +30,7 @@ public abstract class Drone : MonoBehaviour
     public virtual void Start()
     {
         // Test: Add a default trait
-        AddTrait(new TestTrait());
+        AddTrait(new ExtraFatTrait());
 
         //initialize healthbar and update it to full
         healthbar = GetComponentInChildren<Healthbar>();
@@ -59,10 +63,10 @@ public abstract class Drone : MonoBehaviour
                     continue;
                 }
 
-                float currentDsitance =  Vector2.Distance(d.transform.position, transform.position);
-                if (closestDistance > currentDsitance) {
+                float currentDistance =  Vector2.Distance(d.transform.position, transform.position);
+                if (closestDistance > currentDistance) {
                     closestEnemy = d;
-                    closestDistance = currentDsitance;
+                    closestDistance = currentDistance;
                 }
             }
 
@@ -70,7 +74,7 @@ public abstract class Drone : MonoBehaviour
                 moving = false;
                 Attack(closestEnemy);
             } else {
-                MoveTo(closestEnemy);
+                MoveTo(closestEnemy.gameObject);
             }
         }
     }
@@ -91,15 +95,17 @@ public abstract class Drone : MonoBehaviour
         moveTarget = target;
     }
 
-    public void MoveTo(Drone d) {
+    public void MoveTo(GameObject g) {
         moving = true;
-        moveTarget = d.transform.position;
+        moveTarget = g.transform.position;
     }
 
     public void Attack(Drone enemy) {
 
         if (Time.time - timeOfLastAttack >= AttackSpeed) {
             enemy.GetComponent<Drone>().DealDamageCombat(damage);
+            DealDamageCombat(enemy.GetComponent<Drone>().thorns);
+            HealDamage(lifesteal);
             timeOfLastAttack = Time.time;
         }
     }
@@ -128,7 +134,7 @@ public abstract class Drone : MonoBehaviour
 
     public void DealDamageCombat(int damageAmount)
     {
-        currentHealth -= damageAmount;
+        currentHealth -= Math.Max(1, damageAmount - armor);
         healthbar.UpdateHealthbar(currentHealth, maxHealth);
         if (currentHealth <= 0) {
             Die();

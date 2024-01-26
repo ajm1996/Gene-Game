@@ -52,7 +52,8 @@ public class Game : MonoBehaviour
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
 
-        OpenTraversalMenu();
+        //TODO: Change this back to OpenTraversalMenu when breeding menu is ready
+        //OpenBreedingMenu();
     }
 
     // Update is called once per frame
@@ -152,7 +153,7 @@ public class Game : MonoBehaviour
         }
         
         traversalMenu.transform.position = Camera.main.transform.position;
-        traversalMenu.GetComponent<TraversalMenu>().Init();
+        //traversalMenu.GetComponent<TraversalMenu>().Init();
         traversalMenu.SetActive(true);
     }
     public void CloseTraversalMenu() {
