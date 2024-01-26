@@ -16,9 +16,6 @@ public class Game : MonoBehaviour
     public GameObject gameOverMenu;
 
     public GameObject[] worldTiles;
-    private GameObject leftTile;
-    private GameObject middleTile;
-    private GameObject rightTile;
 
     public GameObject breedingMenu;
     public GameObject breedingMenuPrefab;
@@ -46,8 +43,6 @@ public class Game : MonoBehaviour
         SpawnAlly(new Vector2(4, 1), defaultTraits);
         SpawnAlly(new Vector2(-4, 1), defaultTraits);
         
-        SpawnEnemy(new Vector2(-4, 1), defaultTraits);
-
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
@@ -147,14 +142,14 @@ public class Game : MonoBehaviour
 
     public void OpenTraversalMenu() {
         if (traversalMenu == null) return;
-        //TODO: traversal menu for choosing directions of travel with descriptions both specific and vague on what will be found there
 
-        if(worldTiles.Length != 0) {
-            leftTile = worldTiles[Random.Range(0, worldTiles.Length)];
-            middleTile = worldTiles[Random.Range(0, worldTiles.Length)];
-            rightTile = worldTiles[Random.Range(0, worldTiles.Length)];
+        //make a grid of randomly generate tiles surrounding the current tile
+        for (int i=0; i < 3; i++) {
+            for (int j=0; j < 3; j++) {
+                if (i == 1 && j == 1) continue;
+                Instantiate(worldTiles[Random.Range(0, worldTiles.Length)]).transform.position += new Vector3(-24 + 24 * i, -16 + 16 * j);
+            }
         }
-        else Debug.Log("worldTiles array is empty, no world tiles to choose from");
         
         traversalMenu.transform.position = Camera.main.transform.position;
         traversalMenu.GetComponent<TraversalMenu>().Init();
@@ -169,25 +164,22 @@ public class Game : MonoBehaviour
         switch (choice) {
             case 1:
             //travel diaganol left
-            TransitionCamera(leftTile);
+            //TransitionCamera(leftTile);
             break;
 
             case 2:
-            TransitionCamera(middleTile);
+            //TransitionCamera(middleTile);
             //travel straight
             break;
 
             case 3:
-            TransitionCamera(rightTile);
+            //TransitionCamera(rightTile);
             //travel diaganol right
             break;
         }
 
         //add wait time before combat begins?
         StartCombat();
-    }
-    void TransitionCamera (GameObject tile) {
-        //add some sort of logic to zoom out camera and zoom in out tile.transform.position
     }
 
     public void GameOver()
