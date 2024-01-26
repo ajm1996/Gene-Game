@@ -135,7 +135,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MainMusic
     clip: {fileID: 8300000, guid: 0b3172c45fd2dfe4e84f60a8288cd645, type: 3}
-    volume: 0.331
+    volume: 0.249
     pitch: 1.01
     loop: 1
     timeThreshold: 0

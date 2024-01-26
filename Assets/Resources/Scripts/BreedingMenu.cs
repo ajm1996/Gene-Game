@@ -128,10 +128,14 @@ public class BreedingMenu : MonoBehaviour
         foreach(Trait t in traitList1) {
             if (traitList2.Contains(t)) {
                 sharedList.Add(t);
-                traitList1.Remove(t);
-                traitList2.Remove(t);
             }
         }
+
+        foreach(Trait t in sharedList) {
+            traitList1.Remove(t);
+            traitList2.Remove(t);
+        }
+
 
         //create 3 baby drones
         for (int i = 0; i < 3; i++) {
