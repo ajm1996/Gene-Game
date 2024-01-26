@@ -103,8 +103,8 @@ public abstract class Drone : MonoBehaviour
     public void Attack(Drone enemy) {
 
         if (Time.time - timeOfLastAttack >= AttackSpeed) {
-            enemy.GetComponent<Drone>().DealDamageCombat(damage);
-            DealDamageCombat(enemy.GetComponent<Drone>().thorns);
+            enemy.DealDamageCombat(damage);
+            DealDamageCombat(enemy.thorns);
             HealDamage(lifesteal);
             timeOfLastAttack = Time.time;
         }
