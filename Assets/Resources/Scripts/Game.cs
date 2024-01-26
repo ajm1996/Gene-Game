@@ -24,6 +24,7 @@ public class Game : MonoBehaviour
 
     public int foodCount;
     public int breedingCost;
+    public int currentFoodReward;
 
     // Start is called before the first frame update
     void Start()
@@ -108,6 +109,9 @@ public class Game : MonoBehaviour
 
         //move to organized standing spots
         MoveAlliesToIdleSpots();
+
+        //add food reward to food count
+        foodCount = currentFoodReward;
 
         //set to night
         GetComponent<DayNightCycleManager>().SetNight();
@@ -254,7 +258,7 @@ public class Game : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(4.2f);
         StartCoroutine(StartCombat(direction, 5, new List<Trait>())); //TODO: change default values
     }
 

@@ -11,8 +11,8 @@ public class TraversalMenu : MonoBehaviour
     public TextMeshProUGUI foodRewardLabel1;
     public TextMeshProUGUI foodRewardLabel2;
     public TextMeshProUGUI foodRewardLabel3;
-    public int foodRewardMax = 20;
-    public int foodRewardMin = 5;
+    public int foodRewardMax = 80;
+    public int foodRewardMin = 10;
     private int[] foodRewards = new int[3];
     public GameObject travelButton;
     public int destination;
@@ -72,6 +72,7 @@ public class TraversalMenu : MonoBehaviour
 
     public void Travel() {
         g.TraversalChooseDirection(destination);
+        g.currentFoodReward = foodRewards[destination];
     }
 
     public void DisableOutlines() {

@@ -181,7 +181,7 @@ public class BreedingMenu : MonoBehaviour
         
         g.MoveAlliesToIdleSpots();
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2);
         
         transform.GetChild(0).gameObject.SetActive(true);
         CloseBreedingSubMenu();
@@ -371,6 +371,10 @@ public class BreedingMenu : MonoBehaviour
 
     public void EndBreedingPhase() {
         foreach(DroneImage di in droneImages) {
+            if (!di.isChild) {
+                di.linkedDrone.Die();  //kill all adults at the end of the breeding phase
+                if (g.livingAllies.Count == 0) g.GameOver();
+            }
             Destroy(di.gameObject);
         }
         droneImages = new List<DroneImage>();
