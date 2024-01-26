@@ -21,6 +21,7 @@ public abstract class Drone : MonoBehaviour
     public List<Drone> attackList;
     private List<Trait> traits = new List<Trait>();
     public Vector2 moveTarget;
+    public List<Vector2> moveQueue;
     private bool moving;
     private float timeOfLastAttack = Mathf.NegativeInfinity;
     
@@ -38,9 +39,6 @@ public abstract class Drone : MonoBehaviour
         //initialize healthbar and update it to full
         healthbar = GetComponentInChildren<Healthbar>();
         healthbar.UpdateHealthbar(currentHealth, maxHealth);
-        
-        moveTarget = transform.position;
-
     }
 
     public virtual void Update()
@@ -83,11 +81,22 @@ public abstract class Drone : MonoBehaviour
     }
 
      void FixedUpdate() {
+        if (moveQueue.Count != 0) moveTarget = moveQueue[0];    //move queue will always override move commands made with MoveTo
         //move towards target
         if(moving) {
-            if (Vector2.Distance(transform.position, moveTarget) < 0.01f) { //change value for more or less moving percision
-                moving = false;
-            } else {
+            if (Vector2.Distance(transform.position, moveTarget) < 0.05f) { //change value for more or less moving percision
+                
+                if (moveQueue.Count != 0) moveQueue.RemoveAt(0);
+                if (moveQueue.Count != 0) {
+                    moveTarget = moveQueue[0]; 
+                }
+                else {
+                    moving = false;
+                }
+
+            } 
+
+            if (moving) {
                 transform.position = Vector2.MoveTowards(transform.position, moveTarget, speed * Time.deltaTime);
             }
         }
@@ -101,6 +110,11 @@ public abstract class Drone : MonoBehaviour
     public void MoveTo(GameObject g) {
         moving = true;
         moveTarget = g.transform.position;
+    }
+
+    public void MoveToQueue(Vector2 target) {
+        moving = true;
+        moveQueue.Add(target);
     }
 
     public void Attack(Drone enemy) {

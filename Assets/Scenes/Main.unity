@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -337,7 +338,10 @@ MonoBehaviour:
   livingAllies: []
   pauseMenu: {fileID: 0}
   gameOverMenu: {fileID: 0}
-  worldTiles: []
+  worldTiles:
+  - {fileID: 4765237186470160802, guid: 47e14dcd4f721ae43b847d0354e96d4a, type: 3}
+  - {fileID: 2368073564656335692, guid: 5bbefee639148d94da29873894b24c7a, type: 3}
+  - {fileID: 9171204814093467551, guid: dcd3fc3f5c43f5e4493ce6707c5f2609, type: 3}
   breedingMenu: {fileID: 0}
   breedingMenuPrefab: {fileID: 1185763526631766321, guid: aa9741e15267b1f4a966927724f88578, type: 3}
   traversalMenu: {fileID: 0}
@@ -361,6 +365,21 @@ MonoBehaviour:
   dayFinalIntensity: 0.85
   nightFinalIntensity: 0.1
   isDaytime: 1
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5294357e82606246bad954d3b75b089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomEffectDuration: 1.5
+  zoomStart: 5
+  zoomEnd: 9
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

@@ -3512,7 +3512,7 @@ MonoBehaviour:
   foodRewardLabel1: {fileID: 6349692459278566200}
   foodRewardLabel2: {fileID: 8080258114801327560}
   foodRewardLabel3: {fileID: 8889963766392381336}
-  foodRewardMax: 20
+  foodRewardMax: 100
   foodRewardMin: 5
   travelButton: {fileID: 2185675454074699262}
   destination: 0
