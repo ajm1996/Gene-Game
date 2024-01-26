@@ -47,14 +47,17 @@ public class Game : MonoBehaviour
         
         SpawnEnemy(new Vector2(-4, 1), defaultTraits);
 
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
+
+        //TODO: Change this back to OpenTraversalMenu when breeding menu is ready
+        OpenBreedingMenu();
     }
 
     // Update is called once per frame

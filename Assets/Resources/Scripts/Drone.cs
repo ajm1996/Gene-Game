@@ -26,7 +26,7 @@ public abstract class Drone : MonoBehaviour
     public virtual void Start()
     {
         // Test: Add a default trait
-        AddTrait(new TestTrait());
+        AddTrait(new ExtraArmorTrait());
 
         //initialize healthbar and update it to full
         healthbar = GetComponentInChildren<Healthbar>();
