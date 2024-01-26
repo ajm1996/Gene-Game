@@ -268,9 +268,12 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   damage: 10
+  armor: 0
+  lifesteal: 0
+  thorns: 0
   speed: 5
   AttackSpeed: 1
-  AttackDistance: 1.1
+  AttackDistance: 1.3
   color: {r: 0, g: 0, b: 0, a: 0}
   attackList: []
   healthbar: {fileID: 1233967103461217159}

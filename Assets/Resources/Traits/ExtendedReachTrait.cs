@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class TestTrait2 : Trait
+public class ExtendedReachTrait : Trait
 {
-    public TestTrait2()
+    public ExtendedReachTrait()
     {
         Color = Color.blue; // Example color
         Id = 2; // Example ID
+        Description = "Claws extend for farther attack range";
     }
 
     public override void ApplyEffect(Drone drone)
     {
-        //drone.speed += 10;
-        drone.maxHealth -= 3 ;
+        drone.AttackDistance += 1.3f;
     }
 }

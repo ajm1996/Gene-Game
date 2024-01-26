@@ -13,7 +13,7 @@ public class AllyDrone : Drone
         g = Camera.main.GetComponent<Game>();
         bm = g.breedingMenu.GetComponent<BreedingMenu>();
         base.Start();
-        hideHealthbar();
+        //hideHealthbar();
     }
 
     public override void Update()
