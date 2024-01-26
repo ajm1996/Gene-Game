@@ -1,0 +1,5816 @@
+fileFormatVersion: 2
+guid: 47a1c19a3d5525e418f7a353af7a7e13
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SnowTilesetRefined_0
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 136
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e987f657951b5b42a4143f7b9a29e23
+      internalID: -1883211901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 136
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99571072b0389aa499331412a3889024
+      internalID: 437407257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_2
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 136
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d799d581d2e894a9fba6cd9140eae4
+      internalID: -1021784787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_3
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 136
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f85e1f8519719e4c896c92a94233f47
+      internalID: -653078732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_4
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 136
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe08b0e0688255e46bace2e29c8f7151
+      internalID: -1079795038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_5
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff7cfc8683559e47b7099baf916166a
+      internalID: 1714076656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa9f306c86652e4e88c1da0e3ddd6cb
+      internalID: -536563485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_7
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa63cb551f4d1c4299249381483db5f
+      internalID: 2004962281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_8
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2947bd4285dcb3b44ba23890ff92745e
+      internalID: -1701939239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_9
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cb5ad3315ceda459dbcc1c6ea026b8
+      internalID: -1285327743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_10
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630d140b428c3084789e88a430e1505b
+      internalID: -2070251054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_11
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b48f66eb77c908439c82299bf8d9a08
+      internalID: 2121706903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_12
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151156f748c97854596bb5a3abf9e778
+      internalID: -1875637846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_13
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daaf35b62ab8ee347ac04babecfe0080
+      internalID: -1481442074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_14
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00f622c8cf3edc4f87d5badf0200a6f
+      internalID: -173924006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_15
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d90fed37c950842a5de2e47a095dfe
+      internalID: 1101313013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85853126626bfc7408e27445fa33cdec
+      internalID: 389245473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_17
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e982a298eed5240b5d96e81761c839
+      internalID: -68142660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_18
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ddc3a7eec5a5740a5d839b93a3d7b8
+      internalID: 1148735430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_19
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db09d397e690f76499317fb71f7a8fda
+      internalID: 1044603163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_20
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7774954c0ba5d64dbc27dbebd4551a3
+      internalID: -527772121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_21
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e00007f394b7a41b694e2a61552f3e
+      internalID: -1603561076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_22
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141c0f412cb775147b29aa778d3e7a1f
+      internalID: 1133030076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_23
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e530531aa752043824df172b0a2dfa
+      internalID: -2076955155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_24
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af39c326bd243641aefb1801db64733
+      internalID: -264685319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_25
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc650a9c21cbc6a448e28337bab174af
+      internalID: -1196783310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_26
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6a7a36b959ea349b227df70aff6b74
+      internalID: -461870852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_27
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12349ec1c6a539a4c9d385c49376b25a
+      internalID: 1592894884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_28
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86ae1b9864fee649bcd5a2ce8ebb5f1
+      internalID: 700878205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_29
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3109663dce2074396102bf734d4144
+      internalID: -598151378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_30
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa023c7758e63b4e8a0ab9c8beefdee
+      internalID: -1204167799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_31
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab59356bdd75e245bbd04a4ab748b44
+      internalID: 1058513858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_32
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eeffffbdea84504396c522705a1ee4d
+      internalID: -201893906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_33
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2108d2408aaa98f4eb4665cd585f8cc3
+      internalID: -694105839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_34
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d04135a65516945af8097ec2bdc99c
+      internalID: -2140182499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1970e98f7692da459df66ea3bdac712
+      internalID: -220393015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_36
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f972385b08ec3ad44ab35522629d4096
+      internalID: -800985327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_37
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca952c73288c45e4ab3d82a08fd6e336
+      internalID: -683830252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_38
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa9e1fd3607be8409e436ea1d468a42
+      internalID: -1332891007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662ce85efb68eba44a28186b6951a597
+      internalID: 371079731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_40
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cb746c09af77446b88a9ca7b26c962
+      internalID: 14810346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_41
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716966ac7d1cc7f45ace9ffb33a5e3b4
+      internalID: 983236454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_42
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5096ef661763345bab2f79b0aaa751
+      internalID: -2060543419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_43
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca94d08b22effcb489a1cc2732e9efbe
+      internalID: -1410600155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_44
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6992b27e1e61d41af3cea5bcb86d22
+      internalID: 1300304415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_45
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb9057dbb9c5e54884043630f31947c
+      internalID: 804762870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_46
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a99f16347a7e2443b7cf8aa4f356afb
+      internalID: -1116388609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_47
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e083a03e88e2eb4fae6bf81da8c374b
+      internalID: -865187619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_48
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206e258b7eb8bf44ba09ee111b53e345
+      internalID: 1914203387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_49
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6700a665df6624e9741a36c5f65791
+      internalID: -991790946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_50
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d73bdc850a860468b75199ffa1f149
+      internalID: -1749991703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_51
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746dcfbd71c8263429d1f7bf8b9eb00b
+      internalID: 2115957006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_52
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20006d92dde8f548894050f470e9762
+      internalID: 427112568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_53
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f561413f831f2d4387957a3c24a8064
+      internalID: 1043122742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_54
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8e1e9db4cd2144c922324d137e4d30
+      internalID: -1671312141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_55
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8889144b0500d648ad76ffb7d1c08da
+      internalID: 1965942826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_56
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ccd2a71b95290448ef2650c28bd798
+      internalID: -1546279031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_57
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339da6b6eba27ec4e87ee9987d508296
+      internalID: -54855032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_58
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 104
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dab0da716f4d9946b810c08934f1cb3
+      internalID: 451230006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_59
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fbe668ec4d5d742b93ef277fd678b5
+      internalID: -1765907661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_60
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b873d738ee4d8cd4fa442a683efa05b9
+      internalID: 1477219129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_61
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7b057855bfdeb438a54ae39db79d83
+      internalID: -1767605570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_62
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccf2808c4aa3994498e1823628292d0
+      internalID: -1872040242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_63
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee52b63f9ab1a604ab2fda506c16697d
+      internalID: 952489651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_64
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af367677e919b340acfad528b90148b
+      internalID: -30655289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_65
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029e11e9c2d847d4f979d8ee64ac50b9
+      internalID: -731483039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_66
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1aab805891b7a4092f75e651038e43
+      internalID: 390281637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_67
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c67a26ce37347746989686cbbdfbe28
+      internalID: -1544709867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_68
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9ae0e7d67bacb4d9ab189529d1a59b
+      internalID: 919092037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_69
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ffe85a2d2125c49be24e41a125ec92
+      internalID: -568662374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_70
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88cd3b5e5c40e914a994c175877d5fcd
+      internalID: 1697771983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_71
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb89efcc17ea55c4997a21c6d049e833
+      internalID: 1373805895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_72
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddcc3612114e4f48952fce368c0c383
+      internalID: -1496242144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_73
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4943c45082db4246824a162ebd8bfd4
+      internalID: -1721018212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_74
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb02bdcc5e7ff940ba04c8e16b40c80
+      internalID: -800924761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_75
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc06fa152bcfc3b4292a115fe7441c90
+      internalID: -208431401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_76
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1136124544a2934ba04303bcf496e82
+      internalID: 547518733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_77
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1eb554fb168614182e8b22dc912605
+      internalID: -1864845162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_78
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a56873debd0c6428575b7d7ad887be
+      internalID: -213754825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_79
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4250df668817984b96b30bbf4692ccf
+      internalID: -2059479657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_80
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47804cd97a17a5347b4f0cd25dfaceb0
+      internalID: 1424669381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_81
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ace1870b3a4cb4398eacad1dd19707
+      internalID: -1724208966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_82
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27fedb12f9ffbfe4bb1fad4d515c99ff
+      internalID: 1518722935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_83
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72d5014394c52240b21f0a2e27725e9
+      internalID: -1949326889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_84
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9375550611d156842a1907db8cfdda3e
+      internalID: -1624577210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_85
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5595f73616689544a45b9c6a8370288
+      internalID: 1436502673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_86
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43662363b30a4a41abdbf3b63995528
+      internalID: -269813030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_87
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a25379412546540b126bf0f8aa323a
+      internalID: 1818005021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_88
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195a1cc0c0427684a8669e6ee81897f3
+      internalID: -1085206363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_89
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 96
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801c5d8e3cfc3cf4aade3ccd8d1798c8
+      internalID: -1009786471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_90
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd6362ec3fbd4f4c9bb1cffb24a2e17
+      internalID: -1832692079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_91
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0d5a21089db6549875e80364eb5775
+      internalID: 1823028527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_92
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d0c15f298cc134da115cba1851c70e
+      internalID: 1814902824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_93
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0d031db39591347bdde9ecebf77d7d
+      internalID: 1779600240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_94
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1be973eaa7aa343a05eb4b377e62e8
+      internalID: 1942317000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_95
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0db550ae7f0724082c3f9bae1aa9a7
+      internalID: 1808837766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_96
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf99c1254af0a4e469df3d0677d7ccd8
+      internalID: 1127952066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_97
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d497d6ad56b804ba3ddfb19fcd6cae
+      internalID: -2126181344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_98
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e78a11a4328fa499b960d91716e301
+      internalID: -1038311146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_99
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b7b8b70e9ccd14e8db0ad55daa71f5
+      internalID: -1329691503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_100
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397ee77acf689264d92429a4cdc1659f
+      internalID: -1606980170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_101
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b070d9675748e44bb2aa8f81314168
+      internalID: -113925664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_102
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731ebb6a7d8298f40a4b1effaaa02d0a
+      internalID: -389825930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_103
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc199d297aa723d41a7d6532c53b8431
+      internalID: -1694937171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_104
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624f881ebf070724ba9e845018ca32c8
+      internalID: 1743945843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_105
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8bea52c07a0c947a36c2b6cc46d119
+      internalID: -1118490873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_106
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280c06ecd474a3f4fb04da1768b601fe
+      internalID: -69925822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_107
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f520260f001e5c4cac6a2585524a285
+      internalID: -1280998813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_108
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b89476b3228b74c98ba6c045f41883
+      internalID: -1782808299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_109
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad51c2fc89a6fd344b06765c21586e5e
+      internalID: 1850559532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_110
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c817ea588c381ed49acf8fb972f79a06
+      internalID: -608766674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_111
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bd58ab29321b940b98f0dbb0164fac
+      internalID: -1714015229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_112
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b3ca31b5f4b4845bac45623ce3528e
+      internalID: 1883949477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_113
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce50f903d79bb44382e593a5b65f0b5
+      internalID: -1385424818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_114
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7733cb0649769e4eac226bde58c4b54
+      internalID: -1644468793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_115
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729fc32ccd958394ebce07191100593c
+      internalID: -1293932272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_116
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373d3cd98b57b034e9dd62577a3dc180
+      internalID: -1039575490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_117
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf964252279e834297b884d2fdbc42f
+      internalID: 587730464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_118
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc1817fc7dbb4b408f3dd87ef7a344b
+      internalID: -146755750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_119
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0392590f7cd87c64a981098b04449a45
+      internalID: 1537667805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_120
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da6c325962386e46a6d52497e832fb3
+      internalID: -678206396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_121
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f970da16a85217c4a885faf1cec3e468
+      internalID: 526653551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_122
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f025a0fe409b614c99fc340d67299d4
+      internalID: -212961004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_123
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426200831f20be44d8d90f1ec69c7933
+      internalID: 1406847888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_124
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 88
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf3334e272849f48b99b29052847702
+      internalID: 661991776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_125
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e7c635ab39c924aaba2539f096db8f
+      internalID: -2001592409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_126
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b1938cec4d8e141b319f39d315aa71
+      internalID: 658891439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_127
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b1db7683f192649a2259dc0f579ffe
+      internalID: -1870842821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_128
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67aa79c23f37b254e8a9ad1c1b2e655d
+      internalID: -335682230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_129
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b934fd51c029954d9bf3f08bd920734
+      internalID: -1947867589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_130
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0419a635176cd164b82e570a42505984
+      internalID: -1659244326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_131
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa012df7d64de9940b662d48f835446f
+      internalID: -681955135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_132
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8599ab6348e1a443817eb79544081ab
+      internalID: -25537869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_133
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b513301b67a0b4298f6bc5ecc097d8
+      internalID: -164835358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_134
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0058c0ff96c2b4549beda8347da62666
+      internalID: 1912631979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_135
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62c7b4fdd9410f4887505a933cd3ec7
+      internalID: -126225681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_136
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a8c8ec8d6d79d49a47669329ccf5db
+      internalID: -815966149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_137
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8d1f58f9a7a3b4fa2f36b8f4e5e857
+      internalID: 1695174931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_138
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf64cc1a06f50344bca3f4dcb1c1205
+      internalID: 297112506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_139
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387dcb635d14e82489d1c8df64fd7ca5
+      internalID: 1497139180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_140
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa629e2f4505be94294c8d9c0fe027aa
+      internalID: -596513675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_141
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b00273bde618634d8c673f9d558a62f
+      internalID: 554526255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_142
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a38130da04fd942a110f8d79fc8c9a
+      internalID: 1019924088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_143
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ddb3bd3551380408bf48262321cd82
+      internalID: 318237598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_144
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356fb09885964d5439b19fff48c02d92
+      internalID: -227535628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_145
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f746af3adbb5844a9af78c2a06ef942
+      internalID: -112924357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_146
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9807ba40cf0eb043822a1156552b539
+      internalID: 917694719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_147
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487b96bddfe1389418cc2b83dfd3ba00
+      internalID: -590019367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_148
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5376c26ef86da94479b3371aa084bf06
+      internalID: 77363703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_149
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6cb107300fd2e04bbc1f126efae1c82
+      internalID: 1046390024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_150
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c48553230f372e49aa9dbc83d8f69ba
+      internalID: -1175531025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_151
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c114ad962e4d204194473dfe7327470
+      internalID: 1428983355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_152
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1e8d4bbfffb6e4d8dfdc5a2ae9f17d
+      internalID: 947809686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_153
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227a528af01abce479760bc8555de87f
+      internalID: 1675696827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_154
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8500f9c5da5b6484ebb74fedb93157a4
+      internalID: -32229064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_155
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39618622ef771a14b982157c694c86cf
+      internalID: 483800320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_156
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2d3967ab39d004480bed41a87479f3
+      internalID: 865558959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_157
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3db9f31468257c45a1768b0c7905d70
+      internalID: 1516209397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_158
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ab6742f6fe1e745aff35bc34014de9
+      internalID: -142282952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_159
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc68f950ab16ac449ab02d692e36116
+      internalID: -2143317815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_160
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8825b2de6d938749bf0f892f2631e31
+      internalID: -990789768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_161
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64830cf9c1e48364188aaf92eea4dc90
+      internalID: -318799231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_162
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c5fe6f2e3c2cf45a9407a2524d4354
+      internalID: -551561361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_163
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f69322e2676345479e531d1dc6e2b97
+      internalID: 937987735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_164
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9e9483961e28a4db5cd81481fa4cfe
+      internalID: 2117524138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_165
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4558f904c815d4086d684f85425131
+      internalID: -3769303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_166
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395592f479d026347991b66c2fa6ca17
+      internalID: 1340797561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_167
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1c8e83c34169b42b2643b5d2b1a7ab
+      internalID: -1285207991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_168
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587ca8d2eb5e72149a7167c66cdf43db
+      internalID: 84590548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_169
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44624c21ab0b0fd4aa34061a1d2a556c
+      internalID: 12458237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_170
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f8f2c1ceed01640ac1ccac611f5572
+      internalID: -1062095599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_171
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d13afb9d7cb8f43b055a1e38d5b1ee
+      internalID: 190937612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_172
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65bf8f5475bbc234eae23820322574d4
+      internalID: 1448325436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_173
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df78d3425248254aa0ace8832594650
+      internalID: 1330105747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_174
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa2817c814ea2c4590a4c6b7a7c002a
+      internalID: -858061767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_175
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ac205b67096c944bb46b2ca22badff
+      internalID: -1574584546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_176
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe29f95e0067e14db4188503c431295
+      internalID: 52783517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_177
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da656998ef25ad489d6a10ff2ba08e4
+      internalID: 401304955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_178
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd86aa11297b85243bc9c723b0b70821
+      internalID: -1017183897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_179
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db38d52f834b5bd469f76935d81e277c
+      internalID: -1414224782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_180
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1783f8e637a6be340891a4ddef63d981
+      internalID: -1434593280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_181
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cfbd462aab93548919fdc841bcb08c
+      internalID: 135652803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_182
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ed1c29e1c479240975263006970893
+      internalID: -2060916071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_183
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb2d4795b3d060419718231ffe7e27c
+      internalID: 2030119524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_184
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1a1f9b78797314c8f0e429c864a3be
+      internalID: -319522272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_185
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92f292729a33514b8826d4717383844
+      internalID: -149893582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_186
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4c22111a4433144ae6eaa8cbbf1a8b
+      internalID: -1072349828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_187
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44109a41d7f1d14e9c698dbc32a364b
+      internalID: -322218647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_188
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87f2b1ded4a5044cbc0c9bf8de425d6
+      internalID: 835600629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_189
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de001cf7276bf146a7f03a801c21eff
+      internalID: -159068332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_190
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32a2077e2331b44980b41029ab8f46c
+      internalID: 1234678340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_191
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a87eee601731d47a7114fb3b8c8d64
+      internalID: 677252144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_192
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c12bc2db5ca5b44181b22b6ca1fd946
+      internalID: 1070455393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_193
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d3e471f829bbe48a52a9a7e9912fa5
+      internalID: -512456430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_194
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eebe8bcbe9932d4bb4b754bc0eb547e
+      internalID: 570122997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_195
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60eb786cc2d0f9c49ba118e81e982d5d
+      internalID: 2011807494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_196
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b98036fa4fe7a46881eabb4fd2dafd
+      internalID: -1131579184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_197
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c54a1c1b15689047b97c3bcfabc2847
+      internalID: 1244929018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_198
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2530dc110fbffd40b4618e1316488cd
+      internalID: 474409131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_199
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35517aabfe5f95e43980f9fe677d6f6c
+      internalID: 2082121497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_200
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f39521140e8ae64db2e7bd2bb97fa0d
+      internalID: -657614810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_201
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea9aa0fbfd0c084891a969a04db359a
+      internalID: 361035114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_202
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d832bdad26ea04184e865339233b9b
+      internalID: 1875135852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_203
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4c766ecc0964a498350fdcd3874e73
+      internalID: 2063019267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_204
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84da6f7bc8bf38b459ad346b545c1ab8
+      internalID: -1105748600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_205
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c655e22c42bdc7449c015b275ed4bb5
+      internalID: -2112483954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_206
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10386f97f28cfe049ab42ca213e8c2bf
+      internalID: 682442182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_207
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb5f1d14db5caf4bb5dc4b8b5337675
+      internalID: 2032181203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_208
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bac47d6455b45409deb86f47f52e3f
+      internalID: -105204549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_209
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f2b2c6faad1fb49b591db7560c5d37
+      internalID: 240372614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_210
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb34cf2c4c44114592b8fbda1c6977f
+      internalID: 1905957058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_211
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15e3e0eed1481d4eb35b3005dce39d3
+      internalID: -141882897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_212
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623de3898533f8d4cb17fe7e5c3824af
+      internalID: -319026849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_213
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a331f40973e147443a25ab275a373229
+      internalID: -536783329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_214
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45785051b579044fbe698c34b98e43a
+      internalID: -308475217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_215
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f624dc410a11d094a934688050273a15
+      internalID: 793846812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_216
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903de9140e03e374cace8a9be5ecb545
+      internalID: 276097223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_217
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2928fd2424579444c8ea74e9937ac8d0
+      internalID: -1685462387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_218
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7183a2af92e49948942d97afdeb9a12
+      internalID: 1098879942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_219
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809ea0cc959f52940bc2420cdafead80
+      internalID: -787630652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_220
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69662bdaf9a65af41b7627851d62b138
+      internalID: -1416865315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_221
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad53ede10e7d31a4d9fabb6a85eeb954
+      internalID: 1776140083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_222
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d978a691899330548a020a30dd9a576e
+      internalID: 402436060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_223
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f30c3b4de2b6c4fa5af7f823b05e37
+      internalID: 1589548914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_224
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e7cefba6d0898498f0e90f70ed3ee5
+      internalID: -1857555623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_225
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388fb347153f1504e9f665abfb2974d8
+      internalID: 1293286239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_226
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b45e60054dcf0847b682bf63af78c26
+      internalID: 1244780525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_227
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec93a7b304d654849a1b1b148a3efa0e
+      internalID: 849210115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_228
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9c5f6cbbc65aa489ce948a0f6a8ee7
+      internalID: 893834796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_229
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad98a81e2cfe144c87cd2f9e0fbbf9d
+      internalID: -221134011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_230
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27a9fd8a4210974281e03e0764037af
+      internalID: 2049443718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_231
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2cb951c31809746bed7d15abe65116
+      internalID: -996613396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_232
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98294548c868f1f44b5af322f0450909
+      internalID: 837453778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_233
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cef7ceada39a34da27c6a029109435
+      internalID: 675393056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_234
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67d221076768604f81a66816387e869
+      internalID: 1539080998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_235
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db82b760681d45f46baa0cec191851a3
+      internalID: -1243414288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_236
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0096bc61dde6e8149932933c02d9c771
+      internalID: -60378496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_237
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d43ff56c3b1ff74c80f4479918e9eb0
+      internalID: 506046825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_238
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854e4634ddd3da54c8faaa66a1c666c2
+      internalID: -1156137965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_239
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e2447a1d612e9449ad5979f86e982a
+      internalID: -728644488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_240
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21e044e9269b1f4183365c4c878d5d2
+      internalID: -1107760710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_241
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61078888257dda4cb309515508b1540
+      internalID: 1820300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_242
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a511a7ed69592e34f991e5c507f5887a
+      internalID: -2057222049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_243
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49a33c10fba0334e9d316ac77c42aa3
+      internalID: -896087833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_244
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedba27617b9ac24f9da2d14af04127e
+      internalID: -579471036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_245
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0609fa01a8e52246b02feb0ab1d2198
+      internalID: 502146172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_246
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767f13559f6157049aa3c045d16150cb
+      internalID: -1858160950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_247
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c46f39747c3c334c8faa6f26e4430a2
+      internalID: 692665414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_248
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b58b67183b1cf64faa451e87e72a071
+      internalID: -882228747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_249
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc4b5ffc9f59e046a15b72e4bcf309d
+      internalID: 619709612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_250
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483b62a76c4a6f949b1470f21eadaae7
+      internalID: -1736249674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_251
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91310565a41cd1349bb15a1978a1444d
+      internalID: -969851467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_252
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e7468458f2b0945b46bbc42d6aef74
+      internalID: -1753322515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_253
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ceaaf5fc470af0428a2e2ebefbfbcb4
+      internalID: -943635523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_254
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe14bbae6c9753541a449c1fb93f7910
+      internalID: 1851352475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_255
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6f5550bbf934547822e9406e5bbd7c
+      internalID: -1837128939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_256
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea8af15bdddebc43886e73ea35c5357
+      internalID: -973789241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SnowTilesetRefined_257
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83327c57769973642bdbcb6243159c29
+      internalID: -358882247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SnowTilesetRefined_0: -1883211901
+      SnowTilesetRefined_1: 437407257
+      SnowTilesetRefined_10: -2070251054
+      SnowTilesetRefined_100: -1606980170
+      SnowTilesetRefined_101: -113925664
+      SnowTilesetRefined_102: -389825930
+      SnowTilesetRefined_103: -1694937171
+      SnowTilesetRefined_104: 1743945843
+      SnowTilesetRefined_105: -1118490873
+      SnowTilesetRefined_106: -69925822
+      SnowTilesetRefined_107: -1280998813
+      SnowTilesetRefined_108: -1782808299
+      SnowTilesetRefined_109: 1850559532
+      SnowTilesetRefined_11: 2121706903
+      SnowTilesetRefined_110: -608766674
+      SnowTilesetRefined_111: -1714015229
+      SnowTilesetRefined_112: 1883949477
+      SnowTilesetRefined_113: -1385424818
+      SnowTilesetRefined_114: -1644468793
+      SnowTilesetRefined_115: -1293932272
+      SnowTilesetRefined_116: -1039575490
+      SnowTilesetRefined_117: 587730464
+      SnowTilesetRefined_118: -146755750
+      SnowTilesetRefined_119: 1537667805
+      SnowTilesetRefined_12: -1875637846
+      SnowTilesetRefined_120: -678206396
+      SnowTilesetRefined_121: 526653551
+      SnowTilesetRefined_122: -212961004
+      SnowTilesetRefined_123: 1406847888
+      SnowTilesetRefined_124: 661991776
+      SnowTilesetRefined_125: -2001592409
+      SnowTilesetRefined_126: 658891439
+      SnowTilesetRefined_127: -1870842821
+      SnowTilesetRefined_128: -335682230
+      SnowTilesetRefined_129: -1947867589
+      SnowTilesetRefined_13: -1481442074
+      SnowTilesetRefined_130: -1659244326
+      SnowTilesetRefined_131: -681955135
+      SnowTilesetRefined_132: -25537869
+      SnowTilesetRefined_133: -164835358
+      SnowTilesetRefined_134: 1912631979
+      SnowTilesetRefined_135: -126225681
+      SnowTilesetRefined_136: -815966149
+      SnowTilesetRefined_137: 1695174931
+      SnowTilesetRefined_138: 297112506
+      SnowTilesetRefined_139: 1497139180
+      SnowTilesetRefined_14: -173924006
+      SnowTilesetRefined_140: -596513675
+      SnowTilesetRefined_141: 554526255
+      SnowTilesetRefined_142: 1019924088
+      SnowTilesetRefined_143: 318237598
+      SnowTilesetRefined_144: -227535628
+      SnowTilesetRefined_145: -112924357
+      SnowTilesetRefined_146: 917694719
+      SnowTilesetRefined_147: -590019367
+      SnowTilesetRefined_148: 77363703
+      SnowTilesetRefined_149: 1046390024
+      SnowTilesetRefined_15: 1101313013
+      SnowTilesetRefined_150: -1175531025
+      SnowTilesetRefined_151: 1428983355
+      SnowTilesetRefined_152: 947809686
+      SnowTilesetRefined_153: 1675696827
+      SnowTilesetRefined_154: -32229064
+      SnowTilesetRefined_155: 483800320
+      SnowTilesetRefined_156: 865558959
+      SnowTilesetRefined_157: 1516209397
+      SnowTilesetRefined_158: -142282952
+      SnowTilesetRefined_159: -2143317815
+      SnowTilesetRefined_16: 389245473
+      SnowTilesetRefined_160: -990789768
+      SnowTilesetRefined_161: -318799231
+      SnowTilesetRefined_162: -551561361
+      SnowTilesetRefined_163: 937987735
+      SnowTilesetRefined_164: 2117524138
+      SnowTilesetRefined_165: -3769303
+      SnowTilesetRefined_166: 1340797561
+      SnowTilesetRefined_167: -1285207991
+      SnowTilesetRefined_168: 84590548
+      SnowTilesetRefined_169: 12458237
+      SnowTilesetRefined_17: -68142660
+      SnowTilesetRefined_170: -1062095599
+      SnowTilesetRefined_171: 190937612
+      SnowTilesetRefined_172: 1448325436
+      SnowTilesetRefined_173: 1330105747
+      SnowTilesetRefined_174: -858061767
+      SnowTilesetRefined_175: -1574584546
+      SnowTilesetRefined_176: 52783517
+      SnowTilesetRefined_177: 401304955
+      SnowTilesetRefined_178: -1017183897
+      SnowTilesetRefined_179: -1414224782
+      SnowTilesetRefined_18: 1148735430
+      SnowTilesetRefined_180: -1434593280
+      SnowTilesetRefined_181: 135652803
+      SnowTilesetRefined_182: -2060916071
+      SnowTilesetRefined_183: 2030119524
+      SnowTilesetRefined_184: -319522272
+      SnowTilesetRefined_185: -149893582
+      SnowTilesetRefined_186: -1072349828
+      SnowTilesetRefined_187: -322218647
+      SnowTilesetRefined_188: 835600629
+      SnowTilesetRefined_189: -159068332
+      SnowTilesetRefined_19: 1044603163
+      SnowTilesetRefined_190: 1234678340
+      SnowTilesetRefined_191: 677252144
+      SnowTilesetRefined_192: 1070455393
+      SnowTilesetRefined_193: -512456430
+      SnowTilesetRefined_194: 570122997
+      SnowTilesetRefined_195: 2011807494
+      SnowTilesetRefined_196: -1131579184
+      SnowTilesetRefined_197: 1244929018
+      SnowTilesetRefined_198: 474409131
+      SnowTilesetRefined_199: 2082121497
+      SnowTilesetRefined_2: -1021784787
+      SnowTilesetRefined_20: -527772121
+      SnowTilesetRefined_200: -657614810
+      SnowTilesetRefined_201: 361035114
+      SnowTilesetRefined_202: 1875135852
+      SnowTilesetRefined_203: 2063019267
+      SnowTilesetRefined_204: -1105748600
+      SnowTilesetRefined_205: -2112483954
+      SnowTilesetRefined_206: 682442182
+      SnowTilesetRefined_207: 2032181203
+      SnowTilesetRefined_208: -105204549
+      SnowTilesetRefined_209: 240372614
+      SnowTilesetRefined_21: -1603561076
+      SnowTilesetRefined_210: 1905957058
+      SnowTilesetRefined_211: -141882897
+      SnowTilesetRefined_212: -319026849
+      SnowTilesetRefined_213: -536783329
+      SnowTilesetRefined_214: -308475217
+      SnowTilesetRefined_215: 793846812
+      SnowTilesetRefined_216: 276097223
+      SnowTilesetRefined_217: -1685462387
+      SnowTilesetRefined_218: 1098879942
+      SnowTilesetRefined_219: -787630652
+      SnowTilesetRefined_22: 1133030076
+      SnowTilesetRefined_220: -1416865315
+      SnowTilesetRefined_221: 1776140083
+      SnowTilesetRefined_222: 402436060
+      SnowTilesetRefined_223: 1589548914
+      SnowTilesetRefined_224: -1857555623
+      SnowTilesetRefined_225: 1293286239
+      SnowTilesetRefined_226: 1244780525
+      SnowTilesetRefined_227: 849210115
+      SnowTilesetRefined_228: 893834796
+      SnowTilesetRefined_229: -221134011
+      SnowTilesetRefined_23: -2076955155
+      SnowTilesetRefined_230: 2049443718
+      SnowTilesetRefined_231: -996613396
+      SnowTilesetRefined_232: 837453778
+      SnowTilesetRefined_233: 675393056
+      SnowTilesetRefined_234: 1539080998
+      SnowTilesetRefined_235: -1243414288
+      SnowTilesetRefined_236: -60378496
+      SnowTilesetRefined_237: 506046825
+      SnowTilesetRefined_238: -1156137965
+      SnowTilesetRefined_239: -728644488
+      SnowTilesetRefined_24: -264685319
+      SnowTilesetRefined_240: -1107760710
+      SnowTilesetRefined_241: 1820300178
+      SnowTilesetRefined_242: -2057222049
+      SnowTilesetRefined_243: -896087833
+      SnowTilesetRefined_244: -579471036
+      SnowTilesetRefined_245: 502146172
+      SnowTilesetRefined_246: -1858160950
+      SnowTilesetRefined_247: 692665414
+      SnowTilesetRefined_248: -882228747
+      SnowTilesetRefined_249: 619709612
+      SnowTilesetRefined_25: -1196783310
+      SnowTilesetRefined_250: -1736249674
+      SnowTilesetRefined_251: -969851467
+      SnowTilesetRefined_252: -1753322515
+      SnowTilesetRefined_253: -943635523
+      SnowTilesetRefined_254: 1851352475
+      SnowTilesetRefined_255: -1837128939
+      SnowTilesetRefined_256: -973789241
+      SnowTilesetRefined_257: -358882247
+      SnowTilesetRefined_26: -461870852
+      SnowTilesetRefined_27: 1592894884
+      SnowTilesetRefined_28: 700878205
+      SnowTilesetRefined_29: -598151378
+      SnowTilesetRefined_3: -653078732
+      SnowTilesetRefined_30: -1204167799
+      SnowTilesetRefined_31: 1058513858
+      SnowTilesetRefined_32: -201893906
+      SnowTilesetRefined_33: -694105839
+      SnowTilesetRefined_34: -2140182499
+      SnowTilesetRefined_35: -220393015
+      SnowTilesetRefined_36: -800985327
+      SnowTilesetRefined_37: -683830252
+      SnowTilesetRefined_38: -1332891007
+      SnowTilesetRefined_39: 371079731
+      SnowTilesetRefined_4: -1079795038
+      SnowTilesetRefined_40: 14810346
+      SnowTilesetRefined_41: 983236454
+      SnowTilesetRefined_42: -2060543419
+      SnowTilesetRefined_43: -1410600155
+      SnowTilesetRefined_44: 1300304415
+      SnowTilesetRefined_45: 804762870
+      SnowTilesetRefined_46: -1116388609
+      SnowTilesetRefined_47: -865187619
+      SnowTilesetRefined_48: 1914203387
+      SnowTilesetRefined_49: -991790946
+      SnowTilesetRefined_5: 1714076656
+      SnowTilesetRefined_50: -1749991703
+      SnowTilesetRefined_51: 2115957006
+      SnowTilesetRefined_52: 427112568
+      SnowTilesetRefined_53: 1043122742
+      SnowTilesetRefined_54: -1671312141
+      SnowTilesetRefined_55: 1965942826
+      SnowTilesetRefined_56: -1546279031
+      SnowTilesetRefined_57: -54855032
+      SnowTilesetRefined_58: 451230006
+      SnowTilesetRefined_59: -1765907661
+      SnowTilesetRefined_6: -536563485
+      SnowTilesetRefined_60: 1477219129
+      SnowTilesetRefined_61: -1767605570
+      SnowTilesetRefined_62: -1872040242
+      SnowTilesetRefined_63: 952489651
+      SnowTilesetRefined_64: -30655289
+      SnowTilesetRefined_65: -731483039
+      SnowTilesetRefined_66: 390281637
+      SnowTilesetRefined_67: -1544709867
+      SnowTilesetRefined_68: 919092037
+      SnowTilesetRefined_69: -568662374
+      SnowTilesetRefined_7: 2004962281
+      SnowTilesetRefined_70: 1697771983
+      SnowTilesetRefined_71: 1373805895
+      SnowTilesetRefined_72: -1496242144
+      SnowTilesetRefined_73: -1721018212
+      SnowTilesetRefined_74: -800924761
+      SnowTilesetRefined_75: -208431401
+      SnowTilesetRefined_76: 547518733
+      SnowTilesetRefined_77: -1864845162
+      SnowTilesetRefined_78: -213754825
+      SnowTilesetRefined_79: -2059479657
+      SnowTilesetRefined_8: -1701939239
+      SnowTilesetRefined_80: 1424669381
+      SnowTilesetRefined_81: -1724208966
+      SnowTilesetRefined_82: 1518722935
+      SnowTilesetRefined_83: -1949326889
+      SnowTilesetRefined_84: -1624577210
+      SnowTilesetRefined_85: 1436502673
+      SnowTilesetRefined_86: -269813030
+      SnowTilesetRefined_87: 1818005021
+      SnowTilesetRefined_88: -1085206363
+      SnowTilesetRefined_89: -1009786471
+      SnowTilesetRefined_9: -1285327743
+      SnowTilesetRefined_90: -1832692079
+      SnowTilesetRefined_91: 1823028527
+      SnowTilesetRefined_92: 1814902824
+      SnowTilesetRefined_93: 1779600240
+      SnowTilesetRefined_94: 1942317000
+      SnowTilesetRefined_95: 1808837766
+      SnowTilesetRefined_96: 1127952066
+      SnowTilesetRefined_97: -2126181344
+      SnowTilesetRefined_98: -1038311146
+      SnowTilesetRefined_99: -1329691503
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
