@@ -48,16 +48,11 @@ public class Game : MonoBehaviour
         
         SpawnEnemy(new Vector2(-4, 1), defaultTraits);
 
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
+        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
 
-        OpenTraversalMenu();
+        //TODO: Change this back to OpenTraversalMenu when breeding menu is ready
+        //OpenBreedingMenu();
     }
 
     // Update is called once per frame
@@ -157,7 +152,7 @@ public class Game : MonoBehaviour
         else Debug.Log("worldTiles array is empty, no world tiles to choose from");
         
         traversalMenu.transform.position = Camera.main.transform.position;
-        traversalMenu.GetComponent<TraversalMenu>().Init();
+        //traversalMenu.GetComponent<TraversalMenu>().Init();
         traversalMenu.SetActive(true);
     }
     public void CloseTraversalMenu() {
