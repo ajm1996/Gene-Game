@@ -20,6 +20,8 @@ public class TraversalMenu : MonoBehaviour
     public GameObject outline2;
     public GameObject outline3;
 
+    private AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class TraversalMenu : MonoBehaviour
     }
 
     public void Init() {
+        audioManager = FindObjectOfType<AudioManager>();
         g = Camera.main.GetComponent<Game>();
         RandomizeFoodRewards();
         DisableOutlines();
@@ -79,5 +82,25 @@ public class TraversalMenu : MonoBehaviour
         outline1.SetActive(false);
         outline2.SetActive(false);
         outline3.SetActive(false);
+    }
+
+    public void PlayHoverSound() {
+        audioManager.Play("ButtonHover");
+    }
+
+    public void PlayButtonSelect() {
+        audioManager.Play("BackButtonClick");
+    }
+
+    public void PlayTraversalButtonSelectSound() {
+        if (travelButton.GetComponent<Button>().interactable) {
+            audioManager.Play("Success");
+        }
+    }
+
+    public void PlayTraversalButtonHoverSound() {
+        if (travelButton.GetComponent<Button>().interactable) {
+            audioManager.Play("ButtonHover");
+        }
     }
 }
