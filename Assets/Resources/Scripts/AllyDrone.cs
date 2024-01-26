@@ -12,6 +12,7 @@ public class AllyDrone : Drone
     {
         g = Camera.main.GetComponent<Game>();
         bm = g.breedingMenu.GetComponent<BreedingMenu>();
+        SetAllyCollision(false);
         base.Start();
         hideHealthbar();
     }
@@ -20,6 +21,7 @@ public class AllyDrone : Drone
     {
         if (breedingTarget != null) {
             MoveTo(breedingTarget);
+            Physics2D.IgnoreCollision(breedingTarget.GetComponent<Collider2D>(), GetComponent<Collider2D>(), false);
         }
         base.Update();
 
@@ -45,9 +47,13 @@ public class AllyDrone : Drone
                 bm.StartBreeding();
             }
             breedingTarget = null;
-        } 
-        else if (collision.gameObject.GetComponent<AllyDrone>() != null) {
-            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());  //ignore friendly collisions
+        }
+    }
+
+    public void SetAllyCollision(bool canCollide) {
+        foreach(AllyDrone ad in g.livingAllies) {
+            if (!canCollide) Physics2D.IgnoreCollision(ad.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
+            else Physics2D.IgnoreCollision(ad.GetComponent<Collider2D>(), GetComponent<Collider2D>(), false);
         }
     }
 

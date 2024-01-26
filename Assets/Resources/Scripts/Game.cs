@@ -41,6 +41,8 @@ public class Game : MonoBehaviour
         SpawnAlly(new Vector2(0, -1), defaultTraits);
         SpawnAlly(new Vector2(2, 0), defaultTraits);
         SpawnAlly(new Vector2(4, 1), defaultTraits);
+        SpawnAlly(new Vector2(2, 2), defaultTraits);
+        SpawnAlly(new Vector2(4, 3), defaultTraits);
 
         // SpawnAlly(new Vector2(-4, 3), defaultTraits);
         // SpawnAlly(new Vector2(-2, 2), defaultTraits);
@@ -71,7 +73,10 @@ public class Game : MonoBehaviour
 
     public IEnumerator StartCombat(int direction, int enemyCount, List<Trait> traits) {
         //show healthbar
-        foreach(Drone g in livingAllies) g.GetComponent<AllyDrone>().showHealthbar();
+        foreach(AllyDrone ad in livingAllies) {
+            ad.showHealthbar();
+            ad.SetAllyCollision(true);
+        }
 
         Vector3 spawnPoint = new Vector3();
         switch (direction) {
@@ -96,7 +101,13 @@ public class Game : MonoBehaviour
 
     public void EndCombat() {
         //hide healthbar
-        foreach(Drone g in livingAllies) g.GetComponent<AllyDrone>().hideHealthbar();
+        foreach(AllyDrone ad in livingAllies) {
+            ad.hideHealthbar();
+            ad.SetAllyCollision(false);
+        }
+
+        //move to organized standing spots
+        MoveAlliesToIdleSpots();
 
         //set to night
         GetComponent<DayNightCycleManager>().SetNight();
@@ -243,8 +254,17 @@ public class Game : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(4);
         StartCoroutine(StartCombat(direction, 5, new List<Trait>())); //TODO: change default values
+    }
+
+    public void MoveAlliesToIdleSpots() {
+        for (int i=0; i < livingAllies.Count; i++) {
+            int rowLimit = 9;
+                int row = (int) (livingAllies.Count - i - 1) / rowLimit;
+                Vector3 droneSlot = new Vector2((1.5f * (i % rowLimit)) - ((Mathf.Min(rowLimit, livingAllies.Count) / 2) * 1.5f), -4.5f + (1.5f * row));
+                livingAllies[i].MoveTo(transform.position + droneSlot);
+        }
     }
 
     public void GameOver()

@@ -77,7 +77,7 @@ public abstract class Drone : MonoBehaviour
         if (moveQueue.Count != 0) moveTarget = moveQueue[0];    //move queue will always override move commands made with MoveTo
         //move towards target
         if(moving) {
-            if (Vector2.Distance(transform.position, moveTarget) < 0.1f) { //change value for more or less moving percision
+            if (Vector2.Distance(transform.position, moveTarget) < 0.05f) { //change value for more or less moving percision
                 
                 if (moveQueue.Count != 0) moveQueue.RemoveAt(0);
                 if (moveQueue.Count != 0) {

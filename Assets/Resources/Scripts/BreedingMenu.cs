@@ -89,10 +89,10 @@ public class BreedingMenu : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(false);
 
         //move drones to nest
-        breedingTarget1.linkedDrone.MoveTo(new Vector2(5, 5)); //TODO: need proper nest positions
-        breedingTarget2.linkedDrone.MoveTo(new Vector2(4, 4));
+        breedingTarget1.linkedDrone.MoveTo(g.transform.position + new Vector3(2, 4));
+        breedingTarget2.linkedDrone.MoveTo(g.transform.position + new Vector3(-2, 4));
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2.2f);
         MoveToBreed();
     }
 
@@ -145,7 +145,6 @@ public class BreedingMenu : MonoBehaviour
 
             //set their birthing position and their move target
             Drone newSpawn  = g.SpawnAlly(new Vector2(averagePos.x - 2 + (i * 2), averagePos.y - 1), traitList);
-            newSpawn.MoveTo(new Vector2(-4 + i, 0));
 
             DroneImage di = AddDroneToScrollView(newSpawn);
             di.isChild = true;
@@ -179,8 +178,10 @@ public class BreedingMenu : MonoBehaviour
         {
             Destroy(droneTwoTraitsList[i].gameObject);
         }
+        
+        g.MoveAlliesToIdleSpots();
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2.5f);
         
         transform.GetChild(0).gameObject.SetActive(true);
         CloseBreedingSubMenu();
