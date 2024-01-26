@@ -5883,10 +5883,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2209285771266656148
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1471454614169901786, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: sounds.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471454614169901786, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2932cb23c2c68fd47b96fb92a13cde0e, type: 3}
+    - target: {fileID: 1471454614169901786, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: sounds.Array.data[9].name
+      value: Night
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471454614169901786, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: sounds.Array.data[9].pitch
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471454614169901786, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 0.623
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471454614169901786, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: sounds.Array.data[9].volume
+      value: 0.432
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471454614169901786, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: sounds.Array.data[9].timeThreshold
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681770965699016492, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.064323
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.9530199
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.116250396
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783298115148041029, guid: 515141937da7580479272bb9decf738c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 515141937da7580479272bb9decf738c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2209285771266656148}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 150938409}

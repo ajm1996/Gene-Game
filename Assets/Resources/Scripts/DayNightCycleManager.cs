@@ -15,8 +15,11 @@ public class DayNightCycleManager : MonoBehaviour
     public float nightFinalIntensity = 0.1f; // Final intenisty value for nighttime for the global light
     public bool isDaytime = true;
 
+    private AudioManager audioManager;
+
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         if (globalLight == null)
         {
             Debug.LogError("Global light not assigned in DayNightCycleManager.");
@@ -42,10 +45,26 @@ public class DayNightCycleManager : MonoBehaviour
         float startIntensity = globalLight.intensity;
         float time = 0;
 
+        bool soundPlayed = false;
+
         while (time < transitionDuration)
         {
             globalLight.intensity = Mathf.Lerp(startIntensity, targetIntensity, time / transitionDuration);
             time += Time.deltaTime;
+            if(!soundPlayed) {
+                if (isDay) {
+                    if (globalLight.intensity > startIntensity + 0.3f * (targetIntensity - startIntensity)) {
+                        audioManager.Play("Morning");
+                        soundPlayed = true;
+                    }
+                } else {
+                    if (globalLight.intensity < startIntensity - 0.4f * (startIntensity - targetIntensity)) { 
+                        audioManager.Play("Night");
+                        soundPlayed = true;
+                    }
+                }
+            }
+            
             yield return null; // Wait until next frame
         }
 

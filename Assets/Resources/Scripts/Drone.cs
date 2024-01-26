@@ -101,6 +101,7 @@ public abstract class Drone : MonoBehaviour
         if (Time.time - timeOfLastAttack >= AttackSpeed) {
             enemy.GetComponent<Drone>().DealDamageCombat(damage);
             timeOfLastAttack = Time.time;
+            FindObjectOfType<AudioManager>().Play("DamageDealt");
         }
     }
 
