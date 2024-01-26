@@ -53,18 +53,18 @@ public class DayNightCycleManager : MonoBehaviour
             time += Time.deltaTime;
             if(!soundPlayed) {
                 if (isDay) {
-                    if (globalLight.intensity > startIntensity + 0.3f * (targetIntensity - startIntensity)) {
+                    if (globalLight.intensity > startIntensity + 0.2f * (targetIntensity - startIntensity)) {
                         audioManager.Play("Morning");
                         soundPlayed = true;
                     }
                 } else {
-                    if (globalLight.intensity < startIntensity - 0.4f * (startIntensity - targetIntensity)) { 
+                    if (globalLight.intensity < startIntensity - 0.5f * (startIntensity - targetIntensity)) { 
                         audioManager.Play("Night");
                         soundPlayed = true;
                     }
                 }
             }
-            
+
             yield return null; // Wait until next frame
         }
 
