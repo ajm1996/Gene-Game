@@ -152,7 +152,7 @@ public class Game : MonoBehaviour
         else Debug.Log("worldTiles array is empty, no world tiles to choose from");
         
         traversalMenu.transform.position = Camera.main.transform.position;
-        traversalMenu.GetComponent<TraversalMenu>().Init();
+        //traversalMenu.GetComponent<TraversalMenu>().Init();
         traversalMenu.SetActive(true);
     }
     public void CloseTraversalMenu() {
