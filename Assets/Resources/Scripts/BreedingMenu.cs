@@ -1,3 +1,5 @@
+
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -42,6 +44,7 @@ public class BreedingMenu : MonoBehaviour
     public TextMeshProUGUI foodAmountLabel2;
 
     private AudioManager audioManager;
+    public bool readyToBreed = false;
 
 
     // Start is called before the first frame update
@@ -68,29 +71,50 @@ public class BreedingMenu : MonoBehaviour
 
     }
 
-    public void Breed() {
+    public void MoveToNest() {
         if (breedingTarget1 == null || breedingTarget2 == null) return;
         if (g.foodCount < g.breedingCost) {
             Debug.Log("breeding method entered without enough food!");
             return;
         }
+        StartCoroutine(MoveToNestWait());
+    }
 
+    IEnumerator MoveToNestWait() {
         //subtract the food cost and update the labels
         g.foodCount -= g.breedingCost;
         
+        //update labels
         foodAmountLabel1.text = "Food: " + g.foodCount;
         foodAmountLabel2.text = "Food: " + g.foodCount;
             
-
+        //hide menu
         transform.GetChild(0).gameObject.SetActive(false);
 
+        //move drones to nest
+        breedingTarget1.linkedDrone.MoveTo(new Vector2(5, 5)); //TODO: need proper nest positions
+        breedingTarget2.linkedDrone.MoveTo(new Vector2(4, 4));
+
+        yield return new WaitForSeconds(3);
+        MoveToBreed();
+    }
+
+    public void MoveToBreed() {
+        readyToBreed = true;
         //move them away from the group first? to a dedicated breeding area
         //smooching time
-        breedingTarget1.linkedDrone.MoveTo(breedingTarget2.transform.position);
-        breedingTarget2.linkedDrone.MoveTo(breedingTarget1.transform.position);
+        breedingTarget1.linkedDrone.GetComponent<AllyDrone>().breedingTarget = breedingTarget2.linkedDrone.gameObject;
+        breedingTarget2.linkedDrone.GetComponent<AllyDrone>().breedingTarget = breedingTarget1.linkedDrone.gameObject;
         //TODO: add heart animation
         //TODO: add wait time for full breeding animation to complete
+    }
 
+    public void StartBreeding() {
+        StartCoroutine(Breed());
+    }
+
+    public IEnumerator Breed() {
+        readyToBreed = false;
         //average of the parents positions (for birth positions)
         Vector2 averagePos = (breedingTarget1.linkedDrone.transform.position + breedingTarget2.linkedDrone.transform.position) / 2f;
 
@@ -124,7 +148,9 @@ public class BreedingMenu : MonoBehaviour
 
             //set their birthing position and their move target
             Drone newSpawn  = g.SpawnAlly(new Vector2(averagePos.x - 2 + (i * 2), averagePos.y - 1), traitList);
-            //newSpawn.MoveTo(new Vector2(0,0)); //TODO: move them back to the group after a small wait time
+            newSpawn.MoveTo(new Vector2(-4 + i, 0)); //TODO: FIX BUG THAT PREVENTS MOVEMENT and move them back to a proper waiting position
+            Debug.Log(newSpawn.moveTarget); //move target resets to their current position after this point
+
             DroneImage di = AddDroneToScrollView(newSpawn);
             di.isChild = true;
         }
@@ -158,6 +184,8 @@ public class BreedingMenu : MonoBehaviour
             Destroy(droneTwoTraitsList[i].gameObject);
         }
 
+        yield return new WaitForSeconds(3);
+        
         transform.GetChild(0).gameObject.SetActive(true);
         CloseBreedingSubMenu();
         
@@ -313,7 +341,6 @@ public class BreedingMenu : MonoBehaviour
             
             if (di.isChild) {
                 di.GetComponent<Button>().interactable = false;
-                Debug.Log("disable interactable");
             }
         }
 
@@ -337,7 +364,6 @@ public class BreedingMenu : MonoBehaviour
         foreach(DroneImage di in droneImages) {
             if (di.isChild) {
                 di.GetComponent<Button>().interactable = true;
-                Debug.Log("make interactable");
             }
         }
 

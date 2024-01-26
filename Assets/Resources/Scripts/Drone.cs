@@ -16,7 +16,7 @@ public abstract class Drone : MonoBehaviour
 
     public List<Drone> attackList;
     private List<Trait> traits = new List<Trait>();
-    private Vector2 moveTarget;
+    public Vector2 moveTarget;
     private bool moving;
     private float timeOfLastAttack = Mathf.NegativeInfinity;
 
@@ -70,7 +70,7 @@ public abstract class Drone : MonoBehaviour
                 moving = false;
                 Attack(closestEnemy);
             } else {
-                MoveTo(closestEnemy);
+                MoveTo(closestEnemy.gameObject);
             }
         }
     }
@@ -91,9 +91,9 @@ public abstract class Drone : MonoBehaviour
         moveTarget = target;
     }
 
-    public void MoveTo(Drone d) {
+    public void MoveTo(GameObject g) {
         moving = true;
-        moveTarget = d.transform.position;
+        moveTarget = g.transform.position;
     }
 
     public void Attack(Drone enemy) {
