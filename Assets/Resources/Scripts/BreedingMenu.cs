@@ -43,16 +43,18 @@ public class BreedingMenu : MonoBehaviour
     public TextMeshProUGUI foodAmountLabel1;
     public TextMeshProUGUI foodAmountLabel2;
 
+    private AudioManager audioManager;
     public bool readyToBreed = false;
 
 
     // Start is called before the first frame update
     public void Start()
     {
-
+        
     }
 
     public void Init() {
+        audioManager = FindObjectOfType<AudioManager>();
         g = Camera.main.GetComponent<Game>();
         List<Drone> droneList = g.livingAllies;
         SetupDroneScrollView(droneList);
@@ -60,6 +62,7 @@ public class BreedingMenu : MonoBehaviour
         foodAmountLabel1.text = "Food: " + g.foodCount;
         foodAmountLabel2.text = "Food: " + g.foodCount;
         foodCostLabel.text = "" + g.breedingCost;
+        audioManager.Play("Success");
     }
 
     // Update is called once per frame
@@ -99,9 +102,11 @@ public class BreedingMenu : MonoBehaviour
     public void MoveToBreed() {
         readyToBreed = true;
         //move them away from the group first? to a dedicated breeding area
+        
         //smooching time
         breedingTarget1.linkedDrone.GetComponent<AllyDrone>().breedingTarget = breedingTarget2.linkedDrone.gameObject;
         breedingTarget2.linkedDrone.GetComponent<AllyDrone>().breedingTarget = breedingTarget1.linkedDrone.gameObject;
+        audioManager.Play("BreedConfirmed");
         //TODO: add heart animation
         //TODO: add wait time for full breeding animation to complete
     }
@@ -156,6 +161,10 @@ public class BreedingMenu : MonoBehaviour
         droneImages.Remove(breedingTarget1);
         droneImages.Remove(breedingTarget2);
 
+        // set BreedingDeath to true so we don't play death sound
+        breedingTarget1.linkedDrone.BreedingDeath = true;
+        breedingTarget2.linkedDrone.BreedingDeath = true;
+        
         //kill breeding targets
         breedingTarget1.linkedDrone.Die();
         breedingTarget2.linkedDrone.Die();
@@ -373,7 +382,24 @@ public class BreedingMenu : MonoBehaviour
         foreach(DroneImage di in droneImages) {
             Destroy(di.gameObject);
         }
+        audioManager.Play("NextDayButtonSelect");
         droneImages = new List<DroneImage>();
         g.EndBreedingPhase();
+    }
+
+    public void PlayHoverSound() {
+        audioManager.Play("ButtonHover");
+    }
+
+    public void PlayDeselectDroneSound() {
+        audioManager.Play("DeselectDrone");
+    }
+
+    public void PlayBackButtonSound() {
+        audioManager.Play("BackButtonClick");
+    }
+
+    public void PlayButtonSelect() {
+        audioManager.Play("ButtonSelect");
     }
 }

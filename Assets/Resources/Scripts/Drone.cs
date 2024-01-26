@@ -23,6 +23,9 @@ public abstract class Drone : MonoBehaviour
     public Vector2 moveTarget;
     private bool moving;
     private float timeOfLastAttack = Mathf.NegativeInfinity;
+    
+    [HideInInspector]
+    public bool  BreedingDeath = false;
 
 
     [SerializeField] private Healthbar healthbar;
@@ -107,6 +110,7 @@ public abstract class Drone : MonoBehaviour
             DealDamageCombat(enemy.thorns);
             HealDamage(lifesteal);
             timeOfLastAttack = Time.time;
+            FindObjectOfType<AudioManager>().Play("DamageDealt");
         }
     }
 

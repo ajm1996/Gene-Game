@@ -21,6 +21,8 @@ public class EnemyDrone : Drone
             d.attackList.Remove(this.GetComponent<Drone>());
         }
 
+        FindObjectOfType<AudioManager>().Play("DroneDeath");
+
         Destroy(gameObject);
     }
 }

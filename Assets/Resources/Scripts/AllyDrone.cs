@@ -33,6 +33,9 @@ public class AllyDrone : Drone
         foreach (Drone d in g.livingEnemies) {
             d.attackList.Remove(this.GetComponent<Drone>());
         }
+        if (!BreedingDeath) {
+            FindObjectOfType<AudioManager>().Play("DroneDeath");
+        }
 
         Destroy(gameObject);
     }

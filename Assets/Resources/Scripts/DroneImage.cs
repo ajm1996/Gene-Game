@@ -17,5 +17,10 @@ public class DroneImage : MonoBehaviour
 
     public void WasSelected() {
         transform.root.GetComponent<BreedingMenu>().SelectDrone(this);
+        FindObjectOfType<AudioManager>().Play("ButtonSelect");
+    }
+
+    public void PlayHoverSound() {
+        FindObjectOfType<AudioManager>().Play("ButtonHover");
     }
 }

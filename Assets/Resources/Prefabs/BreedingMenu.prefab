@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 1254299639834986800}
   - component: {fileID: 4751137397817195243}
   - component: {fileID: 4258331980333512261}
+  - component: {fileID: 3626966951423877868}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -534,6 +535,47 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3544185167774127960}
+        m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+        m_MethodName: PlayBackButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3626966951423877868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807113911853535692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3544185167774127960}
+          m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1092606748636563333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1446,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3544185167774127960}
+        m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+        m_MethodName: PlayDeselectDroneSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3332438578761610927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,6 +1743,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 3544185167774127960}
+        m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+        m_MethodName: PlayDeselectDroneSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &3506850194687110179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,6 +1767,7 @@ GameObject:
   - component: {fileID: 8764039012651303087}
   - component: {fileID: 442794111892811417}
   - component: {fileID: 7899396666249221129}
+  - component: {fileID: 1888403174759294997}
   m_Layer: 5
   m_Name: Breed Button
   m_TagString: Untagged
@@ -1822,6 +1889,47 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3544185167774127960}
+        m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+        m_MethodName: PlayButtonSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1888403174759294997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3506850194687110179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3544185167774127960}
+          m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &3516599957879909661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2436,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
         m_MethodName: DeselectInspectorContent
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3544185167774127960}
+        m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+        m_MethodName: PlayDeselectDroneSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3029,6 +3149,7 @@ GameObject:
   - component: {fileID: 2202295200017686148}
   - component: {fileID: 4486810786340145700}
   - component: {fileID: 5243018645697968143}
+  - component: {fileID: 3901846650713810322}
   m_Layer: 5
   m_Name: Next Day Button
   m_TagString: Untagged
@@ -3150,6 +3271,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3901846650713810322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5688449104723575167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3544185167774127960}
+          m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &5809292882026113328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,6 +3502,7 @@ GameObject:
   - component: {fileID: 6216697358480928971}
   - component: {fileID: 1326551526672723464}
   - component: {fileID: 3179337277244420104}
+  - component: {fileID: 6655504121904518943}
   m_Layer: 5
   m_Name: Breed Button
   m_TagString: Untagged
@@ -3475,6 +3626,47 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3544185167774127960}
+        m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+        m_MethodName: PlayButtonSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6655504121904518943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460794038272955054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3544185167774127960}
+          m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
+          m_MethodName: PlayHoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6562466468710221003
 GameObject:
   m_ObjectHideFlags: 0
@@ -4528,7 +4720,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3257390787344544725}
   m_HandleRect: {fileID: 797633537674985357}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 11
   m_OnValueChanged:
@@ -5493,7 +5685,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2332492756193673132}
   m_HandleRect: {fileID: 4680031694624599652}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 11
   m_OnValueChanged:
