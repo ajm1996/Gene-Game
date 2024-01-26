@@ -274,6 +274,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   attackList: []
   healthbar: {fileID: 1233967103461217159}
+  breedingTarget: {fileID: 0}
 --- !u!1 &4907439880721480064
 GameObject:
   m_ObjectHideFlags: 0

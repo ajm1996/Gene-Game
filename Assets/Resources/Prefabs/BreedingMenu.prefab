@@ -3465,7 +3465,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3544185167774127960}
         m_TargetAssemblyTypeName: BreedingMenu, Assembly-CSharp
-        m_MethodName: Breed
+        m_MethodName: MoveToNest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4528,7 +4528,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3257390787344544725}
   m_HandleRect: {fileID: 797633537674985357}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 11
   m_OnValueChanged:
