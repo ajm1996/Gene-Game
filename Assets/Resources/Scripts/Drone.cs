@@ -19,6 +19,9 @@ public abstract class Drone : MonoBehaviour
     public Vector2 moveTarget;
     private bool moving;
     private float timeOfLastAttack = Mathf.NegativeInfinity;
+    
+    [HideInInspector]
+    public bool  BreedingDeath = false;
 
 
     [SerializeField] private Healthbar healthbar;

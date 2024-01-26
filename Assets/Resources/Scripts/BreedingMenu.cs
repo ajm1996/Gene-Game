@@ -102,9 +102,11 @@ public class BreedingMenu : MonoBehaviour
     public void MoveToBreed() {
         readyToBreed = true;
         //move them away from the group first? to a dedicated breeding area
+        
         //smooching time
         breedingTarget1.linkedDrone.GetComponent<AllyDrone>().breedingTarget = breedingTarget2.linkedDrone.gameObject;
         breedingTarget2.linkedDrone.GetComponent<AllyDrone>().breedingTarget = breedingTarget1.linkedDrone.gameObject;
+        audioManager.Play("BreedConfirmed");
         //TODO: add heart animation
         //TODO: add wait time for full breeding animation to complete
     }
@@ -159,6 +161,10 @@ public class BreedingMenu : MonoBehaviour
         droneImages.Remove(breedingTarget1);
         droneImages.Remove(breedingTarget2);
 
+        // set BreedingDeath to true so we don't play death sound
+        breedingTarget1.linkedDrone.BreedingDeath = true;
+        breedingTarget2.linkedDrone.BreedingDeath = true;
+        
         //kill breeding targets
         breedingTarget1.linkedDrone.Die();
         breedingTarget2.linkedDrone.Die();

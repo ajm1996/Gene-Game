@@ -19,7 +19,7 @@ public class DayNightCycleManager : MonoBehaviour
 
     void Start()
     {
-        audioManager = FindObjectOfType<AudioManager>();
+        audioManager = AudioManager.instance;
         if (globalLight == null)
         {
             Debug.LogError("Global light not assigned in DayNightCycleManager.");
@@ -31,11 +31,15 @@ public class DayNightCycleManager : MonoBehaviour
 
     public void SetDay() {
         isDaytime = true;
+        audioManager.StopPlaying("NightMusic");
+        audioManager.Play("MainMusic");
         StartCoroutine(TransitionLight(isDaytime));
     }
 
     public void SetNight() {
         isDaytime = false;
+        audioManager.StopPlaying("MainMusic");
+        audioManager.Play("NightMusic");
         StartCoroutine(TransitionLight(isDaytime));
     }
 
