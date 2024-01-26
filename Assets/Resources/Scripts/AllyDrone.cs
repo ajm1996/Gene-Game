@@ -1,24 +1,31 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class AllyDrone : Drone
 {
 
-     public override void Start()
+    private Game g;
+    private BreedingMenu bm;
+    public GameObject breedingTarget;
+
+    public override void Start()
     {
+        g = Camera.main.GetComponent<Game>();
+        bm = g.breedingMenu.GetComponent<BreedingMenu>();
         base.Start();
         hideHealthbar();
     }
 
-    // public override void Update()
-    // {
-    //     attackList = Camera.main.GetComponent<Game>().livingEnemies; //too expensive
-    //     base.Update();
+    public override void Update()
+    {
+        if (breedingTarget != null) {
+            MoveTo(breedingTarget);
+        }
+        base.Update();
 
-    // }
+    }
 
     public override void Die() {
-        Game g = Camera.main.GetComponent<Game>();
-
         //remove self from tracking list
         g.livingAllies.Remove(gameObject.GetComponent<Drone>());
 
@@ -29,4 +36,16 @@ public class AllyDrone : Drone
 
         Destroy(gameObject);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject == breedingTarget)
+        {
+            if(bm.breedingTarget1.linkedDrone == collision.gameObject.GetComponent<Drone>() && bm.readyToBreed) {
+                bm.StartBreeding();
+            }
+            breedingTarget = null;
+        }
+    }
+
 }

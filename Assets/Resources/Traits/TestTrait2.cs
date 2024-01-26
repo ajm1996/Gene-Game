@@ -10,7 +10,7 @@ public class TestTrait2 : Trait
 
     public override void ApplyEffect(Drone drone)
     {
-        drone.speed += 10;
+        //drone.speed += 10;
         drone.maxHealth -= 3 ;
     }
 }
