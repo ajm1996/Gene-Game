@@ -13,6 +13,5 @@ public abstract class Trait : IComparable<Trait>
     public int CompareTo(Trait other)
     {
         return other == null ? 1 : Id.CompareTo(other.Id);
-        //
     }
 }

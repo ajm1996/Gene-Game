@@ -6,7 +6,7 @@ public class AllyDrone : Drone
      public override void Start()
     {
         base.Start();
-        hideHealthbar();
+        //hideHealthbar();
     }
 
     // public override void Update()

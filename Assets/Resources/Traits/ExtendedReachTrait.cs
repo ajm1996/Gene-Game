@@ -11,6 +11,6 @@ public class ExtendedReachTrait : Trait
 
     public override void ApplyEffect(Drone drone)
     {
-        drone.AttackDistance += 1.1f;
+        drone.AttackDistance += 1.3f;
     }
 }

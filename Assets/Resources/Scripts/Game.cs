@@ -49,15 +49,9 @@ public class Game : MonoBehaviour
 
         livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
         livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
-        livingAllies[0].GetComponent<Drone>().AddTrait(new ExtendedReachTrait());
 
         //TODO: Change this back to OpenTraversalMenu when breeding menu is ready
-        OpenBreedingMenu();
+        //OpenBreedingMenu();
     }
 
     // Update is called once per frame
