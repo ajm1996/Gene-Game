@@ -50,10 +50,8 @@ public class Game : MonoBehaviour
         // SpawnAlly(new Vector2(0, -3), defaultTraits);
         // SpawnAlly(new Vector2(2, 2), defaultTraits);
         // SpawnAlly(new Vector2(4, 3), defaultTraits);
-        
 
-        //TODO: Change this back to OpenTraversalMenu when breeding menu is ready
-        //OpenBreedingMenu();
+        OpenTraversalMenu();
     }
 
     // Update is called once per frame
@@ -181,7 +179,7 @@ public class Game : MonoBehaviour
         }
         
         traversalMenu.transform.position = Camera.main.transform.position;
-        //traversalMenu.GetComponent<TraversalMenu>().Init();
+        traversalMenu.GetComponent<TraversalMenu>().Init();
         traversalMenu.SetActive(true);
     }
     public void CloseTraversalMenu() {
