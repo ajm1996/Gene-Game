@@ -324,11 +324,12 @@ MonoBehaviour:
   livingEnemies: []
   livingAllies: []
   pauseMenu: {fileID: 0}
-  traversalMenu: {fileID: 0}
   gameOverMenu: {fileID: 0}
   worldTiles: []
   breedingMenu: {fileID: 0}
   breedingMenuPrefab: {fileID: 1185763526631766321, guid: aa9741e15267b1f4a966927724f88578, type: 3}
+  traversalMenu: {fileID: 0}
+  traversalMenuPrefab: {fileID: 8575123563463349893, guid: 866ea7554c0e7c941b5ce8c6ba4d27af, type: 3}
   foodCount: 50
   breedingCost: 10
 --- !u!114 &519420034

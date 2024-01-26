@@ -13,7 +13,6 @@ public class Game : MonoBehaviour
     public List<Drone> livingAllies;
 
     public GameObject pauseMenu;
-    public GameObject traversalMenu;
     public GameObject gameOverMenu;
 
     public GameObject[] worldTiles;
@@ -23,6 +22,8 @@ public class Game : MonoBehaviour
 
     public GameObject breedingMenu;
     public GameObject breedingMenuPrefab;
+    public GameObject traversalMenu;
+    public GameObject traversalMenuPrefab;
 
     public int foodCount;
     public int breedingCost;
@@ -55,6 +56,8 @@ public class Game : MonoBehaviour
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
         livingAllies[0].GetComponent<Drone>().AddTrait(new TestTrait2());
+
+        OpenTraversalMenu();
     }
 
     // Update is called once per frame
@@ -115,7 +118,9 @@ public class Game : MonoBehaviour
         breedingMenu.transform.position = Camera.main.transform.position;
         breedingMenu.SetActive(false);
 
-        //TODO: Instantiate traversal menu
+        traversalMenu = Instantiate(traversalMenuPrefab);
+        traversalMenu.transform.position = Camera.main.transform.position;
+        traversalMenu.SetActive(false);
     }
 
     public void TogglePauseMenu() {
@@ -151,7 +156,8 @@ public class Game : MonoBehaviour
         }
         else Debug.Log("worldTiles array is empty, no world tiles to choose from");
         
-
+        traversalMenu.transform.position = Camera.main.transform.position;
+        traversalMenu.GetComponent<TraversalMenu>().Init();
         traversalMenu.SetActive(true);
     }
     public void CloseTraversalMenu() {
