@@ -37,6 +37,9 @@ public class Game : MonoBehaviour
 
         //spawn in 5 starter drones with default traits
         List<Trait> defaultTraits = new List<Trait>();
+
+        defaultTraits.Add(new ExtraFatTrait()); //for testing
+        
         SpawnAlly(new Vector2(-4, 1), defaultTraits);
         SpawnAlly(new Vector2(-2, 0), defaultTraits);
         SpawnAlly(new Vector2(0, -1), defaultTraits);

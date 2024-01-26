@@ -6,6 +6,7 @@ public class ThickThighsTrait : Trait
     {
         Color = Color.black; // Example color
         Id = 5; // Example ID
+        Name = "Thick Thighs";
         Description = "Thicken thighs for higher movement speed";
     }
 

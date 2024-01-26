@@ -6,6 +6,7 @@ public class AdrenalineTrait : Trait
     {
         Color = Color.yellow; // Example color
         Id = 4; // Example ID
+        Name = "Adrenaline";
         Description = "Increase adrenaline glands for better attack speed";
     }
 

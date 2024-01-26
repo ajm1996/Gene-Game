@@ -6,6 +6,7 @@ public class ExtraFatTrait : Trait
     {
         Color = Color.red; // Example color
         Id = 1; // Example ID
+        Name = "Extra Fat";
         Description = "Increase health at cost of speed";
     }
 

@@ -6,6 +6,7 @@ public class VampireFangsTrait : Trait
     {
         Color = Color.green; // Example color
         Id = 6; // Example ID
+        Name = "Vampire Fangs";
         Description = "Heal for an amount at each attack";
     }
 

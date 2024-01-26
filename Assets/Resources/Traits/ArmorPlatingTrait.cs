@@ -6,6 +6,7 @@ public class ArmorPlatingTrait : Trait
     {
         Color = Color.gray; // Example color
         Id = 7; // Example ID
+        Name = "Armor Plating";
         Description = "Increase armor at the cost of speed";
     }
 

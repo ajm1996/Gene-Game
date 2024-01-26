@@ -6,6 +6,7 @@ public class ThornedArmorTrait : Trait
     {
         Color = Color.cyan; // Example color
         Id = 8; // Example ID
+        Name = "Thorned Armor";
         Description = "Deal damage back to enemies when hit";
     }
 
