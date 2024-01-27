@@ -63,14 +63,6 @@ public class Game : MonoBehaviour
         SpawnAlly(new Vector2(0, -1), defaultTraits);
         SpawnAlly(new Vector2(2, 0), defaultTraits);
         SpawnAlly(new Vector2(4, 1), defaultTraits);
-        SpawnAlly(new Vector2(2, 2), defaultTraits);
-        SpawnAlly(new Vector2(4, 3), defaultTraits);
-
-        // SpawnAlly(new Vector2(-4, 3), defaultTraits);
-        // SpawnAlly(new Vector2(-2, 2), defaultTraits);
-        // SpawnAlly(new Vector2(0, -3), defaultTraits);
-        // SpawnAlly(new Vector2(2, 2), defaultTraits);
-        // SpawnAlly(new Vector2(4, 3), defaultTraits);
 
         OpenTraversalMenu();
     }
@@ -118,6 +110,9 @@ public class Game : MonoBehaviour
             ad.hideHealthbar();
             ad.SetAllyCollision(false);
         }
+
+        //give a random drone the enemy traits
+        livingAllies[Random.Range(0, livingAllies.Count)].AddTraits(enemyTraits);
 
         //move to organized standing spots
         MoveAlliesToIdleSpots();
