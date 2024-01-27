@@ -306,7 +306,7 @@ public class Game : MonoBehaviour
     {
         
         gameOverMenu.transform.position = Camera.main.transform.position;
-        gameOverMenu.GetComponent<GameOverMenu>().Init(10);
+        gameOverMenu.GetComponent<GameOverMenu>().Init(day);
         if (gameOverMenu != null) {
             traversalMenu.SetActive(false);
             breedingMenu.SetActive(false);
