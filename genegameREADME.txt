@@ -1,4 +1,4 @@
-Thank you for checking out this game!
+Thank you for checking out Legacy of Slime!
 
 This readme will serve as a quick tutorial for the gameplay.
 
@@ -9,7 +9,11 @@ Your drones have extremely short lifespans, but they are able to breed and pass 
 
 The game begins by allowing you to select a location to travel to. Different locations will have different amounts of food and different trait rewards available.
 When you travel to a location, before you can reap the rewards there your drones will have to fight enemy drones. Combat is automatic and does not require any
-user input. When combat ends, if your drones are still alive, you will move on to a breeding screen where you can breed your drones with eachother. Drones have lifespans
-of only a single day, so any non-bred drones will not be able to continue on. After breeding is completed, you will return to the traversal menu and select a new location.
+user input. When combat ends, if your drones are still alive, you will move on to a breeding screen where you can breed your drones with eachother. After breeding
+is completed, you will return to the traversal menu and select a new location.
+
+-Drones can only reproduce once in a day.
+-Drones have lifespans of only a single day, so any non-bred drones will not be able to continue on.
+-Enemies will scale the further you go on, so the game will continue to get harder and harder.
 
 See how far you can get!
