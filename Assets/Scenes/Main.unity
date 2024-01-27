@@ -338,6 +338,7 @@ MonoBehaviour:
   livingAllies: []
   pauseMenu: {fileID: 0}
   gameOverMenu: {fileID: 0}
+  gameOverMenuPrefab: {fileID: 8575123563463349893, guid: e3c4c55ec98b8f34aba791e9a41f37ff, type: 3}
   worldTiles:
   - {fileID: 4765237186470160802, guid: 47e14dcd4f721ae43b847d0354e96d4a, type: 3}
   - {fileID: 2368073564656335692, guid: 5bbefee639148d94da29873894b24c7a, type: 3}
@@ -348,6 +349,7 @@ MonoBehaviour:
   traversalMenuPrefab: {fileID: 8575123563463349893, guid: 866ea7554c0e7c941b5ce8c6ba4d27af, type: 3}
   foodCount: 50
   breedingCost: 10
+  currentFoodReward: 0
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
