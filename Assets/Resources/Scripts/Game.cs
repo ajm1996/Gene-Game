@@ -28,7 +28,20 @@ public class Game : MonoBehaviour
     public int foodCount;
     public int breedingCost;
     public int currentFoodReward;
-    public List<Trait> traits;
+    [SerializeField] public Trait[] possibleTraits = new Trait[] {
+        new AdrenalineTrait(),
+        new ArmorPlatingTrait(),
+        new ExtendedReachTrait(),
+        new ExtraFatTrait(),
+        new SharperClawsTrait(),
+        new ThickThighsTrait(),
+        new ThornedArmorTrait(),
+        new VampireFangsTrait()
+    };
+    
+    public List<Trait> enemyTraits = new List<Trait>();
+    public int numberOfEnemies;
+    public int day = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -118,8 +131,19 @@ public class Game : MonoBehaviour
 
     IEnumerator SpawnEnemy(Vector2 pos, List<Trait> traits, Vector2 spawnPoint) {
         Drone enemy = SpawnDrone(enemyDroneObject, pos, traits);
+
+        foreach(Trait t in traits) Debug.Log(t.Name);
         enemy.transform.position = spawnPoint;
         livingEnemies.Add(enemy);
+
+
+        if (day != 0) {
+            enemy.maxHealth += 4;
+            enemy.damage += 1;
+            enemy.armor += 1;
+            enemy.speed += 1;
+            enemy.attackSpeed *= 0.95f; //in seconds
+        }
 
         //update everyone's attack lists to fight each other
         foreach (Drone ally in livingAllies) enemy.attackList.Add(ally);
@@ -176,6 +200,8 @@ public class Game : MonoBehaviour
 
     public void OpenTraversalMenu() {
         if (traversalMenu == null) return;
+
+        day++;
 
         //make a grid of randomly generate tiles surrounding the current tile
         for (int i=0; i < 3; i++) {
@@ -257,7 +283,7 @@ public class Game : MonoBehaviour
         }
 
         yield return new WaitForSeconds(4.2f);
-        StartCoroutine(StartCombat(direction, 2, new List<Trait>())); //TODO: change default values
+        StartCoroutine(StartCombat(direction, numberOfEnemies, enemyTraits)); 
     }
 
     public void MoveAlliesToIdleSpots() {

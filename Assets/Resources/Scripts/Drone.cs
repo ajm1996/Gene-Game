@@ -14,12 +14,12 @@ public abstract class Drone : MonoBehaviour
     [SerializeField] public  int lifesteal;
     [SerializeField] public  int thorns;
     [SerializeField] public  float speed;
-    [SerializeField] public  float AttackSpeed; //in seconds
+    [SerializeField] public  float attackSpeed; //in seconds
     [SerializeField] public  float AttackDistance;
     [SerializeField] public  Color color;
 
     public List<Drone> attackList;
-    private List<Trait> traits = new List<Trait>();
+    public List<Trait> traits = new List<Trait>();
     public Vector2 moveTarget;
     public List<Vector2> moveQueue;
     private bool moving;
@@ -116,7 +116,7 @@ public abstract class Drone : MonoBehaviour
 
     public void Attack(Drone enemy) {
 
-        if (Time.time - timeOfLastAttack >= AttackSpeed) {
+        if (Time.time - timeOfLastAttack >= attackSpeed) {
             enemy.DealDamageCombat(damage);
             DealDamageCombat(enemy.thorns);
             HealDamage(lifesteal);

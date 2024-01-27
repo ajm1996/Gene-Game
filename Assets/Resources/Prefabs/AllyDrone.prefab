@@ -272,10 +272,14 @@ MonoBehaviour:
   lifesteal: 0
   thorns: 0
   speed: 5
-  AttackSpeed: 1
+  attackSpeed: 1
   AttackDistance: 1.3
   color: {r: 0, g: 0, b: 0, a: 0}
   attackList: []
+  traits: []
+  moveTarget: {x: 0, y: 0}
+  moveQueue: []
+  BreedingDeath: 0
   healthbar: {fileID: 1233967103461217159}
   breedingTarget: {fileID: 0}
 --- !u!1 &4907439880721480064
