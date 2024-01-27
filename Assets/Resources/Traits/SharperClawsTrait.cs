@@ -6,6 +6,7 @@ public class SharperClawsTrait : Trait
     {
         Color = Color.green; // Example color
         Id = 3; // Example ID
+        Name = "Sharper Claws";
         Description = "Sharpen claws for extra damage";
     }
 

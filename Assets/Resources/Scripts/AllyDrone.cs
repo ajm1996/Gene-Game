@@ -14,7 +14,7 @@ public class AllyDrone : Drone
         bm = g.breedingMenu.GetComponent<BreedingMenu>();
         SetAllyCollision(false);
         base.Start();
-        //hideHealthbar();
+        hideHealthbar();
     }
 
     public override void Update()

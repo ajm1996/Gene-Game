@@ -6,6 +6,7 @@ public class ExtendedReachTrait : Trait
     {
         Color = Color.blue; // Example color
         Id = 2; // Example ID
+        Name = "Extended Reach";
         Description = "Claws extend for farther attack range";
     }
 

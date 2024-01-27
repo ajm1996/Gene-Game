@@ -124,17 +124,27 @@ public class BreedingMenu : MonoBehaviour
         List<Trait> traitList2 = breedingTarget2.linkedDrone.GetTraits();
         List<Trait> sharedList = new List<Trait>();
 
+        List<Trait> tempTraits1 = new List<Trait>();
+        List<Trait> tempTraits2 = new List<Trait>();
         //find traits in common and remove them into their own list
-        foreach(Trait t in traitList1) {
-            if (traitList2.Contains(t)) {
-                sharedList.Add(t);
-            }
+        foreach(Trait t1 in traitList1) {
+             foreach(Trait t2 in traitList2) {
+
+                if (t1.Id == t2.Id) {
+                    sharedList.Add(t1);
+
+                } else {
+                    tempTraits1.Add(t1);
+                    tempTraits2.Add(t2);
+                }
+             }
         }
 
-        foreach(Trait t in sharedList) {
-            traitList1.Remove(t);
-            traitList2.Remove(t);
-        }
+        traitList1 = tempTraits1;
+        traitList2 = tempTraits2;
+
+        foreach(Trait t in sharedList) Debug.Log("shared list: " + t.Name);
+        foreach(Trait t in traitList1) Debug.Log("trait1 list: " + t.Name);
 
 
         //create 3 baby drones
@@ -240,7 +250,7 @@ public class BreedingMenu : MonoBehaviour
         for (int i = 0; i < droneOneTraits.Count; i++)
         {
             var newTraitText = Instantiate(traitText);
-            newTraitText.GetComponent<TextMeshProUGUI>().text = droneOneTraits[i].Id.ToString() + " - " + "Short";
+            newTraitText.GetComponent<TextMeshProUGUI>().text = droneOneTraits[i].Name + " - " + droneOneTraits[i].Description;
             
             if (isOne) newTraitText.transform.SetParent(breedingOneTraitScrollMenuContent.transform, false);
             else newTraitText.transform.SetParent(breedingTwoTraitScrollMenuContent.transform, false);
@@ -301,7 +311,7 @@ public class BreedingMenu : MonoBehaviour
             for (int i = 0; i < droneOneTraits.Count; i++)
             {
                 var newTraitText = Instantiate(traitText);
-                newTraitText.GetComponent<TextMeshProUGUI>().text = droneOneTraits[i].Id.ToString() + " - " + "Short";
+                newTraitText.GetComponent<TextMeshProUGUI>().text = droneOneTraits[i].Name + " - " + droneOneTraits[i].Description;
                 newTraitText.transform.SetParent(inspectorTraitScrollMenuContent.transform, false);
             }
             //show deselect button

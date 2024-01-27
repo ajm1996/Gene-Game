@@ -33,9 +33,6 @@ public abstract class Drone : MonoBehaviour
 
     public virtual void Start()
     {
-        // Test: Add a default trait
-        AddTrait(new ExtraFatTrait());
-
         //initialize healthbar and update it to full
         healthbar = GetComponentInChildren<Healthbar>();
         healthbar.UpdateHealthbar(currentHealth, maxHealth);

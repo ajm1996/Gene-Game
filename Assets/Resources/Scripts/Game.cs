@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -25,6 +28,7 @@ public class Game : MonoBehaviour
     public int foodCount;
     public int breedingCost;
     public int currentFoodReward;
+    public List<Trait> traits;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +41,9 @@ public class Game : MonoBehaviour
 
         //spawn in 5 starter drones with default traits
         List<Trait> defaultTraits = new List<Trait>();
+
+        defaultTraits.Add(new ExtraFatTrait()); //for testing
+        
         SpawnAlly(new Vector2(-4, 1), defaultTraits);
         SpawnAlly(new Vector2(-2, 0), defaultTraits);
         SpawnAlly(new Vector2(0, -1), defaultTraits);
@@ -250,7 +257,7 @@ public class Game : MonoBehaviour
         }
 
         yield return new WaitForSeconds(4.2f);
-        StartCoroutine(StartCombat(direction, 5, new List<Trait>())); //TODO: change default values
+        StartCoroutine(StartCombat(direction, 2, new List<Trait>())); //TODO: change default values
     }
 
     public void MoveAlliesToIdleSpots() {
@@ -264,6 +271,8 @@ public class Game : MonoBehaviour
 
     public void GameOver()
     {
-        gameOverMenu.SetActive(true);
+        if (gameOverMenu != null) gameOverMenu.SetActive(true);
+        Thread.Sleep(3000);
+        SceneManager.LoadScene(0);
     }
 }
