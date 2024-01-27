@@ -17,6 +17,7 @@ public class Game : MonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
+    public GameObject gameOverMenuPrefab;
 
     public GameObject[] worldTiles;
 
@@ -175,6 +176,10 @@ public class Game : MonoBehaviour
         traversalMenu = Instantiate(traversalMenuPrefab);
         traversalMenu.transform.position = Camera.main.transform.position;
         traversalMenu.SetActive(false);
+
+        gameOverMenu = Instantiate(gameOverMenuPrefab);
+        gameOverMenu.transform.position = Camera.main.transform.position;
+        gameOverMenu.SetActive(false);
     }
 
     public void TogglePauseMenu() {
@@ -182,9 +187,9 @@ public class Game : MonoBehaviour
         if (!pauseMenu.activeSelf) pauseMenu.SetActive(true);
         else pauseMenu.SetActive(false);
     }
+
     public void OpenBreedingMenu()
     {
-        Debug.Log("open breeding menu");
         breedingMenu.transform.position = Camera.main.transform.position;
         breedingMenu.GetComponent<BreedingMenu>().Init();
         breedingMenu.SetActive(true);
@@ -213,7 +218,9 @@ public class Game : MonoBehaviour
         
         traversalMenu.transform.position = Camera.main.transform.position;
         traversalMenu.GetComponent<TraversalMenu>().Init();
-        traversalMenu.SetActive(true);
+        if (!gameOverMenu.activeSelf) {
+            traversalMenu.SetActive(true);
+        }
     }
     public void CloseTraversalMenu() {
         traversalMenu.SetActive(false);
@@ -297,8 +304,21 @@ public class Game : MonoBehaviour
 
     public void GameOver()
     {
-        if (gameOverMenu != null) gameOverMenu.SetActive(true);
-        Thread.Sleep(3000);
-        SceneManager.LoadScene(0);
+        
+        gameOverMenu.transform.position = Camera.main.transform.position;
+        gameOverMenu.GetComponent<GameOverMenu>().Init(10);
+        if (gameOverMenu != null) {
+            traversalMenu.SetActive(false);
+            breedingMenu.SetActive(false);
+            gameOverMenu.SetActive(true);
+        }
+
+        StartCoroutine(QuitApplication());
+        //SceneManager.LoadScene(0);
+    }
+
+    public IEnumerator QuitApplication() {
+        Application.Quit();
+        yield return new WaitForSeconds(5f);
     }
 }
