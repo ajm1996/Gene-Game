@@ -38,8 +38,22 @@ public class TraversalMenu : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         g = Camera.main.GetComponent<Game>();
         RandomizeFoodRewards();
+        RandomizeTraits();
         DisableOutlines();
         travelButton.GetComponent<Button>().interactable = false;
+    }
+
+    public void RandomizeTraits()
+    {
+        float rand = Random.value;
+        int numberOfTraits = 1;
+        if(rand > 0.5 - (g.day * 0.4)) numberOfTraits++;
+        if (rand > 0.2 - (g.day * 0.2)) numberOfTraits++;
+
+        for (int i=0; i < numberOfTraits; i++) {
+            g.enemyTraits.Add(g.possibleTraits[Random.Range(0, g.possibleTraits.Length)]);
+        }
+        g.numberOfEnemies = (int) (3 + (g.day * Random.Range(0, 0.5f)));
     }
 
     public void RandomizeFoodRewards() {

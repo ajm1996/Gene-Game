@@ -12,6 +12,6 @@ public class AdrenalineTrait : Trait
 
     public override void ApplyEffect(Drone drone)
     {
-        drone.AttackSpeed *= 0.8f;
+        drone.attackSpeed *= 0.8f;
     }
 }
