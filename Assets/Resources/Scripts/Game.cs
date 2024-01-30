@@ -28,7 +28,7 @@ public class Game : MonoBehaviour
     public int foodCount;
     public int breedingCost;
     public int currentFoodReward;
-    [SerializeField] public Trait[] possibleTraits = new Trait[] {
+    public Trait[] possibleTraits = new Trait[] {
         new AdrenalineTrait(),
         new ArmorPlatingTrait(),
         new ExtendedReachTrait(),

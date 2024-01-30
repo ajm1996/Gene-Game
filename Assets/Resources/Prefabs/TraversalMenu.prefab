@@ -171,7 +171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88, y: 0}
+  m_AnchoredPosition: {x: -100, y: 0}
   m_SizeDelta: {x: 23, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2437355057713042375
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 6788118306919610975}
   - component: {fileID: 6349692459278566200}
   m_Layer: 5
-  m_Name: Food Text 1
+  m_Name: Food and Ememy Text 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -443,8 +443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.919998, y: 0}
-  m_SizeDelta: {x: 166.77982, y: 38.99999}
+  m_AnchoredPosition: {x: 9.5, y: 0}
+  m_SizeDelta: {x: 190, y: 38.99999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6788118306919610975
 CanvasRenderer:
@@ -474,7 +474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10 Food
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb627ff46499c3d48bbd8a4d1b4217da, type: 2}
   m_sharedMaterial: {fileID: -1151105335349821708, guid: fb627ff46499c3d48bbd8a4d1b4217da, type: 2}
@@ -688,7 +688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88, y: 0}
+  m_AnchoredPosition: {x: -100, y: 0}
   m_SizeDelta: {x: 23, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5745230069106753266
@@ -1492,7 +1492,7 @@ GameObject:
   - component: {fileID: 3482645354901196936}
   - component: {fileID: 8080258114801327560}
   m_Layer: 5
-  m_Name: Food Text 2
+  m_Name: Food and Enemy Text 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1514,8 +1514,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.919998, y: 0}
-  m_SizeDelta: {x: 166.77982, y: 38.99999}
+  m_AnchoredPosition: {x: 9.5, y: 0}
+  m_SizeDelta: {x: 190, y: 38.99999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3482645354901196936
 CanvasRenderer:
@@ -1545,7 +1545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10 Food
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb627ff46499c3d48bbd8a4d1b4217da, type: 2}
   m_sharedMaterial: {fileID: -1151105335349821708, guid: fb627ff46499c3d48bbd8a4d1b4217da, type: 2}
@@ -2191,7 +2191,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 195, y: 100}
+  m_CellSize: {x: 248.5, y: 75}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -2705,7 +2705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.47749, y: 126.07616}
+  m_AnchoredPosition: {x: -103.47745, y: 126.07618}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.15, y: 1}
 --- !u!222 &4970541119273785307
@@ -2766,7 +2766,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 195, y: 100}
+  m_CellSize: {x: 248.5, y: 75}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -2796,7 +2796,7 @@ GameObject:
   - component: {fileID: 2960774928027613651}
   - component: {fileID: 8889963766392381336}
   m_Layer: 5
-  m_Name: Food Text 3
+  m_Name: Food and Enemy Text 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2818,8 +2818,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.919998, y: 0}
-  m_SizeDelta: {x: 166.77982, y: 38.99999}
+  m_AnchoredPosition: {x: 9.5, y: 0}
+  m_SizeDelta: {x: 190, y: 38.99999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2960774928027613651
 CanvasRenderer:
@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10 Food
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb627ff46499c3d48bbd8a4d1b4217da, type: 2}
   m_sharedMaterial: {fileID: -1151105335349821708, guid: fb627ff46499c3d48bbd8a4d1b4217da, type: 2}
@@ -3087,7 +3087,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 195, y: 100}
+  m_CellSize: {x: 248.5, y: 75}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -3289,7 +3289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88, y: 0}
+  m_AnchoredPosition: {x: -100, y: 0}
   m_SizeDelta: {x: 23, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7722896426421508835
@@ -3509,11 +3509,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b99e8274e74c2243843cbf4c82675c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodRewardLabel1: {fileID: 6349692459278566200}
-  foodRewardLabel2: {fileID: 8080258114801327560}
-  foodRewardLabel3: {fileID: 8889963766392381336}
+  foodRewardAndEnemyCountLabels:
+  - {fileID: 6349692459278566200}
+  - {fileID: 8080258114801327560}
+  - {fileID: 8889963766392381336}
   foodRewardMax: 100
   foodRewardMin: 5
+  traitTextObject: {fileID: 3690587715347653699, guid: 77ed7f36e79b0bf4f83c96d0a2b0f70b, type: 3}
+  traitPanels:
+  - {fileID: 4525877065438256805}
+  - {fileID: 6808349120619493012}
+  - {fileID: 3811757568752526905}
   travelButton: {fileID: 2185675454074699262}
   destination: 0
   outline1: {fileID: 6228835433834551626}

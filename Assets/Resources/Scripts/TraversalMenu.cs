@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class TraversalMenu : MonoBehaviour
 {
 
     private Game g;
-    public TextMeshProUGUI foodRewardLabel1;
-    public TextMeshProUGUI foodRewardLabel2;
-    public TextMeshProUGUI foodRewardLabel3;
+    public TextMeshProUGUI[] foodRewardAndEnemyCountLabels = new TextMeshProUGUI[3];
     public int foodRewardMax = 80;
     public int foodRewardMin = 10;
     private int[] foodRewards = new int[3];
+    private int[] enemyCounts = new int[3];
+    private List<Trait>[] traitLists = new List<Trait>[3];
+    public GameObject traitTextObject;
+    public RectTransform[] traitPanels;
     public GameObject travelButton;
     public int destination;
     public GameObject outline1;
     public GameObject outline2;
     public GameObject outline3;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,23 +38,40 @@ public class TraversalMenu : MonoBehaviour
 
     public void Init() {
         g = Camera.main.GetComponent<Game>();
+
         RandomizeFoodRewards();
         RandomizeTraits();
+        RandomizeEnemies();
+
+        GenerateEnemyPreview();
         DisableOutlines();
         travelButton.GetComponent<Button>().interactable = false;
     }
 
+
+    public void RandomizeEnemies() {
+
+        for (int i=0; i < 3; i++) enemyCounts[i] = (int) (3 + (g.day * Random.Range(0, 0.5f)));
+        
+    }
+
     public void RandomizeTraits()
     {
-        float rand = Random.value;
-        int numberOfTraits = 1;
-        if(rand > 0.5 - (g.day * 0.4)) numberOfTraits++;
-        if (rand > 0.2 - (g.day * 0.2)) numberOfTraits++;
+        for (int i=0; i < 3; i++) {
+            
+            float rand = Random.value;
+            int numberOfTraits = 1;
 
-        for (int i=0; i < numberOfTraits; i++) {
-            g.enemyTraits.Add(g.possibleTraits[Random.Range(0, g.possibleTraits.Length)]);
+            if (rand < 0.3f - (g.day * 0.04f)) numberOfTraits++;    //30% chance, increase 4% per day
+            if (rand < 0.15f + (g.day * 0.02f)) numberOfTraits++;   //15% chance, increase 2% per day
+
+            List<Trait> traits = new List<Trait>();
+
+            for (int j=0; j < numberOfTraits; j++) {
+                traits.Add(g.possibleTraits[Random.Range(0, g.possibleTraits.Length)]);
+            }
+            traitLists[i] = traits;
         }
-        g.numberOfEnemies = (int) (3 + (g.day * Random.Range(0, 0.5f)));
     }
 
     public void RandomizeFoodRewards() {
@@ -58,11 +79,37 @@ public class TraversalMenu : MonoBehaviour
         for (var i = 0; i < 3; i++) {
             randomFoodReward = Random.Range(foodRewardMin, foodRewardMax);
             foodRewards[i] = randomFoodReward;
-            Debug.Log("random food reward: " + randomFoodReward);
+            //Debug.Log("random food reward: " + randomFoodReward);
         }
-        foodRewardLabel1.text = foodRewards[0] + " Food";
-        foodRewardLabel2.text = foodRewards[1] + " Food";
-        foodRewardLabel3.text = foodRewards[2] + " Food";
+    }
+
+    private void GenerateEnemyPreview()
+    {
+        for (int i=0; i < 3; i++) {
+
+             if (Random.value < 0.3)  //30% chance to obfuscate food
+                foodRewardAndEnemyCountLabels[i].text = "??";
+            else
+                foodRewardAndEnemyCountLabels[i].text = "" + foodRewards[i];
+
+            if (Random.value < 0.5)  //50% chance to obfuscate food
+                foodRewardAndEnemyCountLabels[i].text += "  Emeies: ?";
+            else
+                foodRewardAndEnemyCountLabels[i].text += "  Emeies: " + enemyCounts[i];
+
+            foreach (Trait t in traitLists[i]) {
+
+                GameObject enemyTrait = Instantiate(traitTextObject);
+
+                if (Random.value < 0.2)  //20% chance to obfuscate single traits
+                    enemyTrait.GetComponent<TextMeshProUGUI>().text = "??? - ???";
+                else 
+                    enemyTrait.GetComponent<TextMeshProUGUI>().text = t.Name + " - " + t.Description;
+
+
+                enemyTrait.transform.SetParent(traitPanels[i], false);
+            }
+        }
     }
 
     public void SetDestination(int clickedDestination) {
@@ -86,7 +133,13 @@ public class TraversalMenu : MonoBehaviour
 
     public void Travel() {
         g.TraversalChooseDirection(destination);
+        g.enemyTraits = traitLists[destination];
+        g.numberOfEnemies = enemyCounts[destination];
         g.currentFoodReward = foodRewards[destination];
+
+        Debug.Log(g.enemyTraits[0].Name);
+        Debug.Log(g.currentFoodReward);
+        Debug.Log(g.numberOfEnemies);
     }
 
     public void DisableOutlines() {

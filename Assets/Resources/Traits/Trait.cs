@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public abstract class Trait : MonoBehaviour
+public abstract class Trait : IComparable<Trait>
 {
     public Color Color { get; set; }
     public int Id { get; set; }
